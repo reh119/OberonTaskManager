@@ -33,7 +33,7 @@
 
 ## Features
 - Task List/Daily Schedule 
-	Allows User To See A Display Of Tasks For The Day
+	- Allows User To See A Display Of Tasks For The Day
 	Let User Add Tasks To List
 	Let User Add A Date To Each Task
 	Let User Remove Tasks Off List
