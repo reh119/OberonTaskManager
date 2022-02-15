@@ -34,12 +34,12 @@
 ## Features
 - Task List/Daily Schedule 
 	- Allows User To See A Display Of Tasks For The Day
-	Let User Add Tasks To List
-	Let User Add A Date To Each Task
-	Let User Remove Tasks Off List
-	Let User Choose What Day They Want To View
-	Allow User To Add Times For Each Task
-	Prioritize Tasks By Closest Time
+	- Let User Add Tasks To List
+	- Let User Add A Date To Each Task
+	- Let User Remove Tasks Off List
+	- Let User Choose What Day They Want To View
+	- Allow User To Add Times For Each Task
+	- Prioritize Tasks By Closest Time
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
