@@ -19,7 +19,7 @@
 
 ## General Information
 ![Example screenshot](https://i.imgur.com/QGHWdFm.jpg)
-
+Image Description: A moon with a checkmark over it. This was voted on by the team as we feel it best represents our project, the moon representing our team name Oberon and the checkmark represnting a To-Do list.
 
 
 - Provide general information about your project here.
@@ -27,7 +27,7 @@
 - What is the purpose of your project?
 - Why did you undertake it?
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
-
+***To be added***
 
 ## Technologies Used
 - Java - latest version - https://www.java.com/en/download/manual.jsp
@@ -51,29 +51,25 @@
 		Oscar's 1st User Story
 	
 	
-	- Let User Choose What Day They Want To View
-	- Allow User To Add Times For Each Task
-	- Prioritize Tasks By Closest Time
-
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
-***To be added****
+***To be added***
 
 
 ## Setup
 What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
 
 Proceed to describe how to install / setup one's local environment / get started with the project.
-***To be added****
+***To be added***
 
 ## Usage
 How does one go about using it?
 Provide various use cases and code examples here.
 
 `write-your-code-here`
-***To be added****
+***To be added***
 
 ## Project Status
 Project is: _in progress_ 
@@ -89,19 +85,19 @@ Room for improvement:
 To do:
 - Feature to be added 1
 - Feature to be added 2
-***To be added****
+***To be added***
 
 ## Acknowledgements
 Give credit here.
 - This project was inspired by...
 - This project was based on [this tutorial](https://www.example.com).
 - Many thanks to...
-***To be added****
+***To be added***
 
 ## Contact
 Created by Oberon Team
 Template for ReadME provided by: [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
-***To be added****
+***To be added***
 
 <!-- Optional -->
 <!-- ## License -->
