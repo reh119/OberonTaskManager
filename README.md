@@ -1,5 +1,5 @@
 # Oberon Task Manager
-> The Oberon team consists of Oscar Ramirez, Grant Smith, Jacob Jordan, Justin Jimenez, Rafael Hernandez, who are trying to create a task manager that will help anyone determined to make sure they meet their goals to better oragnize their day.
+> The Oberon team consists of Oscar Ramirez, Grant Smith, Jacob Jordan, Justin Jimenez, Rafael Hernandez, who are trying to create a task manager that will help anyone determined to meet their goals to better oragnize their day.
 
 > Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
 
@@ -18,6 +18,10 @@
 
 
 ## General Information
+![Example screenshot](https://i.imgur.com/QGHWdFm.jpg)
+
+
+
 - Provide general information about your project here.
 - What problem does it (intend to) solve?
 - What is the purpose of your project?
@@ -26,17 +30,27 @@
 
 
 ## Technologies Used
-- IntelliJ - version 2021.3.2 - https://www.jetbrains.com/idea/download/
+- Java - latest version - https://www.java.com/en/download/manual.jsp
 - Bitbucket - latest version - https://bitbucket.org/product
 - Jira - latest version - https://www.atlassian.com/software/jira
 
 
 ## Features
-- Task List/Daily Schedule 
-	- Allows User To See A Display Of Tasks For The Day
+- Task List Addition
 	- Let User Add Tasks To List
 	- Let User Add A Date To Each Task
+	-Corresponding User Story:
+		Oscar's 1st User Story
+- Task List Removal
 	- Let User Remove Tasks Off List
+	-Corresponding User Story:
+		Oscar's 1st User Story
+- Task List Dsiplay
+	- Allows User To See A List Of Tasks
+	-Corresponding User Story:
+		Oscar's 1st User Story
+	
+	
 	- Let User Choose What Day They Want To View
 	- Allow User To Add Times For Each Task
 	- Prioritize Tasks By Closest Time
@@ -45,22 +59,24 @@
 ![Example screenshot](./img/screenshot.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
+***To be added****
+
 
 ## Setup
 What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
 
 Proceed to describe how to install / setup one's local environment / get started with the project.
-
+***To be added****
 
 ## Usage
 How does one go about using it?
 Provide various use cases and code examples here.
 
 `write-your-code-here`
-
+***To be added****
 
 ## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+Project is: _in progress_ 
 
 
 ## Room for Improvement
@@ -73,18 +89,19 @@ Room for improvement:
 To do:
 - Feature to be added 1
 - Feature to be added 2
-
+***To be added****
 
 ## Acknowledgements
 Give credit here.
 - This project was inspired by...
 - This project was based on [this tutorial](https://www.example.com).
 - Many thanks to...
-
+***To be added****
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
-
+Created by Oberon Team
+Template for ReadME provided by: [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+***To be added****
 
 <!-- Optional -->
 <!-- ## License -->
