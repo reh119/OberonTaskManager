@@ -1,0 +1,1 @@
+![Example screenshot](https://i.imgur.com/FEVlRHn.jpg)
