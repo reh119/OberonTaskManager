@@ -1,4 +1,11 @@
 A UML Diagram to help with synchonization between users.
-
-<img src = "https://i.imgur.com/FEVlRHn.png"
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>UML IMAGE</title>
+   </head>
+   <body>
+      <img src = "https://i.imgur.com/FEVlRHn.png"
       alt = "UML" height = "3800" width = "2061" />
+   </body>
+</html>
