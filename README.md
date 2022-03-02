@@ -19,6 +19,7 @@
 
 ## General Information
 ![Example screenshot](https://i.imgur.com/QGHWdFm.jpg)
+
 Image Description: A moon with a checkmark over it. This was voted on by the team as we feel it best represents our project, the moon representing our team name Oberon and the checkmark represnting a To-Do list.
 
 
