@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.util.UUID;
 
-public class TaskModel {
+public class BasicTask {
     private UUID taskId;
     private String title;
     private LocalDate date;
@@ -33,7 +33,7 @@ public class TaskModel {
 
     @Override
     public String toString() {
-        return "TASK MODEL\n" + "Task: " + title + " Date: " + date + " Task ID: " + taskId;
+        return "Task: " + title + " Date: " + date + " Task ID: " + taskId;
     }
 }
 

@@ -5,13 +5,13 @@ import java.util.List;
 import java.util.UUID;
 
 public class TaskService {
-    private List<TaskModel> taskList = new ArrayList<>();
+    private List<BasicTask> taskList = new ArrayList<>();
 
     public void addTask(String title, String date){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         LocalDate localDate = LocalDate.parse(date, formatter);
 
-        TaskModel taskmodel = new TaskModel();
+        BasicTask taskmodel = new BasicTask();
         //to-do create unique ID.
         taskmodel.setTaskId(UUID.randomUUID());
         taskmodel.setTitle(title);
@@ -20,7 +20,7 @@ public class TaskService {
         taskList.add(taskmodel);
     }
 
-    public List<TaskModel> getTaskList() {
+    public List<BasicTask> getTaskList() {
         return taskList;
     }
 }
