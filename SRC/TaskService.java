@@ -20,6 +20,16 @@ public class TaskService {
         taskList.add(taskmodel);
     }
 
+    public void removeTask(String id){
+        UUID uuid = UUID.fromString(id); //converting from string to UUID
+        for (BasicTask task:taskList) {
+            if (task.getTaskId().compareTo(uuid) == 0){
+                taskList.remove(task);
+                break;
+            }
+        }
+    }
+
     public List<BasicTask> getTaskList() {
         return taskList;
     }
