@@ -8,38 +8,116 @@ public class OberonGUI extends JFrame {
 
 
     public String name;
-    public JTextArea messageArea;
-    public JTextField taskInput;
+    public JTextArea taskArea; //where task that are added are displayed
+    public JTextField taskInput; // user input for tasks
     private JButton addTaskB;
     private JButton removeTaskB;
 
 
-    public OberonGUI() { // constructor.
+    public OberonGUI() { // constructor, pass stuff from main here
 
 
-        JFrame frame = new JFrame("Oberon Gui V.01");
-        JPanel panel = new JPanel();
-        JLabel label = new JLabel("Task Name");
-        JButton addTask = new JButton("Add Task");
+        // input and a button for sending message
+        taskArea = new JTextArea();
+
+
+        taskArea.setBorder(BorderFactory.createEmptyBorder(1, 14, 14, 14));
+        taskArea.setEditable(false);
+        taskArea.setText("This is where tasks will display");
+        JLabel label = new JLabel("Enter your Task: ");
         taskInput = new JTextField(20);
-        JTextArea text = new JTextArea();
+        // adding action listener to the button
 
-        addTask.setAlignmentX(Component.LEFT_ALIGNMENT);
+        JButton addTaskB = new JButton("Add Task");
 
 
-        taskInput.setAlignmentX(Component.BOTTOM_ALIGNMENT);
-        panel.setLayout(new GridBagLayout());
+        addTaskB.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // logic for add task
+
+            }
+        });
+        JButton removeTaskB = new JButton("Remove Task");
+        addTaskB.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // logic for remove task
+
+            }
+        });
+        // adding label, textfield and button to a panel
+
+        JPanel panel = new JPanel();
         panel.add(label);
-        panel.add(text);
         panel.add(taskInput);
-        panel.add(addTask);
-        panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.add(panel);
-        frame.setSize(500, 300);
-        frame.setVisible(true);
+        panel.add(addTaskB);
+        panel.add(removeTaskB);
+
+        // using BorderLayout, adding text area to center and panel to the end
+
+        setLayout(new BorderLayout());
+        add(new JScrollPane(taskArea), BorderLayout.CENTER);
+        add(panel, BorderLayout.PAGE_END);
+
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(700, 600);
+        setTitle("Oberon Task Manager v0.2");
+
+        setVisible(true);
+
+
+
 
 
     }
 }
 
+// JFrame frame = new JFrame("Oberon Gui V.01");
+//        JPanel panel = new JPanel();
+//        taskArea = new JTextArea(); // where tasks will display after adding.
+//        taskArea.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+//        taskArea.setEditable(false);
+//        JLabel label = new JLabel("Task Name");
+//
+//
+//        JButton addTaskB = new JButton("Add Task"); // Add Button
+//
+//        addTaskB.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//               // logic for add button
+//
+//            }
+//        });
+//
+//
+//
+//        JButton removeTaskB = new JButton("Remove Task"); // Remove Task Button
+//        removeTaskB.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                // logic for remove task button
+//
+//            }
+//        });
+//
+//        taskInput = new JTextField(20);
+//        JTextArea text = new JTextArea();
+//
+//        addTaskB.setAlignmentX(Component.RIGHT_ALIGNMENT);
+//
+//
+//
+//        panel.setLayout(new GridBagLayout());
+//        panel.add(label);
+//        panel.add(text);
+//        panel.add(taskInput);
+//        panel.add(addTaskB);
+//        addTaskB.setBounds(4,3,3,2);
+//        panel.add(removeTaskB);
+//        panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+//        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+//        frame.add(panel);
+//        frame.setSize(500, 300);
+//        frame.setVisible(true);
