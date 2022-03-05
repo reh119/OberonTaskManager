@@ -61,7 +61,7 @@ public class OberonGUI extends JFrame {
         addTaskB.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // logic for remove task
+                C.removeTask();
 
             }
         });
