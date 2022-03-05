@@ -26,13 +26,18 @@ public class TaskController extends Controller {
 		{
 			currentTaskCount++;
 			currentTask = M.TaskService.getTaskList().get(currentTaskCount);
-			
 		}
 	}
 	
 	String getTaskTitle()
 	{
 		return currentTask.getTitle();
+	}
+	
+	void removeTask()
+	{
+		M.TaskService.removeTask(currentTask.getTaskId().toString());
+		currentTaskCount--;
 	}
 	
 	public void setModel(Model Model)
