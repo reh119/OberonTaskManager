@@ -12,16 +12,18 @@ public class OberonGUI extends JFrame {
     public JTextField taskInput; // user input for tasks
     private JButton addTaskB;
     private JButton removeTaskB;
+    public TaskController test = new TaskController();
 
 
-    public OberonGUI() { // constructor, pass stuff from main here
+    public OberonGUI(TaskController Controller1) { // constructor, pass stuff from main here
 
 
+            test = Controller1;
         // input and a button for sending message
         taskArea = new JTextArea();
 
 
-        taskArea.setBorder(BorderFactory.createEmptyBorder(1, 14, 14, 14));
+        taskArea.setBorder(BorderFactory.createEmptyBorder(10, 14, 14, 14));
         taskArea.setEditable(false);
         taskArea.setText("This is where tasks will display");
         JLabel label = new JLabel("Enter your Task: ");
@@ -35,9 +37,18 @@ public class OberonGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // logic for add task
+                test.addTask(taskInput.getText());
+                taskInput.setText("");
+                System.out.print(taskInput.getText());
+                test.nextTask();
+                taskArea.setText(test.getTaskTitle());
+
+
+
 
             }
         });
+
         JButton removeTaskB = new JButton("Remove Task");
         addTaskB.addActionListener(new ActionListener() {
             @Override
