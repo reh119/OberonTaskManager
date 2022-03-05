@@ -8,7 +8,7 @@ public class TaskController extends Controller {
 	
 	void addTask(String taskDescription)
 	{
-		M.TaskService.addTask(null, taskDescription);
+		M.TaskService.addTask(taskDescription,("01/11/1999"));
 	}
 	
 	void nextTask()
