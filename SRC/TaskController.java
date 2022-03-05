@@ -35,9 +35,14 @@ public class TaskController extends Controller {
 	}
 	
 	void removeTask()
-	{
-		M.TaskService.removeTask(currentTask.getTaskId().toString());
-		currentTaskCount--;
+	{	
+		if (currentTaskCount != 0)
+		{
+			M.TaskService.removeTask(currentTask.getTaskId().toString());
+			currentTaskCount--;
+		}
+		else
+			currentTaskCount = 0;
 	}
 	
 	public void setModel(Model Model)
