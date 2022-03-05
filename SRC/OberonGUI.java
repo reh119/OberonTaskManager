@@ -18,7 +18,7 @@ public class OberonGUI extends JFrame {
     public OberonGUI(TaskController Controller1) { // constructor, pass stuff from main here
 
 
-            test = Controller1;
+            TaskController C = Controller1;
         // input and a button for sending message
         taskArea = new JTextArea();
 
@@ -31,24 +31,32 @@ public class OberonGUI extends JFrame {
         // adding action listener to the button
 
         JButton addTaskB = new JButton("Add Task");
+        JButton viewNTask = new JButton("Next Task");
 
 
         addTaskB.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // logic for add task
-                test.addTask(taskInput.getText());
+                C.addTask(taskInput.getText());
                 taskInput.setText("");
                 System.out.print(taskInput.getText());
-                test.nextTask();
-                taskArea.setText(test.getTaskTitle());
+                C.nextTask();
+                taskArea.setText(C.getTaskTitle());
 
 
 
 
             }
         });
-
+        
+        viewNTask.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	C.nextTask();
+            	taskArea.setText(C.getTaskTitle());
+            }
+        });
         JButton removeTaskB = new JButton("Remove Task");
         addTaskB.addActionListener(new ActionListener() {
             @Override
@@ -63,6 +71,7 @@ public class OberonGUI extends JFrame {
         panel.add(label);
         panel.add(taskInput);
         panel.add(addTaskB);
+        panel.add(viewNTask);
         panel.add(removeTaskB);
 
         // using BorderLayout, adding text area to center and panel to the end
