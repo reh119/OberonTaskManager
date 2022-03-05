@@ -8,7 +8,7 @@ public class TaskController extends Controller {
 	
 	void addTask(String taskDescription)
 	{
-		M.TaskService.addTask(taskDescription,("01/11/1999"));
+		M.TaskService.addTask(taskDescription, "01/11/2022");
 	}
 	
 	void nextTask()
@@ -18,9 +18,15 @@ public class TaskController extends Controller {
 			currentTaskCount = 0;
 			currentTask = M.TaskService.getTaskList().get(currentTaskCount);
 		}
+		else if (M.TaskService.getTaskList().size() == 0)
+		{
+			currentTaskCount = 0;
+		}
 		else
 		{
+			currentTaskCount++;
 			currentTask = M.TaskService.getTaskList().get(currentTaskCount);
+			
 		}
 	}
 	
