@@ -11,7 +11,7 @@ public class TaskView extends View {
         this.C = Controller;
     }
     
-    public void GUIStart {
+    public void GUIStart() {
         GUI = new OberonGUI(C);
     }
 }

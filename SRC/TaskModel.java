@@ -7,7 +7,7 @@
  *
  * @author Jacob
  */
-public class TaskModel {
+public class TaskModel extends Model {
     Controller C;
     TaskService TaskService = new TaskService();
     

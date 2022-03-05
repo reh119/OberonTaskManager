@@ -1,13 +1,13 @@
 public class main {
     public static void main(String[] args) {
 
-         Model modelM = new Model();
+         TaskModel modelM = new TaskModel();
          TaskController C = new TaskController();
          modelM.setController(C);
          C.setModel(modelM);
-         OberonGUI test = new OberonGUI( C ); //
-
-
-
+         TaskView viewer = new TaskView();
+         viewer.setController(C);
+         C.setView(viewer);
+         viewer.GUIStart();
     }
 }
