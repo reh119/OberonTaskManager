@@ -242,6 +242,34 @@ https://cs3398s22oberon.atlassian.net/browse/OTM-23
 Rafael worked on adding functionality to the "add task" button and made sure tasks would display when being added using the Controller. 
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/7a616ba1419939ebe762aa14ca9547615e098016
 
+
+***Jacob Jordan***
+Task: Work on learning GUI and adding functionality to remove task button
+https://cs3398s22oberon.atlassian.net/browse/OTM-41
+
+Jacob Built the project after installing a new IDE and experimented with the GUI, after looking at the class file for the GUI, he added functionality to the “remove task” button.
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/833526c829460c7ff0af565fb1855f0d40d107ed
+
+Task: Create a date data structure.
+https://cs3398s22oberon.atlassian.net/browse/OTM-28
+
+Jacob created a date data structure.  At first, he was going to make a custom struct, but decided to just make it its own class with three int fields.  He also made an interface class for the date and a DateCreator class.
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/8d5e1a677d13a283a86e5fb7079becf50d6c3b34
+
+Task: Create a TaskModel class
+https://cs3398s22oberon.atlassian.net/browse/OTM-38
+
+Jacob created a TaskModel class for the task manager’s model.
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/c54d9ec7f73d971d5ccf32da9acfda7d5341d51c
+
+Task: Create a class for the viewer.
+https://cs3398s22oberon.atlassian.net/browse/OTM-19
+
+Jacob created a class for the task manager’s viewer.
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/f904e77bc860061775226139357a7f41372d683e
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/b69736ebebaba80199c1bdec04b019a50bd5f1f2
+
+
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
