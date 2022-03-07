@@ -149,6 +149,18 @@ https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/TaskC
 
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/af67c10e6698ec7c5dda3293908a7b6ee19b283c
 
+Task: Discuss what methods the TaskController class will need to communicate with the TaskModel and Task Viewer classes
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-37?atlOrigin=eyJpIjoiOWY0NTE1NjE1YjgyNGRiNDhkNTJiMTY0ZjU4NDEyMTAiLCJwIjoiaiJ9
+
+Discussed with group members individually as they worked to cordinate communication between the view and the model classes
+
+(WARMING: THIS IS A RICH TEXT FILE, IT MUST BE OPENED IN MICROSOFT WORD)
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/Reports/Report%20on%20Controler%20class%20methods%20for%20GUI%20GCS37.rtf
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/9b83440955efc948d9db0b3682d81437c9ef9d90
+
 
 ***Justin Jimenez***
 
