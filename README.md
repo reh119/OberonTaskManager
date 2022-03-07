@@ -283,6 +283,16 @@ Jacob created a class for the task manager’s viewer.
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/f904e77bc860061775226139357a7f41372d683e
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/b69736ebebaba80199c1bdec04b019a50bd5f1f2
 
+***Oscar Ramirez***
+Task: Create a Task Interface.
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-9
+
+Oscar created a Task Interface file to be used by the class that creates the tasks in the task manager.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/TaskInterface.java
+
+
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
