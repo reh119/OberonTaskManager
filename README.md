@@ -279,6 +279,8 @@ To do:
 For Sprint 2 I will begin my work by first fixing all existing bugs, then beginning work on refactoring parts of the code
 relating to solid principle violations.
 
+**Justin Jimenez**
+For Sprint 2 I would like to add more features to our current program, possibly edit an existing tasks or adding more details to the task. 
 
 ***To be added***
 
