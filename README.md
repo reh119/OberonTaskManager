@@ -223,23 +223,37 @@ https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/909a42f2c2f8
 
 ***Rafael Hernandez***
 Task : Create basic GUI layout for a task managing app. 
+
 https://cs3398s22oberon.atlassian.net/browse/OTM-26
 
-Rafael worked on a simple working gui layout that would be added upon as the sprint continues and features are added.
+Rafael worked on a simple working gui layout that would be added upon as the sprint continues and features are added. The gui was made as a starting place for the 
+gui that would work with the task manager and would be built upon. 
+
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/a7fe0e15390b75d09d96e785bcfdd69ae6385667
+
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/ec5170414fbd150bcc3adba13495260f1454decf
 
-Task : Add a button for adding, removing, and display the tasks being added to the GUI.
+
+
+Task : Add a button for adding, removing, and display the tasks being added to the GUI. 
+
 https://cs3398s22oberon.atlassian.net/browse/OTM-27
 
 Rafael worked on adding a "add task " remove task" button that was visible on the gui. 
+These buttons would be the basic functionality of the task manager for this sprint.
+
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/bad89596534245674f7f0c73625198e11b2482f7
 
-Task: Create classes that take user input from the GUI on command.
+
+
+Task: Create classes that take user input from the GUI on command. 
 
 https://cs3398s22oberon.atlassian.net/browse/OTM-23
 
 Rafael worked on adding functionality to the "add task" button and made sure tasks would display when being added using the Controller. 
+Worked on being able to take take user input and add a task
+as well as being able to display the task that was added to a task area. 
+
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/7a616ba1419939ebe762aa14ca9547615e098016
 
 
@@ -310,6 +324,9 @@ relating to solid principle violations.
 **Justin Jimenez**
 For Sprint 2 I would like to add more features to our current program, possibly edit an existing tasks or adding more details to the task. 
 
+**Rafael Hernandez**
+For sprint two I want to work on the overall design of the gui. Things like better button placement, added fucntionality to buttons, and making
+sure everything work the way its supposed to. 
 ***To be added***
 
 ## Acknowledgements
