@@ -274,8 +274,10 @@ Room for improvement:
 - Improvement to be done for Sprint 2
 
 To do:
-- Feature to be added 1
-- Feature to be added 2
+***Grant Smith***
+
+For Sprint 2 I will begin my work by first fixing all existing bugs, then beginning work on refactoring parts of the code
+relating to solid principle violations.
 
 
 ***To be added***
