@@ -66,6 +66,54 @@ https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/Contr
 
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/33b7bcf3bb2af33b5cae6061e39989b3240d24e8
 
+***Justin Jimenez***
+
+Task: Create a basic task class.
+
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2/backlog?assignee=61ef4266c3cb7c007215c870&selectedIssue=OTM-8
+
+Justin worked on the task service file, this holds our basic task methods to add or remove a task.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/TaskService.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/909a42f2c2f89397147f1e6c7d967c966a38de2b
+
+
+Task: Create a method that adds tasks to a list.
+
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2/backlog?assignee=61ef4266c3cb7c007215c870&selectedIssue=OTM-13
+
+Justin created a method to be able to add tasks to our task list.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/TaskService.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/909a42f2c2f89397147f1e6c7d967c966a38de2b
+
+
+
+Task: Create a method that removes tasks from a list.
+
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2/backlog?assignee=61ef4266c3cb7c007215c870&selectedIssue=OTM-15
+
+Justin worked on creating a method that would remove a task from our task list.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/TaskService.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/2b3de0ace5164b80cc620478befaf2ff1b9684a0
+
+
+
+Task: Create getters and setters for a basic task class.
+
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2/backlog?assignee=61ef4266c3cb7c007215c870&selectedIssue=OTM-12
+
+Justin created getters and setters for our task in order to set and retrieve variables information.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/BasicTask.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/909a42f2c2f89397147f1e6c7d967c966a38de2b
+
+
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
