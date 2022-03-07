@@ -56,7 +56,7 @@ Image Description: A moon with a checkmark over it. This was voted on by the tea
 
 Task: Create an extendable controller class.
 
-https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2/backlog?assignee=61ef3089875fc1007027b7b6&selectedIssue=OTM-20
+https://cs3398s22oberon.atlassian.net/browse/OTM-20?atlOrigin=eyJpIjoiM2IxYTNiYmNkMjA5NGI2NjllMmZmYjFlZTVlMGUyNzAiLCJwIjoiaiJ9
 
 Grant worked on the Controller file, Controller is an extendable class made for all controllers used in the MVC. 
 In this case its used in the first version of TaskController, and by the model class as a settable controller, 
@@ -65,6 +65,90 @@ so extended classes like taskcontroller can be set freely without much modificat
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/Controller.java
 
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/33b7bcf3bb2af33b5cae6061e39989b3240d24e8
+
+Task: Create an Extendable model class
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-11?atlOrigin=eyJpIjoiOTExY2I3ZDAyYzNjNGFkNmIzNmUxZWZkMGQyMmRjZTMiLCJwIjoiaiJ9
+
+Grant worked on the Model file, Model is an extendable class made to be extended by all potential model classes used in the MVC.
+Its also used as a settable attribute in the controller class to ensure that models can be switched out at will if so desired.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/Model.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/33b7bcf3bb2af33b5cae6061e39989b3240d24e8
+
+Task: Create an extendable viewer class
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-18?atlOrigin=eyJpIjoiNzcxNjdiNzM0MzhlNDNkMjhlOTY2NDRhMmVmZjk0MDciLCJwIjoiaiJ9
+
+Grant worked on the view file, view is an extendable class made to be extended by all potential view classes in the MVC.
+It is also used as a settable attribute in controller as to allow for views to be swaped out at will,
+E.G adding a new GUI for the view.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/View.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/33b7bcf3bb2af33b5cae6061e39989b3240d24e8
+
+Task: Create a Taskmanager Creator
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-36?atlOrigin=eyJpIjoiMDVlYmFjZmY4NzA4NDIzMWJkMTY0ODIxMDMxYjFlNzgiLCJwIjoiaiJ9
+
+Grant created a taskmanager creator class made with the intention of it being used to synchronize and combind the desired
+mode, view, and controller classes as to create a proper GUI. this is done through a host of setters within these extendable
+classes.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/TaskManagerCreator.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/983eb4c0e9ee027429ba9f3d945313e5ad3acc3a
+
+Task: Create a Taskmanager Controller class
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-21?atlOrigin=eyJpIjoiMDc1ODlkZDI2NGU2NDdhZjhjMDdkMDE2OTZlZTlkZDUiLCJwIjoiaiJ9
+
+Grant Created a TaskController class which extends controller. The purpose of this class is to contain the ways in which
+The model communicates with the viewer, and how the viewer communicates with the model. The commit posted with this
+If the last meaningful commit made, but also the commit where it was created.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/TaskController.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/a8567b4211f8f0c7ff6aa49f8e104e75adaf9141
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/af67c10e6698ec7c5dda3293908a7b6ee19b283c
+
+Task: Add functionality to TaskController to support remove task button
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-40?atlOrigin=eyJpIjoiY2Y1ZDhlOWRlZTFkNGMyODk0YTFjOTUxMjA3NzZhMjEiLCJwIjoiaiJ9
+
+Grant added the functionality for the TaskManager class to be able to call the model class and remove a task based on the TaskViewer's
+current selected task.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/TaskController.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/5eb31a0ac519f846f3aa8c44b5ea1a68b4b7acbb
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/af67c10e6698ec7c5dda3293908a7b6ee19b283c
+
+Task: add a viewtask button to the GUI
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-39?atlOrigin=eyJpIjoiMzRhNmZhMzU3MWViNDNjZDk5NTc0NGNkYmY5NWEyNjAiLCJwIjoiaiJ9
+
+Added a viewtask button to the file OberonGUI that will cycle to the next available task within the TaskModel's TaskService object
+Functionality was also included in this task and I added that too.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/OberonGUI.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/7eb0a330d68402532ddfdae9e8e2021a59abca0e
+
+Task: BUG: Fix remove when TaskCounter is at 0
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-42?atlOrigin=eyJpIjoiNjRmOWY1YTBlZWE5NGI4ZTlhOGM5NjU3NGEwZmVlOGMiLCJwIjoiaiJ9
+
+Fixed a bug where remove would remove the wrong data when Taskcounter was at 0 in class TaskController.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/TaskController.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/af67c10e6698ec7c5dda3293908a7b6ee19b283c
+
 
 ***Justin Jimenez***
 
