@@ -91,16 +91,18 @@ Provide various use cases and code examples here.
 Project is: _in progress_ 
 
 
-## Room for Improvement
+## Room for Improvement For Sprint 2
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
 Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
+- Improvement to be done for Sprint 2
+- Improvement to be done for Sprint 2
 
 To do:
 - Feature to be added 1
 - Feature to be added 2
+
+
 ***To be added***
 
 ## Acknowledgements
