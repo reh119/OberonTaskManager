@@ -51,7 +51,22 @@ Image Description: A moon with a checkmark over it. This was voted on by the tea
 	-Corresponding User Story:
 		Oscar's 1st User Story
 	
-	
+## 1st Sprint Contributions
+***Grant Smith:***
+
+Task: Create an extendable controller class.
+
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2/backlog?assignee=61ef3089875fc1007027b7b6&selectedIssue=OTM-20
+
+Grant worked on the Controller file, Controller is an extendable class made for all controllers used in the MVC. 
+In this case its used in the first version of TaskController, and by the model class as a settable controller, 
+so extended classes like taskcontroller can be set freely without much modification.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/Controller.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/33b7bcf3bb2af33b5cae6061e39989b3240d24e8
+
+
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
