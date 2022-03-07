@@ -113,7 +113,26 @@ https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/Basic
 
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/909a42f2c2f89397147f1e6c7d967c966a38de2b
 
+***Rafael Hernandez***
+Task : Create basic GUI layout for a task managing app. 
+https://cs3398s22oberon.atlassian.net/browse/OTM-26
 
+Rafael worked on a simple working gui layout that would be added upon as the sprint continues and features are added.
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/a7fe0e15390b75d09d96e785bcfdd69ae6385667
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/ec5170414fbd150bcc3adba13495260f1454decf
+
+Task : Add a button for adding, removing, and display the tasks being added to the GUI.
+https://cs3398s22oberon.atlassian.net/browse/OTM-27
+
+Rafael worked on adding a "add task " remove task" button that was visible on the gui. 
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/bad89596534245674f7f0c73625198e11b2482f7
+
+Task: Create classes that take user input from the GUI on command.
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-23
+
+Rafael worked on adding functionality to the "add task" button and made sure tasks would display when being added using the Controller. 
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/7a616ba1419939ebe762aa14ca9547615e098016
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
