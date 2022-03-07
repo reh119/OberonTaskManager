@@ -5,10 +5,10 @@ public interface TaskInterface {
     //Note: Should private declarations be here as well, ask team members.
     String getTitle();
     LocalDate getDate();
-    UUID getTaskID();
-    void setTitle();
-    void setDate();
-    void setTaskId();
+    UUID getTaskId();
+    void setTitle(String title);
+    void setDate(LocalDate date);
+    void setTaskId(UUID taskId);
     String toString();
 
 }
