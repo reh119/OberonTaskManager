@@ -161,6 +161,18 @@ https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/Reports/R
 
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/9b83440955efc948d9db0b3682d81437c9ef9d90
 
+Task: Create a UML diagram from the synchronization meeting
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-30?atlOrigin=eyJpIjoiZmY4NzY1OTczZTUzNGQ4NDgzZGIzNDc1ODFkZGIwMWMiLCJwIjoiaiJ9
+
+I created this UML diagram in an attempt to make it simpiler for group members to understand MVC and other design aspects
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/Images/OTM%20UML.png
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/635dfebc4b7c56fc6d5649bab7ead0408cba04a0 (OLD MD FORMAT)
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/111b38c237bf43ef03fd6d758590700081be75b9 (NEW PNG COMMIT)
+
 
 ***Justin Jimenez***
 
