@@ -288,11 +288,31 @@ Task: Create a Task Interface.
 
 https://cs3398s22oberon.atlassian.net/browse/OTM-9
 
-Oscar created a Task Interface file to be used by the class that creates the tasks in the task manager.
+Oscar created a Task Interface file to be used by the class that creates the tasks in the task manager. This allows for more abstraction between the files.
 
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/TaskInterface.java
 
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/31c035a94dc8ee6806351a51f539a7784b79b34b
 
+Task: Create a class that creates tasks. (Not used in demo, as it became redundant).
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-14
+
+Oscar created a class that is in charge of buildung the task with the task info once the user decides to add a task to the list.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/TaskCreate.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/6560b375bf8ab5cbb9d7e2881e374e355e139703
+
+Task: Create a Task Storage (Not used in Demo #1)
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-10
+
+Oscar created a storge class for all the tasks in the task manger to be held, which would be called upon in the future to display tasks.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/TaskStorage.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/6560b375bf8ab5cbb9d7e2881e374e355e139703
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
@@ -338,6 +358,9 @@ For Sprint 2 I would like to add more features to our current program, possibly 
 For sprint two I want to work on the overall design of the gui. Things like better button placement, added fucntionality to buttons, and making
 sure everything work the way its supposed to. 
 ***To be added***
+
+***Oscar Ramirez***
+For Sprint 2, I will be helping Rafael with GUI setup and focus on making test cases to better debug our program.
 
 ## Acknowledgements
 Give credit here.
