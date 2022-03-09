@@ -314,6 +314,16 @@ https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/TaskS
 
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/6560b375bf8ab5cbb9d7e2881e374e355e139703
 
+Task: Create a class that calls controller for user input (Not used in demo, as it became redundant during Sprint #1 but may be used in the future)
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-17
+
+Oscar created a class that calls the controller class for input by the user, with the intention of this being expanded on. Howver, while development continued in Sprint #1, this file became redundant but might be reworked and expanded upon in the future.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/userInput.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/6560b375bf8ab5cbb9d7e2881e374e355e139703
+
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
