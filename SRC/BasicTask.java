@@ -3,11 +3,16 @@ import java.util.UUID;
 
 
 public class BasicTask implements TaskInterface {
+	private TaskType type = TaskType.BASIC;
     private UUID taskId;
     private String title;
     private LocalDate date;
+    private int priority;
 
-
+    public TaskType getTaskType() {
+    	return type;
+    }
+    
     public String getTitle() {
         return title;
     }
@@ -31,11 +36,15 @@ public class BasicTask implements TaskInterface {
     public void setTaskId(UUID taskId) {
         this.taskId = taskId;
     }
-
-    @Override
-    public String toString() {
-        return "Task: " + title + " Date: " + date + " Task ID: " + taskId;
+    
+    public int getPriority() {
+    	return priority;
     }
+    
+    public void setPriority(int p) {
+    	priority = p;
+    }
+
 }
 
 

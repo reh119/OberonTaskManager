@@ -1,48 +1,51 @@
+import java.util.Vector;
 
 public class TaskController extends Controller {
 	
 	Model M;
 	View V;
-	int currentTaskCount = 0;
-	BasicTask currentTask;
+	TaskInterface selectedTask;
+	Vector<TaskInterface> visibleTasks;
 	
-	void addTask(String taskDescription)
+	//GUIVector should always be given in the order title, date, priority, and then additional
+	//Values according to task type
+	void addTask(TaskType type, Vector<String> GUIVector)
 	{
-		M.TaskService.addTask(taskDescription, "01/11/2022");
+		M.TaskService.addTask(M.TaskCreator.createTask(type, GUIVector));
 	}
 	
-	void nextTask()
+	//This should change selectedTask to be the current task at index i from visibleTasks
+	void selectTask(int i)
 	{
-		if ((currentTaskCount % M.TaskService.getTaskList().size()) == (M.TaskService.getTaskList().size() - 1))
-		{
-			currentTaskCount = 0;
-			currentTask = M.TaskService.getTaskList().get(currentTaskCount);
-		}
-		else if (M.TaskService.getTaskList().size() == 0)
-		{
-			currentTaskCount = 0;
-		}
-		else
-		{
-			currentTaskCount++;
-			currentTask = M.TaskService.getTaskList().get(currentTaskCount);
-		}
+		
 	}
 	
-	String getTaskTitle()
+	//This finds a list of tasks to move to the controller
+	//The input should be the enum of the task's attribute
+	//Which can be found in TaskAttributes, followed by
+	//A string of the actual query to search for.
+	//This should be done through the model, the controllers job
+	//Is to format the search to be correct for the model to search
+	//E.G changing a date string to the date format.
+	//These found tasks are put into the visibleTasks
+	void findTasks(TaskAttribute attribute, String searchQuery)
 	{
-		return currentTask.getTitle();
+		
 	}
+	
+	//This should remove the tasks from visibleTasks without destroying them, simply
+	//Making them not longer within the vector. this should be called whenever findTasks
+	//Is being called to ensure the vector is at no point cluttered with irrelevant
+	//Tasks for display.
+	void hideTasks()
+	{
+		
+	}
+	
 	
 	void removeTask()
 	{	
-		if (currentTaskCount != 0)
-		{
-			M.TaskService.removeTask(currentTask.getTaskId().toString());
-			currentTaskCount--;
-		}
-		else
-			currentTaskCount = 0;
+		M.TaskService.removeTask(selectedTask.getTaskId());
 	}
 	
 	public void setModel(Model Model)
