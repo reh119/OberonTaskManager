@@ -15,6 +15,10 @@ public class TaskCreator {
 		switch(type) {
 		case BASIC:		factory = new BasicFactory();
 						break;
+
+		case SCHOOL:    factory = new SchoolFactory();
+                		break;
+						
 		default:		factory = new BasicFactory();
 						break;
 		}
