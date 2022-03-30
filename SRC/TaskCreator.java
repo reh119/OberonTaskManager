@@ -18,6 +18,9 @@ public class TaskCreator {
 
 		case SCHOOL:    factory = new SchoolFactory();
                 		break;
+
+        case WORK:      factory = new WorkFactory();
+                		break;
 						
 		default:		factory = new BasicFactory();
 						break;
