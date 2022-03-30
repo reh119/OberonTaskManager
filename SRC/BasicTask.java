@@ -1,7 +1,8 @@
 import java.time.LocalDate;
 import java.util.UUID;
 
-public class BasicTask {
+
+public class BasicTask implements TaskInterface {
     private UUID taskId;
     private String title;
     private LocalDate date;

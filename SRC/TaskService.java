@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class TaskService {
-    private List<BasicTask> taskList = new ArrayList<>();
+    private List<TaskInterface> taskList = new ArrayList<>();
 
     public void addTask(String title, String date){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
@@ -20,7 +20,17 @@ public class TaskService {
         taskList.add(taskmodel);
     }
 
-    public List<BasicTask> getTaskList() {
+    public void removeTask(String id){
+        UUID uuid = UUID.fromString(id); //converting from string to UUID
+        for (TaskInterface task:taskList) {
+            if (task.getTaskId().compareTo(uuid) == 0){
+                taskList.remove(task);
+                break;
+            }
+        }
+    }
+
+    public List<TaskInterface> getTaskList() {
         return taskList;
     }
 }
