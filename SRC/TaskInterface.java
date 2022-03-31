@@ -6,9 +6,11 @@ public interface TaskInterface {
     String getTitle();
     LocalDate getDate();
     UUID getTaskId();
+    TaskType getTaskType();
+    int getPriority();
     void setTitle(String title);
     void setDate(LocalDate date);
     void setTaskId(UUID taskId);
-    String toString();
+    void setPriority(int priority);
 
 }

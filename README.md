@@ -284,6 +284,17 @@ https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/f904e77bc860
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/b69736ebebaba80199c1bdec04b019a50bd5f1f2
 
 ***Oscar Ramirez***
+
+Task: Team Synchronization Meetup
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-33
+
+We met up in a 3 hour long Zoom session to discuss how to design this project. At the end of the session, Grant was able to design a UML design for us to use based on what we talked about.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/demoBranch/Images/UML%20DIAGRAM.md
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/0ed4f92c73adc1a5f22085dc0ddb422248478dcf
+
 Task: Create a Task Interface.
 
 https://cs3398s22oberon.atlassian.net/browse/OTM-9
