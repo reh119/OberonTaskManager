@@ -4,7 +4,7 @@ public class TaskController extends Controller {
 	Model M;
 	View V;
 	int currentTaskCount = 0;
-	BasicTask currentTask;
+	TaskInterface currentTask;
 	
 	void addTask(String taskDescription)
 	{
