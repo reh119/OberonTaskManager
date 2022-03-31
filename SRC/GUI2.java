@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class GUI2 extends JFrame {
+public class GUI2 extends JFrame  {
 
 
     public String title;
