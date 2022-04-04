@@ -46,6 +46,19 @@ public class TaskController extends Controller {
 
     }
 
+    void sortTasks(TaskAttribute attribute) {
+        if (attribute.equals(TaskAttribute.ID)) {
+
+            visibleTasks = M.TaskService.sortBasedOnID();
+        } else if (attribute.equals(TaskAttribute.PRIORITY)) {
+            visibleTasks = M.TaskService.sortBasedOnPriority();
+        } else if (attribute.equals(TaskAttribute.TITLE)) {
+            visibleTasks = M.TaskService.sortBasedOnTitle();
+        } else if (attribute.equals(TaskAttribute.DATE)) {
+            visibleTasks = M.TaskService.sortBasedOnDate();
+        }
+    }
+
     //This should remove the tasks from visibleTasks without destroying them, simply
     //Making them not longer within the vector. this should be called whenever findTasks
     //Is being called to ensure the vector is at no point cluttered with irrelevant
