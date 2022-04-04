@@ -79,5 +79,9 @@ public class TaskController extends Controller {
     public void setView(View View) {
         V = View;
     }
-
+	public DayOfWeek getDay(TaskInterface iTask)
+	{
+		DayOfWeek day = iTask.getDate().getDayOfWeek();
+		return day;
+	}
 }
