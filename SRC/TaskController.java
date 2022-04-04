@@ -1,3 +1,4 @@
+import java.time.DayOfWeek;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -18,7 +19,9 @@ public class TaskController extends Controller {
 
     //This should change selectedTask to be the current task at index i from visibleTasks
     void selectTask(int i) {
-
+    	//getTask(selectedTask) dealing with task interface
+    	selectedTask = visibleTasks.get(i);
+    	// M.TaskService.selectTask(selectedTask.getTaskId());
     }
 
 
