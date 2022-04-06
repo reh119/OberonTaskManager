@@ -101,6 +101,6 @@ public class TaskController extends Controller {
 	
 	public Vector<Vector<String>> getGroupTaskStrings()
 	{
-		return taskParser.multiTaskToStringVector(visibleTasks);
+		return taskParser.muliTaskToStringVector(visibleTasks);
 	}
 }
