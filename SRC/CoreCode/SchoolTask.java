@@ -10,7 +10,7 @@ public class SchoolTask extends BasicTask{
     private double studyHours;
 
     //creating getters and setters for the school task variables
-    public TaskType getType() {
+    public TaskType getTaskType() {
         return type;
     }
 

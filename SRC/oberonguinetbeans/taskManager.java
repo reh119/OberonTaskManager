@@ -37,7 +37,7 @@ public class taskManager extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         taskTableView = new javax.swing.JTable();
-        javax.swing.JComboBox<String> sortBy = new javax.swing.JComboBox<>();
+        sortBy = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         searchType = new javax.swing.JComboBox<>();
         searchB = new javax.swing.JLabel();
@@ -91,7 +91,15 @@ public class taskManager extends javax.swing.JFrame {
         jScrollPane3.setViewportView(taskTableView);
 
         sortBy.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Title", "Date" }));
-
+        sortBy.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
+            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
+            }
+            public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {
+                sortByPopupMenuWillBecomeInvisible(evt);
+            }
+            public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
+            }
+        });
         jLabel7.setText("Sort Tasks By");
 
         searchType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Title", "Priority", "Date", "Type" }));
@@ -335,7 +343,17 @@ public class taskManager extends javax.swing.JFrame {
     						addTaskVec.add(schoolF.getStudyHours());
     						C.addTask(TaskType.SCHOOL, addTaskVec);
     						break;
-    	default: 	break;
+    	case "Work":		addTaskVec.add(workF.getProjectName());
+							addTaskVec.add(workF.getWorkingWith());
+							addTaskVec.add(workF.getHoursWorked());
+							C.addTask(TaskType.WORK, addTaskVec);
+							break;
+    	case "Social":		addTaskVec.add(socialF.getMeetingLocation());
+							addTaskVec.add(socialF.getOccasion());
+							addTaskVec.add(socialF.getAttendingHours());
+							C.addTask(TaskType.SOCIAL, addTaskVec);
+							break;
+    	default: 			break;
     	};
     }//GEN-LAST:event_addButtonActionPerformed
 
@@ -353,6 +371,21 @@ public class taskManager extends javax.swing.JFrame {
     	}
     	updateTaskTable(C.getGroupTaskStrings());
     }//GEN-LAST:event_searchButtonActionPerformed
+    
+    private void sortByPopupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt)
+    {
+    	int dropdownSelection = sortBy.getSelectedIndex();
+    	if (dropdownSelection == 0){ // ID
+            
+        }
+        if (dropdownSelection == 1){ // Title
+           C.sortTasks(TaskAttribute.TITLE);
+        }
+        if (dropdownSelection == 2){ // Date
+            C.sortTasks(TaskAttribute.DATE);
+        }
+        updateTaskTable(C.getGroupTaskStrings());
+    }
 
     private void deleteTaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteTaskActionPerformed
         C.selectTask(taskTableView.getSelectedRow());
@@ -383,12 +416,12 @@ public class taskManager extends javax.swing.JFrame {
             schoolF.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         }
         if (test == 1){ // work frame 
-            workFrame workF = new workFrame (); 
+            workF = new workFrame (); 
             workF.setVisible(true);
             workF.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         }
         if (test == 2){ // Social 
-            socialFrame socialF = new socialFrame (); // school frame 
+            socialF = new socialFrame (); // school frame 
             socialF.setVisible(true);
             socialF.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         }
@@ -418,6 +451,9 @@ public class taskManager extends javax.swing.JFrame {
     private TaskController C;
     private javax.swing.JTable taskTableView;
     private javax.swing.JTextField searchTask;
-    schoolFrame schoolF;
+    private javax.swing.JComboBox<String> sortBy;
+    private schoolFrame schoolF;
+    private workFrame workF;
+    socialFrame socialF;
     // End of variables declaration//GEN-END:variables
 }

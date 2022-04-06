@@ -10,8 +10,8 @@ public class SocialTask extends BasicTask{
     private double attendingHours;
 
     //creating getters and setters for the social task variables
-    public TaskType getType() {
-        return type;
+    public TaskType getTaskType() {
+        return TaskType.SOCIAL;
     }
 
     public void setType(TaskType type) {

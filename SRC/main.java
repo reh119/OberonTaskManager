@@ -15,14 +15,30 @@ public class main {
          viewer.setController(C);
          C.setView(viewer);
          viewer.GUIStart();
-         String s;
+         for(boolean j = false; j == false;)
+         {
+         int selectedTask;
+         int selection;
+         System.out.print("SELECT TASK INDEX TO VIEW" + "\n");
          Scanner obj = new Scanner(System.in);
-         s = obj.nextLine();
-         C.findTasks(TaskAttribute.TITLE, "Mario");
-         C.selectTask(0);
+         selectedTask = Integer.parseInt(obj.nextLine());
+         C.selectTask(selectedTask);
          Vector<String> testVecString = C.getCurrentTaskStrings();
-         System.out.print(testVecString.get(0));
-         System.out.print(testVecString.get(1));
-         System.out.print(testVecString.get(3));
+         for(int i = 0; i < testVecString.size(); i++)
+         {
+	         System.out.print(testVecString.get(i) + "\n");
+         }
+         System.out.print("ADD EXTRA GUI?" + "\n" + "YES: 1" + "\n" + "NO: 2" + "\n");
+         Scanner obj2 = new Scanner(System.in);
+         selection = Integer.parseInt(obj2.nextLine());
+         if (selection == 1)
+         {
+        	 GUI1TaskView viewer2 = new GUI1TaskView();
+        	 viewer2.setController(C);
+        	 viewer2.resetForGUIChange();
+        	 C.setView(viewer2);
+        	 viewer2.GUIStart();
+         }         
+         }
     }
 }

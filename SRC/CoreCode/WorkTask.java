@@ -7,7 +7,7 @@ public class WorkTask extends BasicTask{
     private String meetingWith;
     private double hoursWorking;
 
-    public TaskType getType() {
+    public TaskType getTaskType() {
         return type;
     }
 

@@ -10,7 +10,7 @@ public class TaskController extends Controller {
 
     Model M;
     View V;
-    TaskInterface selectedTask;
+    public TaskInterface selectedTask;
     Vector<TaskInterface> visibleTasks;
     // Used to parse tasks into strings.
     TaskParser taskParser;
@@ -59,7 +59,7 @@ public class TaskController extends Controller {
     
     
     //sorts taks in visibile tasks
-    void sortTasks(TaskAttribute attribute) {
+    public void sortTasks(TaskAttribute attribute) {
         if (attribute.equals(TaskAttribute.ID)) {
             visibleTasks = M.TaskService.sortBasedOnID(visibleTasks);
         } else if (attribute.equals(TaskAttribute.PRIORITY)) {
