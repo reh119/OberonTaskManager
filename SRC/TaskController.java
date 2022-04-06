@@ -10,6 +10,13 @@ public class TaskController extends Controller {
     View V;
     TaskInterface selectedTask;
     List<TaskInterface> visibleTasks;
+    // Used to parse tasks into strings.
+    TaskParser taskParser;
+    
+    public TaskController()
+    {
+    	taskParser = new TaskParser();
+    }
 
     //GUIVector should always be given in the order title, date, priority, and then additional
     //Values according to task type
