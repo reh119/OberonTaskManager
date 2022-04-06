@@ -23,7 +23,7 @@ public class TaskController extends Controller {
     void addTask(TaskType type, Vector<String> GUIVector) {
         M.TaskService.addTask(M.TaskCreator.createTask(type, GUIVector));
     }
-
+    
     //This should change selectedTask to be the current task at index i from visibleTasks
     void selectTask(int i) {
     	selectedTask = visibleTasks.get(i);
@@ -91,5 +91,15 @@ public class TaskController extends Controller {
 	{
 		DayOfWeek day = iTask.getDate().getDayOfWeek();
 		return day;
+	}
+	
+	public Vector<String> getCurrentTaskStrings()
+	{
+		return taskParser.singleTaskToStringVector(selectedTask);
+	}
+	
+	public Vector<Vector<String>> getGroupTaskStrings()
+	{
+		return taskParser.multiTaskToStringVector(visibleTasks);
 	}
 }
