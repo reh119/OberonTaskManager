@@ -11,4 +11,5 @@ public class GUI2TaskView extends View {
 	{
 		C.resetTasks();
 	}
+	//comment
 }
