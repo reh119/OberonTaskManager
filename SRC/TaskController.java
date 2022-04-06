@@ -53,7 +53,9 @@ public class TaskController extends Controller {
         }
 
     }
-
+    
+    
+    //sorts taks in visibile tasks
     void sortTasks(TaskAttribute attribute) {
         if (attribute.equals(TaskAttribute.ID)) {
             visibleTasks = M.TaskService.sortBasedOnID(visibleTasks);
