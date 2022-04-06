@@ -1,3 +1,5 @@
+package CoreCode;
+
 
 public class TaskStringifierCreator {
 	private TaskType currentType;

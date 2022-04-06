@@ -1,3 +1,5 @@
+package CoreCode;
+
 import java.util.Vector;
 
 public interface ITaskStringifier {

@@ -1,3 +1,5 @@
+package CoreCode;
+
 //creating SchoolTask that will implement Basictask to include the basic task variables
 public class SchoolTask extends BasicTask{
     private TaskType type = TaskType.SCHOOL;

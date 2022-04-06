@@ -1,3 +1,5 @@
+package CoreCode;
+
 
 public class View {
 	Controller C;

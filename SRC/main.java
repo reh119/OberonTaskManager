@@ -1,45 +1,28 @@
+import java.util.Scanner;
 import java.util.Vector;
-
 import oberonguinetbeans.taskManager;
+import CoreCode.*;
+
 
 public class main {
     public static void main(String[] args) {
-
+    	
          TaskModel modelM = new TaskModel();
          TaskController C = new TaskController();
          modelM.setController(C);
          C.setModel(modelM);
-         TaskView viewer = new TaskView();
+         GUI1TaskView viewer = new GUI1TaskView();
          viewer.setController(C);
          C.setView(viewer);
-         Vector<String> testVec = new Vector<String>();
-         testVec.add("Mario");
-         testVec.add("01/11/2022");
-         testVec.add("5");
-         C.addTask(TaskType.BASIC, testVec);
-         testVec.removeAllElements();
-         testVec.add("Luigi");
-         testVec.add("02/11/2022");
-         testVec.add("3");
-         C.addTask(TaskType.BASIC, testVec);
-         testVec.removeAllElements();
-         testVec.add("Wario");
-         testVec.add("03/11/2022");
-         testVec.add("1");
-         C.addTask(TaskType.BASIC, testVec);
-         testVec.removeAllElements();
-         BasicTask BT = new BasicTask();
-         BT = (BasicTask) modelM.TaskService.taskList.get(0);
-         System.out.print(BT.getTitle());
-         C.selectedTask = modelM.TaskService.taskList.get(0);
-         C.removeTask();
-         BT = (BasicTask) modelM.TaskService.taskList.get(0);
-         System.out.print(BT.getTitle());
-         C.selectedTask = modelM.TaskService.taskList.get(0);
-         C.removeTask();
-         BT = (BasicTask) modelM.TaskService.taskList.get(0);
-         System.out.print(BT.getTitle());
-         C.selectedTask = modelM.TaskService.taskList.get(0);
-         C.removeTask();
+         viewer.GUIStart();
+         String s;
+         Scanner obj = new Scanner(System.in);
+         s = obj.nextLine();
+         C.findTasks(TaskAttribute.TITLE, "Mario");
+         C.selectTask(0);
+         Vector<String> testVecString = C.getCurrentTaskStrings();
+         System.out.print(testVecString.get(0));
+         System.out.print(testVecString.get(1));
+         System.out.print(testVecString.get(3));
     }
 }

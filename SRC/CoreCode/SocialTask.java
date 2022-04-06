@@ -1,3 +1,5 @@
+package CoreCode;
+
 //creating SocialTask that will implement Basictask to include the basic task variables
 public class SocialTask extends BasicTask{
     private TaskType type = TaskType.SOCIAL;

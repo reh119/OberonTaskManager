@@ -1,3 +1,5 @@
+package CoreCode;
+
 import java.time.DayOfWeek;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,16 +18,17 @@ public class TaskController extends Controller {
     public TaskController()
     {
     	taskParser = new TaskParser();
+    	visibleTasks = new Vector<TaskInterface>();
     }
 
     //GUIVector should always be given in the order title, date, priority, and then additional
     //Values according to task type
-    void addTask(TaskType type, Vector<String> GUIVector) {
+    public void addTask(TaskType type, Vector<String> GUIVector) {
         M.TaskService.addTask(M.TaskCreator.createTask(type, GUIVector));
     }
     
     //This should change selectedTask to be the current task at index i from visibleTasks
-    void selectTask(int i) {
+    public void selectTask(int i) {
     	selectedTask = visibleTasks.get(i);
     }
 
@@ -38,7 +41,7 @@ public class TaskController extends Controller {
     //Is to format the search to be correct for the model to search
     //E.G changing a date string to the date format.
     //These found tasks are put into the visibleTasks
-    void findTasks(TaskAttribute attribute, String searchQuery) {
+    public void findTasks(TaskAttribute attribute, String searchQuery) {
         if (attribute.equals(TaskAttribute.ID)) {
 
             TaskInterface taskinterface = M.TaskService.searchTaskBasedOnID(UUID.fromString(searchQuery));
@@ -66,6 +69,7 @@ public class TaskController extends Controller {
         } else if (attribute.equals(TaskAttribute.DATE)) {
             visibleTasks = M.TaskService.sortBasedOnDate(visibleTasks);
         }
+        
     }
 
     //This should remove the tasks from visibleTasks without destroying them, simply
@@ -77,7 +81,7 @@ public class TaskController extends Controller {
     }
 
 
-    void removeTask() {
+    public void removeTask() {
         M.TaskService.removeTask(selectedTask.getTaskId());
     }
 
@@ -101,7 +105,7 @@ public class TaskController extends Controller {
 	
 	public Vector<Vector<String>> getGroupTaskStrings()
 	{
-		return taskParser.muliTaskToStringVector(visibleTasks);
+		return taskParser.multiTaskToStringVector(visibleTasks);
 	}
 	
 	public void resetTasks()

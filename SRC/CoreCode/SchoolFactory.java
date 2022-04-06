@@ -1,3 +1,5 @@
+package CoreCode;
+
 import java.util.Vector;
 
 public class SchoolFactory implements ITaskFactory{

@@ -1,3 +1,5 @@
+package CoreCode;
+
 public class WorkTask extends BasicTask{
     private TaskType type = TaskType.WORK;
 
