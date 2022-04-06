@@ -17,7 +17,7 @@ public class TaskParser {
 	}
 	
 	// Call this method to put a vector of tasks into String vector form
-	public Vector<Vector<String>> muliTaskToStringVector(Vector<TaskInterface> taskVec)
+	public Vector<Vector<String>> multiTaskToStringVector(Vector<TaskInterface> taskVec)
 	{
 		Vector<Vector<String>> doubleStringVec = new Vector<Vector<String>>();
 		int size = taskVec.size();
