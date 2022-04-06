@@ -5,4 +5,9 @@ public class View {
 	{
 		C = Controller;
 	}
+	
+	public void resetForGUIChange()
+	{
+		
+	}
 }

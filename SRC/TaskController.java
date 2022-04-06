@@ -103,4 +103,10 @@ public class TaskController extends Controller {
 	{
 		return taskParser.muliTaskToStringVector(visibleTasks);
 	}
+	
+	public void resetTasks()
+	{
+		selectedTask = null;
+		visibleTasks.clear();
+	}
 }
