@@ -4,10 +4,10 @@ import java.util.*;
 
 public class TaskService {
 	
-    public List<TaskInterface> taskList;
+    public Vector<TaskInterface> taskList;
     
     TaskService() {
-    	 taskList = new ArrayList<>();
+    	 taskList = new Vector<TaskInterface>();
     }
 
     public void addTask(TaskInterface task){
@@ -32,8 +32,8 @@ public class TaskService {
         return null;
     }
 
-    public List<TaskInterface> searchTaskBasedOnPriority(int priority){
-        List<TaskInterface> list = new ArrayList<>();
+    public Vector<TaskInterface> searchTaskBasedOnPriority(int priority){
+    	Vector<TaskInterface> list = new Vector<TaskInterface>();
         for (TaskInterface task:taskList) {
             if (task.getPriority() == priority){
                 list.add(task);
@@ -42,8 +42,8 @@ public class TaskService {
         return list;
     }
 
-    public List<TaskInterface> searchTaskBasedOnTitle(String title){
-        List<TaskInterface> list = new ArrayList<>();
+    public Vector<TaskInterface> searchTaskBasedOnTitle(String title){
+    	Vector<TaskInterface> list = new Vector<TaskInterface>();
         for (TaskInterface task:taskList) {
             if (task.getTitle().equals(title)){
                 list.add(task);
@@ -52,10 +52,10 @@ public class TaskService {
         return list;
     }
 
-    public List<TaskInterface> searchTaskBasedOnDate(String date){
+    public Vector<TaskInterface> searchTaskBasedOnDate(String date){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         LocalDate localDate = LocalDate.parse(date, formatter);
-        List<TaskInterface> list = new ArrayList<>();
+        Vector<TaskInterface> list = new Vector<TaskInterface>();
         for (TaskInterface task:taskList) {
             if (task.getDate().isEqual(localDate)){
                 list.add(task);
@@ -64,31 +64,31 @@ public class TaskService {
         return list;
     }
 
-    public List<TaskInterface> sortBasedOnPriority(){
+    public Vector<TaskInterface> sortBasedOnPriority(Vector<TaskInterface> taskList){
         Comparator<TaskInterface> taskComparator = Comparator.comparingInt(TaskInterface::getPriority);
         taskList.sort(taskComparator);
         return taskList;
     }
 
-    public List<TaskInterface> sortBasedOnTitle(){
+    public Vector<TaskInterface> sortBasedOnTitle(Vector<TaskInterface> taskList){
         Comparator<TaskInterface> taskComparator = Comparator.comparing(TaskInterface::getTitle);
         taskList.sort(taskComparator);
         return taskList;
     }
 
-    public List<TaskInterface> sortBasedOnID(){
+    public Vector<TaskInterface> sortBasedOnID(Vector<TaskInterface> taskList){
         Comparator<TaskInterface> taskComparator = Comparator.comparing(TaskInterface::getTaskId);
         taskList.sort(taskComparator);
         return taskList;
     }
 
-    public List<TaskInterface> sortBasedOnDate(){
+    public Vector<TaskInterface> sortBasedOnDate(Vector<TaskInterface> taskList){
         Comparator<TaskInterface> taskComparator = Comparator.comparing(TaskInterface::getDate);
         taskList.sort(taskComparator);
         return taskList;
     }
 
-    public List<TaskInterface> getTaskList() {
+    public Vector<TaskInterface> getTaskList() {
         return taskList;
     }
 }

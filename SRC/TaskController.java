@@ -9,7 +9,7 @@ public class TaskController extends Controller {
     Model M;
     View V;
     TaskInterface selectedTask;
-    List<TaskInterface> visibleTasks;
+    Vector<TaskInterface> visibleTasks;
     // Used to parse tasks into strings.
     TaskParser taskParser;
     
@@ -42,7 +42,7 @@ public class TaskController extends Controller {
         if (attribute.equals(TaskAttribute.ID)) {
 
             TaskInterface taskinterface = M.TaskService.searchTaskBasedOnID(UUID.fromString(searchQuery));
-            visibleTasks = new ArrayList<>();
+            visibleTasks = new Vector<TaskInterface>();
             visibleTasks.add(taskinterface);
         } else if (attribute.equals(TaskAttribute.PRIORITY)) {
             visibleTasks = M.TaskService.searchTaskBasedOnPriority(Integer.parseInt(searchQuery));
@@ -53,17 +53,18 @@ public class TaskController extends Controller {
         }
 
     }
-
+    
+    
+    //sorts taks in visibile tasks
     void sortTasks(TaskAttribute attribute) {
         if (attribute.equals(TaskAttribute.ID)) {
-
-            visibleTasks = M.TaskService.sortBasedOnID();
+            visibleTasks = M.TaskService.sortBasedOnID(visibleTasks);
         } else if (attribute.equals(TaskAttribute.PRIORITY)) {
-            visibleTasks = M.TaskService.sortBasedOnPriority();
+            visibleTasks = M.TaskService.sortBasedOnPriority(visibleTasks);
         } else if (attribute.equals(TaskAttribute.TITLE)) {
-            visibleTasks = M.TaskService.sortBasedOnTitle();
+            visibleTasks = M.TaskService.sortBasedOnTitle(visibleTasks);
         } else if (attribute.equals(TaskAttribute.DATE)) {
-            visibleTasks = M.TaskService.sortBasedOnDate();
+            visibleTasks = M.TaskService.sortBasedOnDate(visibleTasks);
         }
     }
 
@@ -100,6 +101,12 @@ public class TaskController extends Controller {
 	
 	public Vector<Vector<String>> getGroupTaskStrings()
 	{
-		return taskParser.multiTaskToStringVector(visibleTasks);
+		return taskParser.muliTaskToStringVector(visibleTasks);
+	}
+	
+	public void resetTasks()
+	{
+		selectedTask = null;
+		visibleTasks.clear();
 	}
 }
