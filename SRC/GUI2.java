@@ -477,7 +477,7 @@ public class GUI2 extends javax.swing.JFrame {
         jTextField9.setText("");
         jTextField10.setText("");
         jTextField11.setText("");
-        jTextField12.setText("");
+        jTextField12.setText(" ");
         
     }//GEN-LAST:event_jButton4ActionPerformed
 
