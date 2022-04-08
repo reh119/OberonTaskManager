@@ -493,6 +493,63 @@ https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/9290645ab4f0
 
 ***Oscar Ramirez***
 
+Task: Practice building a basic GUI on Netbeans using a tutorial
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-75
+
+Oscar followed an online tutorial to get used to using the Netbeans IDE.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/Reports/NumberAdditionUI%20copy.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/54495326ec8c29b550eb2c54d7850a3efaae9cdf
+
+https://netbeans.apache.org/kb/docs/java/gui-functionality.html (Tutorial Followed)
+
+Task: Design a standard (2nd) Graphical User Interface's framework.
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-73
+
+Oscar began setting up the basic framework for our Task Manager's second GUI.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/GUI2.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/322b13d0f16f21fd8404dd88cdb91e8e5b3f1661
+
+Task: Add (to 2nd GUI) a Clear, Display, and Exit button to allow the user to clear the GUI fields, display tasks, and exit respectively.
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-74
+
+Oscar added a clear, display, and exit button to the second GUI.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/GUI2.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/322b13d0f16f21fd8404dd88cdb91e8e5b3f1661
+
+Task: Add a button or tab that allows user to select what typ of task they will be adding.
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-76
+
+Oscar added a way for users to select a task type on the second GUI.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/GUI2.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/322b13d0f16f21fd8404dd88cdb91e8e5b3f1661
+
+Task: Begin implementing extra panel to the GUI that will allow the users to fill in the extra text fields that are added when a task type (school, work, etc) is chosen.
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-77
+
+Oscar added extra panels to the second GUI for text fields that correspond to the different task types.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/GUI2.java
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/322b13d0f16f21fd8404dd88cdb91e8e5b3f1661
+
+
+
+
+
+
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
@@ -557,8 +614,9 @@ that is uses the full functionallity of what has been created in the back-end.
 
 For sprint 3, I will work on adding the last new feature to the GUI. which is a calender view. I will also focus on having the actual buttons work in the way theyre suppossed to,
  and add tests to make sure it doesnt crash. I will also work on input validation for the GUI. 
-
 ***Oscar Ramirez***
+For Sprint 3, I will work on fully connecting the Second GUI to the backend code will also adding new elements to the design (sort button,
+ extra windows, etc.). I also want to customize the design to make it more visually pleasing and accesible.
 
 ***Jacob Jordan***
 
