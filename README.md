@@ -403,6 +403,25 @@ https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/a396f96a5c47
 
 
 ***Justin Jimenez***
+Task: Create a method that searches through an array and sorts all tasks of a certain type, date, priority.
+
+
+
+Task: Create a method that searches through array and finds all tasks of a certain type, date, priority.
+
+
+
+Task: Create a SocialTask Class that implements ITask.
+
+
+
+Task: Create a WorkTask Class that implements ITask.
+
+
+
+Task: Create a SchoolTask Class that implements ITask.
+
+
 
 
 ***Rafael Hernandez***
