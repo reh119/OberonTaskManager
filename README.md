@@ -335,6 +335,21 @@ https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/userI
 
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/6560b375bf8ab5cbb9d7e2881e374e355e139703
 
+## 2nd Sprint Contributions
+***Grant Smith:***
+
+
+***Justin Jimenez***
+
+
+***Rafael Hernandez***
+
+
+***Jacob Jordan***
+
+
+***Oscar Ramirez***
+
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
