@@ -490,6 +490,32 @@ https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/9290645ab4f0
 
 ***Jacob Jordan***
 
+Task: Create a method to return the day of a week by using a Java library when passed a task.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/d5baca662de143c7f108899bce28a506686835a3
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/0cb6429f9e5a596a64aa3edfab32f23963db1ca2
+
+Jacob made a method that returns a task's day of the week when passed a task object.
+
+Task: Add implementation to the selectTask method in TaskController.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/75a3870334545fbefc2fc33d04e926f9d4bacdb3
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/82ca466633620356554cf329c4fe3e64afe2dda5
+
+Jacob implemented a method for setting a selected task from visible tasks in the Task Controller.
+
+Task: Add Support for returning formatted string vectors from the controller.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/234d785eef0561184f2f45f2eb040d1e87070f6e
+
+Jacob implemented a method for returnning formatted strings for visible tasks and selected tasks in the Task Controller.
+
+Task: Add methods to the project to start switching GUI during runtime.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/0866807290112f735a0c9f8e935d6a71e0b75bd7
+
+Jacob created the start of severla methods that resest the tasks and overall allow for the GUI to be hanged out during runtime.
+
 
 ***Oscar Ramirez***
 
@@ -620,6 +646,8 @@ For Sprint 3, I will work on fully connecting the Second GUI to the backend code
 extra windows, etc.). I also want to customize the design to make it more visually pleasing and accesible.
 
 ***Jacob Jordan***
+For Sprint 3, I will be working on the back end, implementing imput validation and JUnit tests for various classes.  I will also communicate with my teammates to create more tasks that overall allow the GUI to function as neededed.
+Overall I will be adding missing elemts from our demo to the backend as we see fit.
 
 ## Acknowledgements
 Give credit here.
