@@ -461,6 +461,21 @@ sure everything work the way its supposed to.
 ***Oscar Ramirez***
 For Sprint 2, I will be helping Rafael with GUI setup and focus on making test cases to better debug our program.
 
+***Sprint 3 todo:***
+
+***Grant Smith***
+
+For Sprint 3 I will begin my work by starting to fix the problems with missing elements in the GUI and add their functionality to the backend,
+in addition I will attempt to add a customtask Task Type and functionality for parsing that.
+
+**Justin Jimenez**
+
+**Rafael Hernandez**
+
+***Oscar Ramirez***
+
+***Jacob Jordan***
+
 ## Acknowledgements
 Give credit here.
 - This project was inspired by...
