@@ -614,9 +614,10 @@ that is uses the full functionallity of what has been created in the back-end.
 
 For sprint 3, I will work on adding the last new feature to the GUI. which is a calender view. I will also focus on having the actual buttons work in the way theyre suppossed to,
  and add tests to make sure it doesnt crash. I will also work on input validation for the GUI. 
+
 ***Oscar Ramirez***
 For Sprint 3, I will work on fully connecting the Second GUI to the backend code will also adding new elements to the design (sort button,
- extra windows, etc.). I also want to customize the design to make it more visually pleasing and accesible.
+extra windows, etc.). I also want to customize the design to make it more visually pleasing and accesible.
 
 ***Jacob Jordan***
 
