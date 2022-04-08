@@ -402,26 +402,48 @@ https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/cc1e0b76fb6b
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/a396f96a5c479edf5a7e62cc1b3477906665f554
 
 
-***Justin Jimenez***
-Task: Create a method that searches through an array and sorts all tasks of a certain type, date, priority.
+***Justin Jimenez:***
 
+Task: Create a method that searches through an array and sorts all tasks of a certain type, date, priority.
+https://cs3398s22oberon.atlassian.net/browse/OTM-59
+
+Justin added the sort method to alphabetically sort the title, sort the date and priotrity numerically ascending. 
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/03878aae9779dae159887f043e4ae3a9771c86a5
 
 
 Task: Create a method that searches through array and finds all tasks of a certain type, date, priority.
+https://cs3398s22oberon.atlassian.net/browse/OTM-57
 
+Justin added the search method in order to search and return the task of a certain type, date and priotrity.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/cf7e770076318eb155cc145b3bebf2d430c779cd
 
 
 Task: Create a SocialTask Class that implements ITask.
+https://cs3398s22oberon.atlassian.net/browse/OTM-52
 
+Justin included the SocialTask class to have a different task types that would include additional variables 
+onto the BasicTask Class
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/b421125834aea8c04e0d8326479584082bf0bb1e
 
 
 Task: Create a WorkTask Class that implements ITask.
+https://cs3398s22oberon.atlassian.net/browse/OTM-51
 
+Justin included the WorkTask class to have a different task types that would include additional variables 
+onto the BasicTask Class
 
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/e22154bbbe52a27da311ebc7e6150d80dfef87cd
 
 Task: Create a SchoolTask Class that implements ITask.
+https://cs3398s22oberon.atlassian.net/browse/OTM-50
 
+Justin included the SchoolTask class to have a different task types that would include additional variables 
+onto the BasicTask Class
 
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/824bce14d747dc12e8b7f143c85933c170a73e0e
 
 
 ***Rafael Hernandez***
@@ -488,6 +510,9 @@ For Sprint 3 I will begin my work by starting to fix the problems with missing e
 in addition I will attempt to add a customtask Task Type and functionality for parsing that.
 
 **Justin Jimenez**
+
+For Sprint 3 I would like to add J-Unit tests to my code. I would also like to provide assistance with the GUI side of the code in ensuring
+that is uses the full functionallity of what has been created in the back-end.
 
 **Rafael Hernandez**
 
