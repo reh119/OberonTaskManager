@@ -447,6 +447,45 @@ https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/824bce14d747
 
 
 ***Rafael Hernandez***
+Task: Create a sort option where user can sort tasks by priority, type and date.
+https://cs3398s22oberon.atlassian.net/browse/OTM-71
+
+Rafael (me) added a function/button for when tasks need to be sorted by a certain type ( priority, date, type) 
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/1b55d6d33e7c74ddd981ee94eb1ffbc5fa208ded
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/8170cdd874aa9caa3978125934955f5e8c24b4ad
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/1b55d6d33e7c74ddd981ee94eb1ffbc5fa208ded
+
+Task: Create a search function menu/bar that allows users to search for tasks 
+https://cs3398s22oberon.atlassian.net/browse/OTM-70
+
+Rafael (me) added a search bar/function for when user wants to search for a certain task by a type or date. 
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/18fd7fd5cd28825b0c37f22f56d319bcbd214067
+
+Task: Create a menu/dropdown for when user wants to set task types, and set priority. Make to where a new window pops up when 
+a task type is selected with fields to enter
+https://cs3398s22oberon.atlassian.net/browse/OTM-69
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/3607af738dc3be44136654652b46266622c62add
+
+Task: Design a V2 GUI with a diagram/drawing. 
+https://cs3398s22oberon.atlassian.net/browse/OTM-68 
+
+Rafael took some time before actually created a GUI to design one on paper with functions that we plan on having for the task manager. 
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/5fe740d169625c446c5eeed9838e46e988fa16fc
+
+Task: Improve upon former GUI (add tasks, display task, gui design and organizaton. 
+https://cs3398s22oberon.atlassian.net/browse/OTM-67
+
+Rafael made improvments on the team GUI by re designing the old gui we had into a completley different version that incorporated all the 
+functions that we planned to have on it. 
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/9290645ab4f06bc5030991a021c97f23d570997a
+
 
 
 ***Jacob Jordan***
@@ -515,6 +554,9 @@ For Sprint 3 I would like to add J-Unit tests to my code. I would also like to p
 that is uses the full functionallity of what has been created in the back-end.
 
 **Rafael Hernandez**
+
+For sprint 3, I will work on adding the last new feature to the GUI. which is a calender view. I will also focus on having the actual buttons work in the way theyre suppossed to,
+ and add tests to make sure it doesnt crash. I will also work on input validation for the GUI. 
 
 ***Oscar Ramirez***
 
