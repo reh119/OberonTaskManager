@@ -338,6 +338,69 @@ https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/6560b375bf8a
 ## 2nd Sprint Contributions
 ***Grant Smith:***
 
+Task: Refactor the code to better represent and implement object oriented design, and allow for the new tasks
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-56?atlOrigin=eyJpIjoiM2I3YWZhMWMyYzkxNDViNTlhYjdiNmU0MWM1N2EwYTAiLCJwIjoiaiJ9
+
+Grant (me) refactored the code by creating classes to create tasks, and adding the vector of tasks for visible tasks the GUI might need, stored in the controller,
+also in the process removed the complex logic regarding current index, and replaced it with the simple visibletasks vector and selected task variable.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/2039dc97e76b67dde272f5053ab9793118130b02
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/43f5c6ce9efcc56618a3b626d8da658337931bfe
+
+Task: Fix the bug with adding and viewing more than 2 tasks
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-55?atlOrigin=eyJpIjoiZjNjMWQ1NzYyY2JjNDVjMWJhNTYyZDU4YTMzNGRiMGYiLCJwIjoiaiJ9
+
+Grant (me) Fixed the bug with adding and viewing 2 or more tasks, this was accomplished by adding a method that used the new refactored code,
+Through the use of the new classes added to model. This also was fixed by creating the vector storing tasks on creation of the tasks service
+and creating an object of TaskService on creation of the TaskModel.
+
+(these are the same as they were a major part of the refactoring)
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/2039dc97e76b67dde272f5053ab9793118130b02
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/43f5c6ce9efcc56618a3b626d8da658337931bfe
+
+Task: Fix the bug with remove task not working properly.
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-53?atlOrigin=eyJpIjoiYTkxZTg0NmViODQ3NGEzMjhiMGZhMmU3MjJmYjhhNzgiLCJwIjoiaiJ9
+
+Grant (me) Fixed the bug with removing tasks, this was accomplished by adding a method that used the new refactored code, specifically,
+it took the selected tasks, and called the model to remove it.
+
+(these are the same as they were a major part of the refactoring)
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/2039dc97e76b67dde272f5053ab9793118130b02
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/43f5c6ce9efcc56618a3b626d8da658337931bfe
+
+Task: Create classes needed to parse data from model for the view/GUI.
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-58?atlOrigin=eyJpIjoiMTI5Y2Q1ZGEwMDRhNDhiYjgwMTE2NDdmN2M4MjZhOWUiLCJwIjoiaiJ9
+
+Grant (me) Created the classes for parsing data, specifically they create a stringifier/formatter
+on runtiome based on passed values, then returns a vector of strings that the GUI can use.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/a87cdf8aa90936db117e7e51db64d8c7387e29f6
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/1865064ce68a7fa7e8dfd88ae057ce956263ca49
+
+Task: Change the locations of some methods to ensure functionality
+
+https://cs3398s22oberon.atlassian.net/browse/OTM-78?atlOrigin=eyJpIjoiYTE0MWRkZTQ0YjU0NDlmZDkyYjJmMTRjYTU0OWUyMDciLCJwIjoiaiJ9
+
+Grant (me) Fixed an error with sorttasks being in the model instead of the controller, which meant that visibletasks would not be sorted,
+but instead the backend would be sorted, not sorting the users tasks visually. In addition fixed a broken method in the cacluation of
+day of the week. also replaced all instances of arraylist with vector to better standardize the code.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/6e5703df024556b0179fd6ff3ec1338b5a818b15
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/cc1e0b76fb6b5c911d79a0d091441a04fdc06e73
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/a396f96a5c479edf5a7e62cc1b3477906665f554
+
 
 ***Justin Jimenez***
 
