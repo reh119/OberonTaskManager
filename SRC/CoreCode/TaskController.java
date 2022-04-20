@@ -10,6 +10,8 @@ public class TaskController extends Controller {
 
     Model M;
     View V;
+    SearchTask searchTask;
+    SortTask sortTask;
     public TaskInterface selectedTask;
     Vector<TaskInterface> visibleTasks;
     // Used to parse tasks into strings.
@@ -44,30 +46,32 @@ public class TaskController extends Controller {
     public void findTasks(TaskAttribute attribute, String searchQuery) {
         if (attribute.equals(TaskAttribute.ID)) {
 
-            TaskInterface taskinterface = M.TaskService.searchTaskBasedOnID(UUID.fromString(searchQuery));
+            TaskInterface taskinterface = searchTask.searchTaskBasedOnID(UUID.fromString(searchQuery));
             visibleTasks = new Vector<TaskInterface>();
             visibleTasks.add(taskinterface);
         } else if (attribute.equals(TaskAttribute.PRIORITY)) {
-            visibleTasks = M.TaskService.searchTaskBasedOnPriority(Integer.parseInt(searchQuery));
+            visibleTasks = searchTask.searchTaskBasedOnPriority(Integer.parseInt(searchQuery));
         } else if (attribute.equals(TaskAttribute.TITLE)) {
-            visibleTasks = M.TaskService.searchTaskBasedOnTitle(searchQuery);
+            visibleTasks = searchTask.searchTaskBasedOnTitle(searchQuery);
         } else if (attribute.equals(TaskAttribute.DATE)) {
-            visibleTasks = M.TaskService.searchTaskBasedOnDate(searchQuery);
+            visibleTasks = searchTask.searchTaskBasedOnDate(searchQuery);
         }
 
     }
     
     
-    //sorts taks in visibile tasks
+    //sorts tasks
     public void sortTasks(TaskAttribute attribute) {
         if (attribute.equals(TaskAttribute.ID)) {
-            visibleTasks = M.TaskService.sortBasedOnID(visibleTasks);
+            visibleTasks = sortTask.sortBasedOnID(visibleTasks);
         } else if (attribute.equals(TaskAttribute.PRIORITY)) {
-            visibleTasks = M.TaskService.sortBasedOnPriority(visibleTasks);
+            visibleTasks = sortTask.sortBasedOnPriority(visibleTasks);
         } else if (attribute.equals(TaskAttribute.TITLE)) {
-            visibleTasks = M.TaskService.sortBasedOnTitle(visibleTasks);
+            visibleTasks = sortTask.sortBasedOnTitle(visibleTasks);
         } else if (attribute.equals(TaskAttribute.DATE)) {
-            visibleTasks = M.TaskService.sortBasedOnDate(visibleTasks);
+            visibleTasks = sortTask.sortBasedOnDate(visibleTasks);
+        } else if (attribute.equals(TaskAttribute.TYPE)) {
+            visibleTasks = sortTask.sortBasedType(visibleTasks);
         }
         
     }
@@ -87,6 +91,8 @@ public class TaskController extends Controller {
 
     public void setModel(Model Model) {
         M = Model;
+        searchTask = new SearchTask(M);
+        sortTask = new SortTask(M);
     }
 
     public void setView(View View) {
