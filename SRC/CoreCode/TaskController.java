@@ -71,7 +71,7 @@ public class TaskController extends Controller {
         } else if (attribute.equals(TaskAttribute.DATE)) {
             visibleTasks = sortTask.sortBasedOnDate(visibleTasks);
         } else if (attribute.equals(TaskAttribute.TYPE)) {
-            visibleTasks = sortTask.sortBasedType(visibleTasks);
+            visibleTasks = sortTask.sortBasedOnType(visibleTasks);
         }
         
     }
