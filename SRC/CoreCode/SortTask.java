@@ -35,7 +35,7 @@ public class SortTask {
         return taskList;
     }
 
-    public Vector<TaskInterface> sortBasedType(Vector<TaskInterface> taskList){
+    public Vector<TaskInterface> sortBasedOnType(Vector<TaskInterface> taskList){
         Comparator<TaskInterface> taskComparator = Comparator.comparing(TaskInterface::getTaskType);
         taskList.sort(taskComparator);
         return taskList;
