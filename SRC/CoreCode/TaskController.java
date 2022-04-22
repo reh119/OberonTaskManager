@@ -28,6 +28,10 @@ public class TaskController extends Controller {
     public void addTask(TaskType type, Vector<String> GUIVector) {
         M.TaskService.addTask(M.TaskCreator.createTask(type, GUIVector));
     }
+
+    public void editTask(TaskInterface taskInterface) {
+        M.TaskService.editTask(taskInterface);
+    }
     
     //This should change selectedTask to be the current task at index i from visibleTasks
     public void selectTask(int i) {
