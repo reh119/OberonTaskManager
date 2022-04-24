@@ -80,18 +80,19 @@ public class TaskController extends Controller {
     }
     
     
-    //sorts tasks
-    public void sortTasks(TaskAttribute attribute) {
+    //sorts tasks with an added boolean parameter. if bool is false, the tasks will be sorted
+    //in ascending order. If bool is true, it will return sorted in descending order.
+    public void sortTasks(TaskAttribute attribute, boolean reverseSort) {
         if (attribute.equals(TaskAttribute.ID)) {
-            visibleTasks = sortTask.sortBasedOnID(visibleTasks);
+            visibleTasks = sortTask.sortBasedOnID(visibleTasks, reverseSort);
         } else if (attribute.equals(TaskAttribute.PRIORITY)) {
-            visibleTasks = sortTask.sortBasedOnPriority(visibleTasks);
+            visibleTasks = sortTask.sortBasedOnPriority(visibleTasks, reverseSort);
         } else if (attribute.equals(TaskAttribute.TITLE)) {
-            visibleTasks = sortTask.sortBasedOnTitle(visibleTasks);
+            visibleTasks = sortTask.sortBasedOnTitle(visibleTasks, reverseSort);
         } else if (attribute.equals(TaskAttribute.DATE)) {
-            visibleTasks = sortTask.sortBasedOnDate(visibleTasks);
+            visibleTasks = sortTask.sortBasedOnDate(visibleTasks, reverseSort);
         } else if (attribute.equals(TaskAttribute.TYPE)) {
-            visibleTasks = sortTask.sortBasedOnType(visibleTasks);
+            visibleTasks = sortTask.sortBasedType(visibleTasks, reverseSort);
         }
         
     }
