@@ -53,7 +53,8 @@ public class SearchTask {
         return list;
     }
 
-
+    //Search Based on Date Range method works the same as the single date method above
+    //with two strong parameters to have the date range.
     public Vector<TaskInterface> searchTaskBasedOnDateRange(String fromDate, String toDate){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         LocalDate fromLocalDate = LocalDate.parse(fromDate, formatter);

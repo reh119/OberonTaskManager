@@ -53,8 +53,19 @@ public class TaskController extends Controller {
             visibleTasks = searchTask.searchTaskBasedOnPriority(Integer.parseInt(searchQuery));
         } else if (attribute.equals(TaskAttribute.TITLE)) {
             visibleTasks = searchTask.searchTaskBasedOnTitle(searchQuery);
+        
+        //This is finding a task for either date or date range. If the length of the String is
+        //1 then there is only one date and it will find the tasks based on a single date.
+        //if there are two Strings seperated by a hyphen " - " then it will look for the date range.
+            
         } else if (attribute.equals(TaskAttribute.DATE)) {
-            visibleTasks = searchTask.searchTaskBasedOnDate(searchQuery);
+            String[] splits = searchQuery.split("-");
+            if(splits.length == 1) {
+                visibleTasks = searchTask.searchTaskBasedOnDate(splits[0]);
+            } else {
+                visibleTasks = searchTask.searchTaskBasedOnDateRange(splits[0], splits[1]);
+            }
+
         }
 
     }
