@@ -108,6 +108,8 @@ public class taskManager extends javax.swing.JFrame {
         });
 
         descendToggle.setText("descendOption");
+
+        descendToggle.setText("descendOption");
         descendToggle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 descendToggleActionPerformed(evt);
@@ -377,12 +379,6 @@ public class taskManager extends javax.swing.JFrame {
 // logic for picking what to sort by
         // TODO add your handling code here:
     }//GEN-LAST:event_sortByActionPerformed
-
-    private void descendToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descendToggleActionPerformed
-        // TODO add your handling code here: 
-        // toggle if you wanted sorted in descending order
-        
-    }//GEN-LAST:event_descendToggleActionPerformed
 
     //
     
