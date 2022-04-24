@@ -25,14 +25,8 @@ public class TaskService {
         }
     }
 
-    public void editTask(TaskInterface editTask) {
-        for (int i = 0; i < taskList.size(); i++) {
-            if(taskList.get(i).getTaskId().equals(editTask.getTaskId())) {
-                taskList.remove(i);
-                taskList.add(i, editTask);
-                break;
-            }
-        }
+    public TaskInterface getLastTask() {
+        return taskList.lastElement();
     }
 
 
