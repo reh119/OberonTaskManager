@@ -4,6 +4,9 @@
  */
 package oberonguinetbeans;
 
+//import CodeCore.TaskController;
+import java.util.*;
+
 /**
  *
  * @author rafaelhernandez
@@ -13,8 +16,9 @@ public class taskManager extends javax.swing.JFrame {
     /**
      * Creates new form taskManager
      */
-    public taskManager() {
+    public taskManager(/*TaskController C*/) {
         initComponents();
+       // this.C =C; 
     }
 
     /**
@@ -28,14 +32,13 @@ public class taskManager extends javax.swing.JFrame {
 
         jTable3 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        taskTableView = new javax.swing.JTable();
         sortBy = new javax.swing.JComboBox<>();
-        jLabel7 = new javax.swing.JLabel();
+        sortTasks = new javax.swing.JLabel();
         searchType = new javax.swing.JComboBox<>();
-        searchB = new javax.swing.JLabel();
+        searchLabel = new javax.swing.JLabel();
         searchTask = new javax.swing.JTextField();
         searchButton = new javax.swing.JButton();
+        descendToggle = new javax.swing.JToggleButton();
         jPanel2 = new javax.swing.JPanel();
         addTaskLabel = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -48,9 +51,11 @@ public class taskManager extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         addButton = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        OTMlabel = new javax.swing.JLabel();
         editTask = new javax.swing.JButton();
         deleteTask = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        taskTableView = new javax.swing.JTable();
 
         jTable3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
@@ -69,35 +74,43 @@ public class taskManager extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        taskTableView.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 10)); // NOI18N
-        taskTableView.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title", "Priority", "Type", "Date"
+        sortBy.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Title", "Date", "Priority", "by type" }));
+        sortBy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sortByActionPerformed(evt);
             }
-        ));
-        jScrollPane3.setViewportView(taskTableView);
+        });
 
-        sortBy.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Title", "Date" }));
-
-        jLabel7.setText("Sort Tasks By");
+        sortTasks.setText("Sort Tasks By");
 
         searchType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Title", "Priority", "Date", "Type" }));
+        searchType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchTypeActionPerformed(evt);
+            }
+        });
 
-        searchB.setFont(new java.awt.Font("Impact", 1, 24)); // NOI18N
-        searchB.setText("Search Tasks");
+        searchLabel.setFont(new java.awt.Font("Impact", 1, 24)); // NOI18N
+        searchLabel.setText("Search Tasks");
 
         searchTask.setText("searchTask");
+        searchTask.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchTaskActionPerformed(evt);
+            }
+        });
 
         searchButton.setText("Search");
         searchButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchButtonActionPerformed(evt);
+            }
+        });
+
+        descendToggle.setText("descendOption");
+        descendToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                descendToggleActionPerformed(evt);
             }
         });
 
@@ -108,42 +121,42 @@ public class taskManager extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(sortBy, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(163, 163, 163)
+                        .addComponent(sortTasks))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(159, 159, 159)
+                        .addComponent(searchLabel))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(191, 191, 191)
-                        .addComponent(searchB))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
+                        .addGap(27, 27, 27)
                         .addComponent(searchType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(searchTask, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(searchButton))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(descendToggle)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(searchButton)))
-                .addContainerGap(36, Short.MAX_VALUE))
+                        .addComponent(sortBy, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addComponent(jLabel7)
+                .addComponent(sortTasks)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sortBy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(sortBy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(descendToggle))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(searchB)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(searchLabel)
+                .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(searchType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(searchTask, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(searchButton))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(java.awt.Color.lightGray);
@@ -205,7 +218,7 @@ public class taskManager extends javax.swing.JFrame {
                         .addComponent(taskType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(210, Short.MAX_VALUE)
                 .addComponent(addButton)
                 .addGap(103, 103, 103))
         );
@@ -235,11 +248,11 @@ public class taskManager extends javax.swing.JFrame {
                 .addComponent(taskType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(5, 5, 5)
                 .addComponent(addButton)
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
-        jLabel1.setFont(new java.awt.Font("Impact", 3, 36)); // NOI18N
-        jLabel1.setText("Oberon Task Manager");
+        OTMlabel.setFont(new java.awt.Font("Impact", 3, 36)); // NOI18N
+        OTMlabel.setText("Oberon Task Manager");
 
         editTask.setText("Edit Task");
 
@@ -256,8 +269,8 @@ public class taskManager extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(38, 38, 38)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addComponent(OTMlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(editTask, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(deleteTask, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
@@ -271,21 +284,41 @@ public class taskManager extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(deleteTask)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(OTMlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(75, Short.MAX_VALUE))
         );
+
+        taskTableView.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 10)); // NOI18N
+        taskTableView.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title", "Priority", "Type", "Date"
+            }
+        ));
+        jScrollPane3.setViewportView(taskTableView);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38))
         );
         layout.setVerticalGroup(
@@ -294,12 +327,14 @@ public class taskManager extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -330,6 +365,48 @@ public class taskManager extends javax.swing.JFrame {
         // delete task button
     }//GEN-LAST:event_deleteTaskActionPerformed
 
+    private void searchTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchTypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchTypeActionPerformed
+
+    private void searchTaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchTaskActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchTaskActionPerformed
+
+    private void sortByActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortByActionPerformed
+// logic for picking what to sort by
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sortByActionPerformed
+
+    private void descendToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descendToggleActionPerformed
+        // TODO add your handling code here: 
+        // toggle if you wanted sorted in descending order
+        
+    }//GEN-LAST:event_descendToggleActionPerformed
+
+    //
+    
+    private void updateTaskTable(Vector<Vector<String>> stringVec) {
+    	taskTableView.setModel(new javax.swing.table.DefaultTableModel(
+                new Object [stringVec.size()][3],
+                new String [] {
+                     "Title", "Priority", "Type", "Date"
+                }));
+    	for (int i = 0; i < stringVec.size(); i++)
+    	{
+    		taskTableView.getModel().setValueAt(stringVec.get(i).get(0), i, 0);
+    		taskTableView.getModel().setValueAt(stringVec.get(i).get(3), i, 1);
+    		taskTableView.getModel().setValueAt(stringVec.get(i).get(2), i, 2);
+    		taskTableView.getModel().setValueAt(stringVec.get(i).get(1), i, 3);
+    	}
+    }
+    
+    
+    
+    
+    
+    
+    
     public void comboselect(){ // selection when user selects type of tasks 
         int test = taskType.getSelectedIndex();
         
@@ -387,30 +464,31 @@ public class taskManager extends javax.swing.JFrame {
             }
         });
     }
-
+//TaskController C ;
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel OTMlabel;
     private javax.swing.JButton addButton;
     private javax.swing.JLabel addTaskLabel;
     private javax.swing.JTextField dateField;
     private javax.swing.JButton deleteTask;
+    private javax.swing.JToggleButton descendToggle;
     private javax.swing.JButton editTask;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable3;
     private javax.swing.JComboBox<String> priorityType;
-    private javax.swing.JLabel searchB;
     private javax.swing.JButton searchButton;
+    private javax.swing.JLabel searchLabel;
     private javax.swing.JTextField searchTask;
     private javax.swing.JComboBox<String> searchType;
     private javax.swing.JComboBox<String> sortBy;
+    private javax.swing.JLabel sortTasks;
     private javax.swing.JTable taskTableView;
     private javax.swing.JComboBox<String> taskType;
     private javax.swing.JTextField titleField;
