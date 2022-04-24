@@ -28,6 +28,15 @@ public class TaskController extends Controller {
     public void addTask(TaskType type, Vector<String> GUIVector) {
         M.TaskService.addTask(M.TaskCreator.createTask(type, GUIVector));
     }
+
+    public void editTask(TaskType type, Vector<String> GUIVector) {
+        visibleTasks.remove(selectedTask);
+        M.TaskService.removeTask(selectedTask.getTaskId());
+        selectedTask = null;
+        addTask(type, GUIVector);
+        visibleTasks.add(M.TaskService.getLastTask());
+        selectedTask = M.TaskService.getLastTask();
+    }
     
     //This should change selectedTask to be the current task at index i from visibleTasks
     public void selectTask(int i) {

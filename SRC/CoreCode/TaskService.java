@@ -25,6 +25,10 @@ public class TaskService {
         }
     }
 
+    public TaskInterface getLastTask() {
+        return taskList.lastElement();
+    }
+
 
     public Vector<TaskInterface> getTaskList() {
         return taskList;
