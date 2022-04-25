@@ -86,7 +86,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="editSchoolStudyHField" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="updateSchoolTask" min="-2" max="-2" attributes="0"/>
+              <Component id="updateSchoolTask" min="-2" pref="23" max="-2" attributes="0"/>
               <EmptySpace pref="28" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -169,6 +169,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Update Task"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateSchoolTaskActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

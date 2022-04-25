@@ -54,6 +54,7 @@ public class taskManager extends javax.swing.JFrame {
         OTMlabel = new javax.swing.JLabel();
         editTask = new javax.swing.JButton();
         deleteTask = new javax.swing.JButton();
+        viewTaskB = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         taskTableView = new javax.swing.JTable();
 
@@ -93,7 +94,6 @@ public class taskManager extends javax.swing.JFrame {
         searchLabel.setFont(new java.awt.Font("Impact", 1, 24)); // NOI18N
         searchLabel.setText("Search Tasks");
 
-        searchTask.setText("searchTask");
         searchTask.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchTaskActionPerformed(evt);
@@ -262,10 +262,17 @@ public class taskManager extends javax.swing.JFrame {
             }
         });
 
-        deleteTask.setText("Delete task");
+        deleteTask.setText("Delete Task");
         deleteTask.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteTaskActionPerformed(evt);
+            }
+        });
+
+        viewTaskB.setText("View Task");
+        viewTaskB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewTaskBActionPerformed(evt);
             }
         });
 
@@ -273,13 +280,16 @@ public class taskManager extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
-                .addComponent(OTMlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(editTask, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(deleteTask, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(OTMlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(editTask)
+                            .addComponent(deleteTask, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addComponent(viewTaskB, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -288,10 +298,12 @@ public class taskManager extends javax.swing.JFrame {
                 .addGap(47, 47, 47)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(editTask)
-                    .addComponent(OTMlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(OTMlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(deleteTask)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(deleteTask)
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addComponent(viewTaskB)
+                .addContainerGap(94, Short.MAX_VALUE))
         );
 
         taskTableView.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 10)); // NOI18N
@@ -320,7 +332,7 @@ public class taskManager extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 86, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -397,7 +409,7 @@ public class taskManager extends javax.swing.JFrame {
         // will open new windows based on task that was selected. 
         // eg.) if work task is selected from table, and edit is clicked, then an "edit work window"  will pop up. 
         // pop up window type, depends on the task that they select from table. 
-        // a few if statements here maybe for the logic
+        
         // I wasnt able to test since I have no tasks to select from - rafael 
         
         
@@ -406,6 +418,16 @@ public class taskManager extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_editTaskActionPerformed
+
+    private void viewTaskBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewTaskBActionPerformed
+        // TODO add your handling code here view task will be similar to logic from edit task 
+        // Very similar to edit task
+        // user will select added task on table, then click view task button. 
+        // pop up window displaying task info and their respective fields will show. No Editing here from user. 
+        // should be able to close out this pop up window without program terminating
+        // 
+        // use something like DISPOSE_ON_CLOSE when exiting this view task pop up window, so that the whole program doesnt stop running. 
+    }//GEN-LAST:event_viewTaskBActionPerformed
 
     //
     
@@ -515,5 +537,6 @@ public class taskManager extends javax.swing.JFrame {
     private javax.swing.JTable taskTableView;
     private javax.swing.JComboBox<String> taskType;
     private javax.swing.JTextField titleField;
+    private javax.swing.JButton viewTaskB;
     // End of variables declaration//GEN-END:variables
 }

@@ -174,7 +174,8 @@ public class editWorkTaskFrame extends javax.swing.JFrame {
     private void updateWorkTaskBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateWorkTaskBActionPerformed
         // TODO add your handling code here:
         // When update is pressed on edit work task frame, task should be updated, and the edit work task window should close without ending the program. 
-        // recommended to use xxxxx.setDefaultCloseOperation(DISPOSE_ON_CLOSE); command on update button. 
+        // recommended to use xxxxx.setDefaultCloseOperation(DISPOSE_ON_CLOSE); command on update button. or something similar
+        
     }//GEN-LAST:event_updateWorkTaskBActionPerformed
 
     /**

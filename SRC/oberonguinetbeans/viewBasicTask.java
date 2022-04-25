@@ -8,12 +8,12 @@ package oberonguinetbeans;
  *
  * @author rafaelhernandez
  */
-public class schoolFrame extends javax.swing.JFrame {
+public class viewBasicTask extends javax.swing.JFrame {
 
     /**
-     * Creates new form schoolFrame
+     * Creates new form viewBasicTask
      */
-    public schoolFrame() {
+    public viewBasicTask() {
         initComponents();
     }
 
@@ -28,31 +28,29 @@ public class schoolFrame extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        viewBasicTitleField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        viewBasicDateField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        courseNameField = new javax.swing.JTextField();
-        hwNameField = new javax.swing.JTextField();
-        studyHrsField = new javax.swing.JTextField();
+        viewBasicPriorityField = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        viewBasicTypeField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setName("schoolFrameTask"); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("Papyrus", 3, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 0, 51));
-        jLabel1.setText("School Tasks");
+        jLabel1.setText("View Basic Tasks");
 
-        jLabel2.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 13)); // NOI18N
-        jLabel2.setText("Course Name");
+        jLabel2.setText("Title");
 
-        jLabel3.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 13)); // NOI18N
-        jLabel3.setText("Homework Name");
+        jLabel3.setText("Date");
 
-        jLabel4.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 13)); // NOI18N
-        jLabel4.setText("Study Hours ");
+        jLabel4.setText("Priority");
 
-        courseNameField.addActionListener(new java.awt.event.ActionListener() {
+        jLabel5.setText("Type");
+
+        viewBasicTypeField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                courseNameFieldActionPerformed(evt);
+                viewBasicTypeFieldActionPerformed(evt);
             }
         });
 
@@ -63,45 +61,52 @@ public class schoolFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(121, 121, 121)
+                        .addGap(140, 140, 140)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
+                        .addGap(52, 52, 52)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel3)
                             .addComponent(jLabel2)
+                            .addComponent(jLabel3)
                             .addComponent(jLabel4)
-                            .addComponent(courseNameField, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
-                            .addComponent(hwNameField)
-                            .addComponent(studyHrsField))))
-                .addContainerGap(134, Short.MAX_VALUE))
+                            .addComponent(jLabel5)
+                            .addComponent(viewBasicTitleField)
+                            .addComponent(viewBasicDateField)
+                            .addComponent(viewBasicPriorityField)
+                            .addComponent(viewBasicTypeField, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE))))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(49, 49, 49)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(courseNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(viewBasicTitleField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(hwNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(viewBasicDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(studyHrsField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addComponent(viewBasicPriorityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(viewBasicTypeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void courseNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_courseNameFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_courseNameFieldActionPerformed
+    private void viewBasicTypeFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewBasicTypeFieldActionPerformed
+// ignore
+// TODO add your handling code here:
+    }//GEN-LAST:event_viewBasicTypeFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,31 +125,33 @@ public class schoolFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(schoolFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(viewBasicTask.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(schoolFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(viewBasicTask.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(schoolFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(viewBasicTask.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(schoolFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(viewBasicTask.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new schoolFrame().setVisible(true);
+                new viewBasicTask().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField courseNameField;
-    private javax.swing.JTextField hwNameField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField studyHrsField;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JTextField viewBasicDateField;
+    private javax.swing.JTextField viewBasicPriorityField;
+    private javax.swing.JTextField viewBasicTitleField;
+    private javax.swing.JTextField viewBasicTypeField;
     // End of variables declaration//GEN-END:variables
 }
