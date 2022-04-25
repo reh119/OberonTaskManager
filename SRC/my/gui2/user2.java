@@ -26,22 +26,29 @@ public class user2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        titleText = new javax.swing.JTextField();
+        dateText = new javax.swing.JTextField();
+        priorityText = new javax.swing.JTextField();
+        addButton = new javax.swing.JButton();
+        schoolCheckbox = new javax.swing.JCheckBox();
+        workCheckbox = new javax.swing.JCheckBox();
+        socialCheckbox = new javax.swing.JCheckBox();
+        clearButton = new javax.swing.JButton();
+        exitButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        taskGrid = new javax.swing.JTable();
+        viewTaskButton = new javax.swing.JButton();
+        sortTitleBut = new javax.swing.JButton();
+        switchBut = new javax.swing.JButton();
+        sortTypeBut = new javax.swing.JButton();
+        sortDateBut = new javax.swing.JButton();
+        sortPriorityBut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,51 +60,51 @@ public class user2 extends javax.swing.JFrame {
 
         jLabel3.setText("Priority:");
 
-        jTextField1.setText("jTextField1");
+        titleText.setText("jTextField1");
 
-        jTextField2.setText("jTextField2");
+        dateText.setText("jTextField2");
 
-        jTextField3.setText("jTextField3");
+        priorityText.setText("jTextField3");
 
-        jButton1.setText("Add Task");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        addButton.setText("Add Task");
+        addButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                addButtonActionPerformed(evt);
             }
         });
 
-        jCheckBox1.setText("School");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        schoolCheckbox.setText("School");
+        schoolCheckbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                schoolCheckboxActionPerformed(evt);
             }
         });
 
-        jCheckBox2.setText("Work");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+        workCheckbox.setText("Work");
+        workCheckbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
+                workCheckboxActionPerformed(evt);
             }
         });
 
-        jCheckBox3.setText("Social");
-        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+        socialCheckbox.setText("Social");
+        socialCheckbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox3ActionPerformed(evt);
+                socialCheckboxActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Clear");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        clearButton.setText("Clear");
+        clearButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                clearButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Exit");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        exitButton.setText("Exit");
+        exitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                exitButtonActionPerformed(evt);
             }
         });
 
@@ -118,20 +125,20 @@ public class user2 extends javax.swing.JFrame {
                             .addComponent(jLabel1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField3))
+                            .addComponent(titleText, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE)
+                            .addComponent(dateText, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(priorityText))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox1)
-                            .addComponent(jCheckBox2)
-                            .addComponent(jCheckBox3)))
+                            .addComponent(schoolCheckbox)
+                            .addComponent(workCheckbox)
+                            .addComponent(socialCheckbox)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(addButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2)
+                        .addComponent(clearButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton3)))
+                        .addComponent(exitButton)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -140,29 +147,29 @@ public class user2 extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox1))
+                    .addComponent(titleText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(schoolCheckbox))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox2))
+                    .addComponent(dateText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(workCheckbox))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox3))
+                    .addComponent(priorityText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(socialCheckbox))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(addButton)
+                    .addComponent(clearButton)
+                    .addComponent(exitButton))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Display"));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        taskGrid.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -185,10 +192,27 @@ public class user2 extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jTable1.setCellSelectionEnabled(true);
-        jTable1.setShowGrid(true);
-        jScrollPane1.setViewportView(jTable1);
-        jTable1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        taskGrid.setCellSelectionEnabled(true);
+        taskGrid.setShowGrid(true);
+        jScrollPane1.setViewportView(taskGrid);
+        taskGrid.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+
+        viewTaskButton.setText("View Task");
+        viewTaskButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewTaskButtonActionPerformed(evt);
+            }
+        });
+
+        sortTitleBut.setText("Sort By Title");
+
+        switchBut.setText("Switch GUI");
+
+        sortTypeBut.setText("Sort By Type");
+
+        sortDateBut.setText("Sort By Date");
+
+        sortPriorityBut.setText("Sort By Priority");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -196,7 +220,26 @@ public class user2 extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sortPriorityBut)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(viewTaskButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(sortTitleBut)
+                                .addGap(12, 12, 12)
+                                .addComponent(sortTypeBut)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(sortDateBut)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(switchBut, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -204,7 +247,17 @@ public class user2 extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(265, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(viewTaskButton)
+                    .addComponent(sortTitleBut)
+                    .addComponent(sortTypeBut)
+                    .addComponent(sortDateBut))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(sortPriorityBut)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(switchBut, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -223,10 +276,10 @@ public class user2 extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 8, Short.MAX_VALUE)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -234,7 +287,7 @@ public class user2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 int check =0;
 String taskType = "";
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
         
  
@@ -261,42 +314,49 @@ String taskType = "";
           taskType = "Social";
             
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_addButtonActionPerformed
 
     
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void schoolCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_schoolCheckboxActionPerformed
         // TODO add your handling code here:
-        jCheckBox2.setSelected(false);
-        jCheckBox3.setSelected(false);
+        workCheckbox.setSelected(false);
+        socialCheckbox.setSelected(false);
         check = 1;
         
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_schoolCheckboxActionPerformed
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+    private void workCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_workCheckboxActionPerformed
         // TODO add your handling code here:
-        jCheckBox1.setSelected(false);
-        jCheckBox3.setSelected(false);
+        schoolCheckbox.setSelected(false);
+        socialCheckbox.setSelected(false);
         check = 2;
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
+    }//GEN-LAST:event_workCheckboxActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
         // TODO add your handling code here:
         System.exit(0);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_exitButtonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
         // TODO add your handling code here:
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
-    }//GEN-LAST:event_jButton2ActionPerformed
+        titleText.setText("");
+        dateText.setText("");
+        priorityText.setText("");
+    }//GEN-LAST:event_clearButtonActionPerformed
 
-    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+    private void socialCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_socialCheckboxActionPerformed
         // TODO add your handling code here:
-        jCheckBox1.setSelected(false);
-        jCheckBox2.setSelected(false);
-        int check = 3;
-    }//GEN-LAST:event_jCheckBox3ActionPerformed
+        schoolCheckbox.setSelected(false);
+        workCheckbox.setSelected(false);
+        check = 3;
+    }//GEN-LAST:event_socialCheckboxActionPerformed
+
+    private void viewTaskButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewTaskButtonActionPerformed
+        // TODO add your handling code here:
+        taskView tv = new taskView();
+        tv.setVisible(true);
+        
+    }//GEN-LAST:event_viewTaskButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -334,21 +394,28 @@ String taskType = "";
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JButton addButton;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton clearButton;
+    private javax.swing.JTextField dateText;
+    private javax.swing.JButton exitButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField priorityText;
+    private javax.swing.JCheckBox schoolCheckbox;
+    private javax.swing.JCheckBox socialCheckbox;
+    private javax.swing.JButton sortDateBut;
+    private javax.swing.JButton sortPriorityBut;
+    private javax.swing.JButton sortTitleBut;
+    private javax.swing.JButton sortTypeBut;
+    private javax.swing.JButton switchBut;
+    private javax.swing.JTable taskGrid;
+    private javax.swing.JTextField titleText;
+    private javax.swing.JButton viewTaskButton;
+    private javax.swing.JCheckBox workCheckbox;
     // End of variables declaration//GEN-END:variables
 }
