@@ -4,7 +4,8 @@
  */
 package oberonguinetbeans;
 
-//import CodeCore.TaskController;
+import CoreCode.*;
+
 import java.util.*;
 
 /**
@@ -16,9 +17,9 @@ public class taskManager extends javax.swing.JFrame {
     /**
      * Creates new form taskManager
      */
-    public taskManager(/*TaskController C*/) {
+    public taskManager(TaskController C) {
         initComponents();
-       // this.C =C; 
+       this.C =C;
     }
 
     /**
@@ -167,7 +168,7 @@ public class taskManager extends javax.swing.JFrame {
 
         jLabel6.setText("Type");
 
-        taskType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "School ", "Work", "Social ", "Basic", " " }));
+        taskType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "School", "Work", "Social", "Basic", "N/A" }));
         taskType.setSelectedIndex(3);
         taskType.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
             public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
@@ -369,18 +370,52 @@ public class taskManager extends javax.swing.JFrame {
     }//GEN-LAST:event_taskTypeActionPerformed
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
-        // TODO add your handling code here:
-        // add button
+        Vector<String> addTaskVec = new Vector<String>();
+        addTaskVec.add(titleField.getText());
+        addTaskVec.add(dateField.getText());
+        addTaskVec.add(priorityType.getItemAt(priorityType.getSelectedIndex()));
+        switch (taskType.getItemAt(taskType.getSelectedIndex())) {
+            case "Basic": 		C.addTask(TaskType.BASIC, addTaskVec);
+                break;
+            case "School":		addTaskVec.add(schoolF.getCourseName());
+                addTaskVec.add(schoolF.getHomeworkName());
+                addTaskVec.add(schoolF.getStudyHours());
+                C.addTask(TaskType.SCHOOL, addTaskVec);
+                schoolF.dispose();
+                break;
+            case "Work":		addTaskVec.add(workF.getProjectName());
+                addTaskVec.add(workF.getWorkingWith());
+                addTaskVec.add(workF.getHoursWorked());
+                C.addTask(TaskType.WORK, addTaskVec);
+                workF.dispose();
+                break;
+            case "Social":		addTaskVec.add(socialF.getMeetingLocation());
+                addTaskVec.add(socialF.getOccasion());
+                addTaskVec.add(socialF.getAttendingHours());
+                C.addTask(TaskType.SOCIAL, addTaskVec);
+                socialF.dispose();
+                break;
+            default: 			break;
+        };
     }//GEN-LAST:event_addButtonActionPerformed
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
-        // TODO add your handling code here:
-        // search Task Button
+        switch(searchType.getItemAt(searchType.getSelectedIndex())) {
+            case "Title":		C.findTasks(TaskAttribute.TITLE, searchTask.getText());
+                break;
+            case "Date":		C.findTasks(TaskAttribute.DATE, searchTask.getText());
+                break;
+            case "Type":		C.findTasks(TaskAttribute.TYPE, searchTask.getText());
+                break;
+            case "Priority":	C.findTasks(TaskAttribute.PRIORITY, searchTask.getText());
+                break;
+        }
+        updateTaskTable(C.getGroupTaskStrings());
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void deleteTaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteTaskActionPerformed
-        // TODO add your handling code here:
-        // delete task button
+        C.selectTask(taskTableView.getSelectedRow());
+        C.removeTask();
     }//GEN-LAST:event_deleteTaskActionPerformed
 
     private void searchTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchTypeActionPerformed
@@ -392,12 +427,35 @@ public class taskManager extends javax.swing.JFrame {
     }//GEN-LAST:event_searchTaskActionPerformed
 
     private void sortByActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortByActionPerformed
-// logic for picking what to sort by
-        // TODO add your handling code here:
+        int dropdownSelection = sortBy.getSelectedIndex();
+        if (dropdownSelection == 0){ // ID
+            C.sortTasks(TaskAttribute.ID, descendOrAscend);
+        }
+        if (dropdownSelection == 1){ // Title
+            C.sortTasks(TaskAttribute.TITLE, descendOrAscend);
+        }
+        if (dropdownSelection == 2){ // Date
+            C.sortTasks(TaskAttribute.DATE, descendOrAscend);
+        }
+        if (dropdownSelection == 3){ // Priority
+            C.sortTasks(TaskAttribute.PRIORITY, descendOrAscend);
+        }
+        if (dropdownSelection == 4){ // Type
+            C.sortTasks(TaskAttribute.TYPE, descendOrAscend);
+        }
+        updateTaskTable(C.getGroupTaskStrings());
     }//GEN-LAST:event_sortByActionPerformed
 
     private void descendToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descendToggleActionPerformed
-        // TODO add your handling code here: 
+        if (descendOrAscend == false)
+        {
+            descendOrAscend = true;
+            descendToggle.setText(" Ascend");
+        }
+        else {
+            descendOrAscend = false;
+            descendToggle.setText("Descend");
+        }
         // toggle if you wanted sorted in descending order
         // if toggled, sorts in decending order. 
         // if not toggled, then default is ascend 
@@ -405,7 +463,8 @@ public class taskManager extends javax.swing.JFrame {
     }//GEN-LAST:event_descendToggleActionPerformed
 
     private void editTaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editTaskActionPerformed
-        // TODO add your handling code here:// 
+        // TODO add your handling code here://
+
         // will open new windows based on task that was selected. 
         // eg.) if work task is selected from table, and edit is clicked, then an "edit work window"  will pop up. 
         // pop up window type, depends on the task that they select from table. 
@@ -456,17 +515,17 @@ public class taskManager extends javax.swing.JFrame {
         int test = taskType.getSelectedIndex();
         
         if (test == 0){ // school frame
-            schoolFrame schoolF = new schoolFrame (); 
+            schoolF = new schoolFrame ();
             schoolF.setVisible(true);
             schoolF.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         }
         if (test == 1){ // work frame 
-            workFrame workF = new workFrame (); 
+            workF = new workFrame ();
             workF.setVisible(true);
             workF.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         }
         if (test == 2){ // Social 
-            socialFrame socialF = new socialFrame (); // school frame 
+            socialF = new socialFrame (); // school frame
             socialF.setVisible(true);
             socialF.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         }
@@ -478,38 +537,12 @@ public class taskManager extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(taskManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(taskManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(taskManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(taskManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new taskManager().setVisible(true);
-            }
-        });
-    }
-//TaskController C ;
+    TaskController C ;
+    schoolFrame schoolF;
+    socialFrame socialF;
+    workFrame   workF;
+    boolean descendOrAscend = false;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel OTMlabel;
     private javax.swing.JButton addButton;

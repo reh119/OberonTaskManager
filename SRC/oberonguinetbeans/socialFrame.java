@@ -166,6 +166,21 @@ public class socialFrame extends javax.swing.JFrame {
         });
     }
 
+    public String getMeetingLocation()
+    {
+        return meetingLocationField.getText();
+    }
+
+    public String getOccasion()
+    {
+        return ocassionField.getText();
+    }
+
+    public String getAttendingHours()
+    {
+        return attendingHours.getText();
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField attendingHours;
     private javax.swing.JLabel jLabel1;

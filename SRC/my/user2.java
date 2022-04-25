@@ -8,6 +8,9 @@
  *
  * @author oscarramirez
  */
+
+package my;
+
 public class user2 extends javax.swing.JFrame {
 
     /**

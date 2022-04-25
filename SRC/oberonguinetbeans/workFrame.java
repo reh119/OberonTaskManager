@@ -156,6 +156,21 @@ public class workFrame extends javax.swing.JFrame {
         });
     }
 
+    public String getWorkingWith()
+    {
+        return meetingwithField.getText();
+    }
+
+    public String getProjectName()
+    {
+        return projNameField.getText();
+    }
+
+    public String getHoursWorked()
+    {
+        return hoursWorkedField.getText();
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField hoursWorkedField;
     private javax.swing.JLabel jLabel1;

@@ -7,6 +7,9 @@
  *
  * @author oscarramirez
  */
+
+package my;
+
 public class socialFrame2 extends javax.swing.JFrame {
 
     /**
