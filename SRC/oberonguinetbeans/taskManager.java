@@ -479,13 +479,30 @@ public class taskManager extends javax.swing.JFrame {
     }//GEN-LAST:event_editTaskActionPerformed
 
     private void viewTaskBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewTaskBActionPerformed
-        // TODO add your handling code here view task will be similar to logic from edit task 
-        // Very similar to edit task
-        // user will select added task on table, then click view task button. 
-        // pop up window displaying task info and their respective fields will show. No Editing here from user. 
-        // should be able to close out this pop up window without program terminating
-        // 
-        // use something like DISPOSE_ON_CLOSE when exiting this view task pop up window, so that the whole program doesnt stop running. 
+        // TODO add your handling code here view task will be similar to logic from edit task
+        C.selectTask(taskTableView.getSelectedRow());
+        Vector<String> stringVec = new Vector<String>();
+        stringVec = C.getCurrentTaskStrings();
+        switch (C.getSelectedTaskType()) {
+            case BASIC:     viewBasicTask VBT = new viewBasicTask(stringVec);
+                            VBT.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                            VBT.setVisible(true);
+                break;
+            case SCHOOL:	viewSchoolTask VST = new viewSchoolTask(stringVec);
+                            VST.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                            VST.setVisible(true);
+                break;
+            case WORK:		viewWorkTask VWT = new viewWorkTask(stringVec);
+                            VWT.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                            VWT.setVisible(true);
+                break;
+            case SOCIAL:	viewSocialTask VSoCT = new viewSocialTask(stringVec);
+                            VSoCT.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                            VSoCT.setVisible(true);
+                break;
+            default: 			break;
+        };
+        
     }//GEN-LAST:event_viewTaskBActionPerformed
 
     //

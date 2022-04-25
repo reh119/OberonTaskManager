@@ -11,7 +11,7 @@ public class main {
          TaskController C = new TaskController();
          modelM.setController(C);
          C.setModel(modelM);
-         GUI2TaskView viewer = new GUI2TaskView();
+         GUI1TaskView viewer = new GUI1TaskView();
          viewer.setController(C);
          C.setView(viewer);
          viewer.GUIStart();
