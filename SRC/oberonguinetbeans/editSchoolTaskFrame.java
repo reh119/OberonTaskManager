@@ -83,6 +83,11 @@ public class editSchoolTaskFrame extends javax.swing.JFrame {
         });
 
         updateSchoolTask.setText("Update Task");
+        updateSchoolTask.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateSchoolTaskActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -144,7 +149,7 @@ public class editSchoolTaskFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(editSchoolStudyHField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(updateSchoolTask)
+                .addComponent(updateSchoolTask, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
@@ -153,23 +158,31 @@ public class editSchoolTaskFrame extends javax.swing.JFrame {
 
     private void editSchoolPriorityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editSchoolPriorityActionPerformed
         // TODO add your handling code here:
-        // ignore unless needed
+        // ignore unless needed, can delet
     }//GEN-LAST:event_editSchoolPriorityActionPerformed
 
     private void editSchoolDateFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editSchoolDateFieldActionPerformed
         // TODO add your handling code here:
+       // ignore unless needed, can delete
     }//GEN-LAST:event_editSchoolDateFieldActionPerformed
 
     private void editSchoolTitleFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editSchoolTitleFieldActionPerformed
         // TODO add your handling code here:
-        // ignore unless needed 
+        // ignore unless needed can delete
     }//GEN-LAST:event_editSchoolTitleFieldActionPerformed
 
     private void editSchoolStudyHFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editSchoolStudyHFieldActionPerformed
         // TODO add your handling code here:
-       // ignore unless needed
+       // ignore unless needed can delete
                 
     }//GEN-LAST:event_editSchoolStudyHFieldActionPerformed
+
+    private void updateSchoolTaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateSchoolTaskActionPerformed
+        // TODO add your handling code here:
+        /// When update is pressed on edit social task frame, task should be updated, and the edit school task window should close without ending the program. 
+        // recommended to use xxxxx.setDefaultCloseOperation(DISPOSE_ON_CLOSE); command on update button. or something similar
+        
+    }//GEN-LAST:event_updateSchoolTaskActionPerformed
 
     /**
      * @param args the command line arguments

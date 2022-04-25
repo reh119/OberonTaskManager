@@ -37,9 +37,9 @@ public class editSocialTaskFrame extends javax.swing.JFrame {
         editSocialPriority = new javax.swing.JComboBox<>();
         editSocialTitleField = new javax.swing.JTextField();
         editSocialdateField = new javax.swing.JTextField();
-        editSocialMeetLocField = new javax.swing.JTextField();
-        editSocialOccasionField = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        editSocialLocField = new javax.swing.JTextField();
+        editOccasionField = new javax.swing.JTextField();
+        editAttendingHours = new javax.swing.JTextField();
         updateWorkTaskB = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -66,6 +66,11 @@ public class editSocialTaskFrame extends javax.swing.JFrame {
         });
 
         updateWorkTaskB.setText("Update Task");
+        updateWorkTaskB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateWorkTaskBActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -87,9 +92,9 @@ public class editSocialTaskFrame extends javax.swing.JFrame {
                             .addComponent(socialEditAttenHoursLabel)
                             .addComponent(editSocialPriority, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(editSocialdateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(editSocialMeetLocField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(editSocialOccasionField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(editSocialLocField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(editOccasionField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(editAttendingHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(editSocialTitleField, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(99, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -117,15 +122,15 @@ public class editSocialTaskFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(socialEditMeetLocLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(editSocialMeetLocField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(editSocialLocField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(socialEditOccasionLabel)
                 .addGap(2, 2, 2)
-                .addComponent(editSocialOccasionField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(editOccasionField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(socialEditAttenHoursLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(editAttendingHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(updateWorkTaskB)
                 .addContainerGap(10, Short.MAX_VALUE))
@@ -152,7 +157,15 @@ public class editSocialTaskFrame extends javax.swing.JFrame {
 
     private void editSocialPriorityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editSocialPriorityActionPerformed
         // TODO add your handling code here:
+        // ignore or delete, not needed
     }//GEN-LAST:event_editSocialPriorityActionPerformed
+
+    private void updateWorkTaskBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateWorkTaskBActionPerformed
+        // TODO add your handling code here:
+        // / When update is pressed on edit social task frame, task should be updated, and the edit social task window should close without ending the program. 
+        // recommended to use xxxxx.setDefaultCloseOperation(DISPOSE_ON_CLOSE); command on update button. or something similar
+        
+    }//GEN-LAST:event_updateWorkTaskBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,14 +203,14 @@ public class editSocialTaskFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField editSocialMeetLocField;
-    private javax.swing.JTextField editSocialOccasionField;
+    private javax.swing.JTextField editAttendingHours;
+    private javax.swing.JTextField editOccasionField;
+    private javax.swing.JTextField editSocialLocField;
     private javax.swing.JComboBox<String> editSocialPriority;
     private javax.swing.JLabel editSocialTaskLabel;
     private javax.swing.JTextField editSocialTitleField;
     private javax.swing.JTextField editSocialdateField;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JLabel socialEditAttenHoursLabel;
     private javax.swing.JLabel socialEditDateLabel;
     private javax.swing.JLabel socialEditMeetLocLabel;

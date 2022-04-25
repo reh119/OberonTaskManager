@@ -62,9 +62,9 @@
                               <Component id="socialEditAttenHoursLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="editSocialPriority" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="editSocialdateField" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="editSocialMeetLocField" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="editSocialOccasionField" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField5" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="editSocialLocField" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="editOccasionField" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="editAttendingHours" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="editSocialTitleField" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -98,15 +98,15 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="socialEditMeetLocLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="editSocialMeetLocField" min="-2" max="-2" attributes="0"/>
+                  <Component id="editSocialLocField" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="socialEditOccasionLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                  <Component id="editSocialOccasionField" min="-2" max="-2" attributes="0"/>
+                  <Component id="editOccasionField" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="socialEditAttenHoursLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jTextField5" min="-2" max="-2" attributes="0"/>
+                  <Component id="editAttendingHours" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="updateWorkTaskB" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="10" max="32767" attributes="0"/>
@@ -172,16 +172,19 @@
         </Component>
         <Component class="javax.swing.JTextField" name="editSocialdateField">
         </Component>
-        <Component class="javax.swing.JTextField" name="editSocialMeetLocField">
+        <Component class="javax.swing.JTextField" name="editSocialLocField">
         </Component>
-        <Component class="javax.swing.JTextField" name="editSocialOccasionField">
+        <Component class="javax.swing.JTextField" name="editOccasionField">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField5">
+        <Component class="javax.swing.JTextField" name="editAttendingHours">
         </Component>
         <Component class="javax.swing.JButton" name="updateWorkTaskB">
           <Properties>
             <Property name="text" type="java.lang.String" value="Update Task"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateWorkTaskBActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
