@@ -464,7 +464,28 @@ public class taskManager extends javax.swing.JFrame {
 
     private void editTaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editTaskActionPerformed
         // TODO add your handling code here://
-
+        C.selectTask(taskTableView.getSelectedRow());
+        Vector<String> stringVec = new Vector<String>();
+        stringVec = C.getCurrentTaskStrings();
+        switch (C.getSelectedTaskType()) {
+            case BASIC:     editBasicTaskFrame VBT = new editBasicTaskFrame(stringVec, C);
+                            VBT.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                            VBT.setVisible(true);
+                            break;
+            case SCHOOL:	editSchoolTaskFrame VST = new editSchoolTaskFrame(stringVec, C);
+                            VST.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                            VST.setVisible(true);
+                            break;
+            case WORK:		editWorkTaskFrame VWT = new editWorkTaskFrame(stringVec, C);
+                            VWT.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                            VWT.setVisible(true);
+                            break;
+            case SOCIAL:	editSocialTaskFrame VSoCT = new editSocialTaskFrame(stringVec, C);
+                            VSoCT.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                            VSoCT.setVisible(true);
+                            break;
+            default: 		break;
+        };
         // will open new windows based on task that was selected. 
         // eg.) if work task is selected from table, and edit is clicked, then an "edit work window"  will pop up. 
         // pop up window type, depends on the task that they select from table. 
