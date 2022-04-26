@@ -2,6 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+package my.gui2;
 
 /**
  *
@@ -122,6 +123,11 @@ public class workTaskInfo extends javax.swing.JFrame {
         jLabel3.setText("Priority:");
 
         titleText.setText("jTextField1");
+        titleText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                titleTextActionPerformed(evt);
+            }
+        });
 
         dateText.setText("jTextField2");
 
@@ -305,6 +311,11 @@ public class workTaskInfo extends javax.swing.JFrame {
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_deleteButtonActionPerformed
+
+    private void titleTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titleTextActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_titleTextActionPerformed
 
     /**
      * @param args the command line arguments
