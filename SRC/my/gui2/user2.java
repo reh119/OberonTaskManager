@@ -1,7 +1,11 @@
+
+import java.util.Vector;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+package my.gui2;
 
 /** 
 
@@ -42,13 +46,20 @@ public class user2 extends javax.swing.JFrame {
         exitButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        taskGrid = new javax.swing.JTable();
+        taskTableView = new javax.swing.JTable();
         viewTaskButton = new javax.swing.JButton();
         sortTitleBut = new javax.swing.JButton();
         switchBut = new javax.swing.JButton();
         sortTypeBut = new javax.swing.JButton();
         sortDateBut = new javax.swing.JButton();
         sortPriorityBut = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        searchText = new javax.swing.JTextField();
+        titleCheckBox = new javax.swing.JCheckBox();
+        priorityCheckBox = new javax.swing.JCheckBox();
+        dateCheckBox = new javax.swing.JCheckBox();
+        typeCheckBox = new javax.swing.JCheckBox();
+        searchButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -169,19 +180,12 @@ public class user2 extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Display"));
 
-        taskGrid.setModel(new javax.swing.table.DefaultTableModel(
+        taskTableView.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
                 {null, null, null, null}
             },
             new String [] {
-                "Task Title", "Task Type", "Date", "Priority "
+                "Task Title", "Priority", "Type", "Date"
             }
         ) {
             Class[] types = new Class [] {
@@ -192,10 +196,11 @@ public class user2 extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        taskGrid.setCellSelectionEnabled(true);
-        taskGrid.setShowGrid(true);
-        jScrollPane1.setViewportView(taskGrid);
-        taskGrid.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        taskTableView.setToolTipText("");
+        taskTableView.setColumnSelectionAllowed(false);
+        taskTableView.setShowGrid(true);
+        jScrollPane1.setViewportView(taskTableView);
+        taskTableView.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 
         viewTaskButton.setText("View Task");
         viewTaskButton.addActionListener(new java.awt.event.ActionListener() {
@@ -221,13 +226,14 @@ public class user2 extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1)
-                        .addContainerGap())
+                    .addComponent(jScrollPane1)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(sortPriorityBut)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(sortPriorityBut)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(switchBut, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(viewTaskButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -235,11 +241,7 @@ public class user2 extends javax.swing.JFrame {
                                 .addGap(12, 12, 12)
                                 .addComponent(sortTypeBut)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(sortDateBut)))
-                        .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(switchBut, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(sortDateBut)))))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -254,10 +256,82 @@ public class user2 extends javax.swing.JFrame {
                     .addComponent(sortTypeBut)
                     .addComponent(sortDateBut))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(sortPriorityBut)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(sortPriorityBut)
+                    .addComponent(switchBut, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        searchText.setText("jTextField1");
+
+        titleCheckBox.setText("Task Title");
+        titleCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                titleCheckBoxActionPerformed(evt);
+            }
+        });
+
+        priorityCheckBox.setText("Priority");
+        priorityCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                priorityCheckBoxActionPerformed(evt);
+            }
+        });
+
+        dateCheckBox.setText("Date ");
+        dateCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dateCheckBoxActionPerformed(evt);
+            }
+        });
+
+        typeCheckBox.setText("Task Type");
+        typeCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                typeCheckBoxActionPerformed(evt);
+            }
+        });
+
+        searchButton.setText("Search");
+        searchButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(searchText, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(typeCheckBox)
+                    .addComponent(titleCheckBox)
+                    .addComponent(priorityCheckBox)
+                    .addComponent(dateCheckBox))
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(searchText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(titleCheckBox))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(priorityCheckBox)
+                    .addComponent(searchButton))
+                .addGap(7, 7, 7)
+                .addComponent(dateCheckBox)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(switchBut, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addComponent(typeCheckBox)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -268,19 +342,23 @@ public class user2 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(69, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 19, Short.MAX_VALUE))
         );
 
         pack();
@@ -353,11 +431,94 @@ String taskType = "";
 
     private void viewTaskButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewTaskButtonActionPerformed
         // TODO add your handling code here:
-        taskView tv = new taskView();
-        tv.setVisible(true);
+        switch((String)taskTableView.getModel().getValueAt(taskTableView.getSelectedRow(), 1)){
+            
+            case "Basic":
+                basicTaskInfo bt = new basicTaskInfo();
+                bt.setVisible(true);
+                break;
+                
+             case "School":
+                schoolTaskInfo st = new schoolTaskInfo();
+                st.setVisible(true);
+                break;
+                
+             case "Work":
+                workTaskInfo wt = new workTaskInfo();
+                wt.setVisible(true);
+                break;
+                
+              case "Social":
+                socialTaskInfo sct = new socialTaskInfo();
+                sct.setVisible(true);
+                break;
+                
+              default: break;
+         
+              }
+        
+        
+               
+        
         
     }//GEN-LAST:event_viewTaskButtonActionPerformed
 
+    private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
+        // TODO add your handling code here:
+
+      
+    }//GEN-LAST:event_searchButtonActionPerformed
+
+    private void titleCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titleCheckBoxActionPerformed
+        // TODO add your handling code here:
+        priorityCheckBox.setSelected(false);
+        dateCheckBox.setSelected(false);
+        typeCheckBox.setSelected(false);
+        check = 1;
+    }//GEN-LAST:event_titleCheckBoxActionPerformed
+
+    private void priorityCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_priorityCheckBoxActionPerformed
+        // TODO add your handling code here:
+        titleCheckBox.setSelected(false);
+        dateCheckBox.setSelected(false);
+        typeCheckBox.setSelected(false);
+        check = 2;
+    }//GEN-LAST:event_priorityCheckBoxActionPerformed
+
+    private void dateCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateCheckBoxActionPerformed
+        // TODO add your handling code here:
+        titleCheckBox.setSelected(false);
+        priorityCheckBox.setSelected(false);
+        typeCheckBox.setSelected(false);
+        check = 3;
+    }//GEN-LAST:event_dateCheckBoxActionPerformed
+
+    private void typeCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typeCheckBoxActionPerformed
+        // TODO add your handling code here:
+        titleCheckBox.setSelected(false);
+        priorityCheckBox.setSelected(false);
+        dateCheckBox.setSelected(false);
+        check = 4;
+    }//GEN-LAST:event_typeCheckBoxActionPerformed
+
+    private void updateTaskTable(Vector<Vector<String>> stringVec) {
+    	taskTableView.setModel(new javax.swing.table.DefaultTableModel(
+                new Object [stringVec.size()][3],
+                new String [] {
+                     "Title", "Priority", "Type", "Date"
+                }));
+    	for (int i = 0; i < stringVec.size(); i++)
+    	{
+    		taskTableView.getModel().setValueAt(stringVec.get(i).get(0), i, 0);
+    		taskTableView.getModel().setValueAt(stringVec.get(i).get(3), i, 1);
+    		taskTableView.getModel().setValueAt(stringVec.get(i).get(2), i, 2);
+    		taskTableView.getModel().setValueAt(stringVec.get(i).get(1), i, 3);
+    	}
+        
+       
+    }
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -397,6 +558,7 @@ String taskType = "";
     private javax.swing.JButton addButton;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton clearButton;
+    private javax.swing.JCheckBox dateCheckBox;
     private javax.swing.JTextField dateText;
     private javax.swing.JButton exitButton;
     private javax.swing.JLabel jLabel1;
@@ -404,17 +566,23 @@ String taskType = "";
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JCheckBox priorityCheckBox;
     private javax.swing.JTextField priorityText;
     private javax.swing.JCheckBox schoolCheckbox;
+    private javax.swing.JButton searchButton;
+    private javax.swing.JTextField searchText;
     private javax.swing.JCheckBox socialCheckbox;
     private javax.swing.JButton sortDateBut;
     private javax.swing.JButton sortPriorityBut;
     private javax.swing.JButton sortTitleBut;
     private javax.swing.JButton sortTypeBut;
     private javax.swing.JButton switchBut;
-    private javax.swing.JTable taskGrid;
+    private javax.swing.JTable taskTableView;
+    private javax.swing.JCheckBox titleCheckBox;
     private javax.swing.JTextField titleText;
+    private javax.swing.JCheckBox typeCheckBox;
     private javax.swing.JButton viewTaskButton;
     private javax.swing.JCheckBox workCheckbox;
     // End of variables declaration//GEN-END:variables
