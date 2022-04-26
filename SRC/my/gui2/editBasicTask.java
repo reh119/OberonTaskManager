@@ -145,8 +145,6 @@ public class editBasicTask extends javax.swing.JFrame {
     private void addEditButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEditButActionPerformed
         // TODO add your handling code here:
 
-        editBasicTask ebt = new editBasicTask;
-        ebt.setVisible(true);
     }//GEN-LAST:event_addEditButActionPerformed
 
     private void titleTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titleTextActionPerformed
