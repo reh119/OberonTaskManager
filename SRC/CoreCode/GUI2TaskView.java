@@ -1,6 +1,6 @@
 package CoreCode;
 
-import my.user2;
+import my.gui2.*;
 
 public class GUI2TaskView extends View {
 
@@ -31,7 +31,7 @@ public class GUI2TaskView extends View {
         }
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new user2().setVisible(true);
+                new user2(C).setVisible(true);
             }
         });
     }
