@@ -44,33 +44,54 @@ public class viewWorkTask extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Papyrus", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(150, 0, 51));
         jLabel1.setText("View Work Task");
 
+        jLabel2.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         jLabel2.setText("Title");
 
+        viewWorkTaskTitleField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         viewWorkTaskTitleField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewWorkTaskTitleFieldActionPerformed(evt);
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         jLabel3.setText("Date");
 
+        jLabel4.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         jLabel4.setText("Priortiy");
 
+        jLabel5.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         jLabel5.setText("Type");
 
+        jLabel6.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         jLabel6.setText("Project Name");
 
+        jLabel7.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         jLabel7.setText("Meeting With");
 
+        jLabel8.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         jLabel8.setText("Hours Worked");
 
+        viewWorkTaskDateField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
+        viewWorkTaskPriorityField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
+        viewWorkTaskTypeField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
+        viewWorkTaskProjField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
+        viewWorkTaskMeetField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         viewWorkTaskMeetField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewWorkTaskMeetFieldActionPerformed(evt);
             }
         });
+
+        viewWorkTaskHoursField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -133,7 +154,7 @@ public class viewWorkTask extends javax.swing.JFrame {
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(viewWorkTaskHoursField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();
