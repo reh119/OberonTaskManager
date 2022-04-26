@@ -1,6 +1,5 @@
 package CoreCode;
 
-import my.gui2.GUI2;
 import my.user2;
 
 public class GUI2TaskView extends View {

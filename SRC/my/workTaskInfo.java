@@ -7,9 +7,6 @@
  *
  * @author oscarramirez
  */
-
-package my;
-
 public class workTaskInfo extends javax.swing.JFrame {
 
     /**

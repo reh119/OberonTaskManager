@@ -7,9 +7,6 @@
  *
  * @author oscarramirez
  */
-
-package my;
-
 public class socialTaskInfo extends javax.swing.JFrame {
 
     /**

@@ -7,9 +7,6 @@
  *
  * @author oscarramirez
  */
-
-package my;
-
 public class workFrame2 extends javax.swing.JFrame {
 
     /**

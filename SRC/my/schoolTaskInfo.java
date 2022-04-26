@@ -7,9 +7,6 @@
  *
  * @author oscarramirez
  */
-
-package my;
-
 public class schoolTaskInfo extends javax.swing.JFrame {
 
     /**
