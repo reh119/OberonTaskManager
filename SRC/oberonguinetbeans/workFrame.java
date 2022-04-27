@@ -44,12 +44,17 @@ public class workFrame extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 13)); // NOI18N
         jLabel2.setText("Project Name");
 
+        projNameField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
         jLabel3.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 13)); // NOI18N
         jLabel3.setText("Meeting With");
+
+        meetingwithField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
         jLabel4.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 13)); // NOI18N
         jLabel4.setText("Hours Worked");
 
+        hoursWorkedField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         hoursWorkedField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hoursWorkedFieldActionPerformed(evt);
@@ -94,7 +99,7 @@ public class workFrame extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(hoursWorkedField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

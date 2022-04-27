@@ -23,16 +23,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel1" max="32767" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="1" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel1" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -41,6 +37,11 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="c0" green="c0" id="lightGray" palette="1" red="c0" type="palette"/>
+        </Property>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -53,7 +54,7 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="socialEditDateLabel" min="-2" max="-2" attributes="0"/>
                               <Component id="socialEditTitleLabel" min="-2" max="-2" attributes="0"/>
                               <Component id="socialEditPriorityLabel" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -61,15 +62,15 @@
                               <Component id="socialEditOccasionLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="socialEditAttenHoursLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="editSocialPriority" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="editSocialdateField" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="editSocialLocField" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="editOccasionField" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="editAttendingHours" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="editSocialTitleField" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                              <Component id="editSocialTitleField" alignment="0" pref="250" max="32767" attributes="0"/>
+                              <Component id="editSocialLocField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="editOccasionField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="editAttendingHours" alignment="0" max="32767" attributes="0"/>
+                              <Component id="editSocialdateField" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="99" max="32767" attributes="0"/>
+                  <EmptySpace pref="105" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -109,7 +110,7 @@
                   <Component id="editAttendingHours" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="updateWorkTaskB" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="10" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -117,36 +118,60 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="editSocialTaskLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Papyrus" size="24" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="0" red="8c" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Edit Social tasks"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="socialEditTitleLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Hiragino Mincho ProN" size="14" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Title"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="socialEditDateLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Hiragino Mincho ProN" size="14" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Date"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="socialEditPriorityLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Hiragino Mincho ProN" size="14" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Priority"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="socialEditMeetLocLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Hiragino Mincho ProN" size="14" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Meeting Location"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="socialEditOccasionLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Hiragino Mincho ProN" size="14" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Occasion"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="socialEditAttenHoursLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Hiragino Mincho ProN" size="14" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Attending Hours"/>
           </Properties>
         </Component>
@@ -160,6 +185,11 @@
                 <StringItem index="3" value="4"/>
               </StringArray>
             </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                <BevelBorder bevelType="1"/>
+              </Border>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editSocialPriorityActionPerformed"/>
@@ -169,18 +199,58 @@
           </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="editSocialTitleField">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                <BevelBorder bevelType="1"/>
+              </Border>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="editSocialdateField">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                <BevelBorder bevelType="1"/>
+              </Border>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="editSocialLocField">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                <BevelBorder bevelType="1"/>
+              </Border>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="editOccasionField">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                <BevelBorder bevelType="1"/>
+              </Border>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="editAttendingHours">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                <BevelBorder bevelType="1"/>
+              </Border>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="updateWorkTaskB">
           <Properties>
             <Property name="text" type="java.lang.String" value="Update Task"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                <BevelBorder/>
+              </Border>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateWorkTaskBActionPerformed"/>

@@ -35,26 +35,33 @@ public class schoolFrame extends javax.swing.JFrame {
         studyHrsField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(java.awt.Color.lightGray);
         setName("schoolFrameTask"); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("Papyrus", 3, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Papyrus", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(153, 0, 51));
         jLabel1.setText("School Tasks");
 
-        jLabel2.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 13)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         jLabel2.setText("Course Name");
 
-        jLabel3.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 13)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Homework Name");
 
-        jLabel4.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 13)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         jLabel4.setText("Study Hours ");
 
+        courseNameField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         courseNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 courseNameFieldActionPerformed(evt);
             }
         });
+
+        hwNameField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
+        studyHrsField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,7 +81,7 @@ public class schoolFrame extends javax.swing.JFrame {
                             .addComponent(courseNameField, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
                             .addComponent(hwNameField)
                             .addComponent(studyHrsField))))
-                .addContainerGap(134, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -93,7 +100,7 @@ public class schoolFrame extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(studyHrsField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         pack();
