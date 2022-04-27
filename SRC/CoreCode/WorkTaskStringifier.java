@@ -12,8 +12,8 @@ public class WorkTaskStringifier implements ITaskStringifier {
 		stringVec.add(workTask.getDate().format(DateTimeFormatter.ofPattern("MM/dd/yyyy")));
 		stringVec.add("Work");
 		stringVec.add(Integer.toString(workTask.getPriority(), 10));
-		stringVec.add(workTask.getMeetingWith());
 		stringVec.add(workTask.getProjectName());
+		stringVec.add(workTask.getMeetingWith());
 		stringVec.add(Double.toString(workTask.getHoursWorking()));
 		return stringVec;
 	}

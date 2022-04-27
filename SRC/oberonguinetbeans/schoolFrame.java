@@ -145,6 +145,21 @@ public class schoolFrame extends javax.swing.JFrame {
         });
     }
 
+    public String getCourseName()
+    {
+        return courseNameField.getText();
+    }
+
+    public String getHomeworkName()
+    {
+        return hwNameField.getText();
+    }
+
+    public String getStudyHours()
+    {
+        return studyHrsField.getText();
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField courseNameField;
     private javax.swing.JTextField hwNameField;
