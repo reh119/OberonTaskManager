@@ -584,6 +584,8 @@ public class taskManager extends javax.swing.JFrame {
     private javax.swing.JToggleButton descendToggle;
     private javax.swing.JButton editTask;
     private javax.swing.JLabel jLabel3;
+
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
