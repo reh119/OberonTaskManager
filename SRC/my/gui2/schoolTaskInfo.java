@@ -6,6 +6,8 @@ package my.gui2;
 
 import CoreCode.TaskController;
 
+import java.util.Vector;
+
 /**
  *
  * @author oscarramirez
@@ -19,6 +21,20 @@ public class schoolTaskInfo extends javax.swing.JFrame {
         initComponents();
         this.C =C;
         this.U = U;
+        Vector<String> dataFields = new Vector<String>();
+        dataFields = C.getCurrentTaskStrings();
+        titleText.setText(dataFields.get(0));
+        dateText.setText(dataFields.get(1));
+        priorityText.setText(dataFields.get(3));
+        courseText.setText(dataFields.get(4));
+        homeworkText.setText(dataFields.get(5));
+        studyText.setText(dataFields.get(6));
+        titleText.setEditable(false);
+        dateText.setEditable(false);
+        priorityText.setEditable(false);
+        courseText.setEditable(false);
+        homeworkText.setEditable(false);
+        studyText.setEditable(false);
     }
     TaskController C;
     user2 U;

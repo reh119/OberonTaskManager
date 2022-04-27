@@ -479,6 +479,7 @@ public class user2 extends javax.swing.JFrame {
 
     private void viewTaskButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewTaskButtonActionPerformed
         // TODO add your handling code here:
+        C.selectTask(getSelectedTaskIndex());
         switch((String)taskTableView.getModel().getValueAt(taskTableView.getSelectedRow(), 2)){
 
             case "Basic":

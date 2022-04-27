@@ -43,9 +43,9 @@ public class TaskController extends Controller {
     	selectedTask = visibleTasks.get(i);
     }
 
-    public TaskInterface getSelectedTask()
+    public TaskType getSelectedTaskType()
     {
-        return selectedTask;
+        return selectedTask.getTaskType();
     }
 
     //This finds a list of tasks to move to the controller
