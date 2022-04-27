@@ -24,8 +24,8 @@ public class editSocialTaskFrame extends javax.swing.JFrame {
         editSocialTitleField.setText(dataFields.get(0));
         editSocialdateField.setText(dataFields.get(1));
         editSocialPriority.setSelectedIndex(Integer.parseInt(dataFields.get(3))-1);
-        editOccasionField.setText(dataFields.get(4));
-        editSocialLocField.setText(dataFields.get(5));
+        editSocialLocField.setText(dataFields.get(4));
+        editOccasionField.setText(dataFields.get(5));
         editAttendingHours.setText(dataFields.get(6));
         this.C = C;
     }
