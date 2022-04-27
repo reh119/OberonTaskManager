@@ -569,18 +569,26 @@ public class user2 extends javax.swing.JFrame {
 
     private void sortTitleButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortTitleButActionPerformed
         // TODO add your handling code here:
+        C.sortTasks(TaskAttribute.TITLE,false);
+        updateTaskTable(C.getGroupTaskStrings());
     }//GEN-LAST:event_sortTitleButActionPerformed
 
     private void sortTypeButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortTypeButActionPerformed
         // TODO add your handling code here:
+        C.sortTasks(TaskAttribute.TYPE,false);
+        updateTaskTable(C.getGroupTaskStrings());
     }//GEN-LAST:event_sortTypeButActionPerformed
 
     private void sortDateButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortDateButActionPerformed
         // TODO add your handling code here:
+        C.sortTasks(TaskAttribute.DATE,false);
+        updateTaskTable(C.getGroupTaskStrings());
     }//GEN-LAST:event_sortDateButActionPerformed
 
     private void sortPriorityButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortPriorityButActionPerformed
         // TODO add your handling code here:
+        C.sortTasks(TaskAttribute.PRIORITY,false);
+        updateTaskTable(C.getGroupTaskStrings());
     }//GEN-LAST:event_sortPriorityButActionPerformed
 
     private void switchGUIButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_switchGUIButActionPerformed
