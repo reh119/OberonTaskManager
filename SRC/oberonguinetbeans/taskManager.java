@@ -330,6 +330,11 @@ public class taskManager extends javax.swing.JFrame {
         switchGuiB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oberonguinetbeans/swap.png"))); // NOI18N
         switchGuiB.setText("Switch GUI");
         switchGuiB.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        switchGuiB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                switchGuiBActionPerformed(evt);
+            }
+        });
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oberonguinetbeans/oberonLOGO.jpeg"))); // NOI18N
@@ -590,6 +595,18 @@ public class taskManager extends javax.swing.JFrame {
         };
         
     }//GEN-LAST:event_viewTaskBActionPerformed
+
+    private void switchGuiBActionPerformed(java.awt.event.ActionEvent evt)
+    {
+        C.resetTasks();
+        GUI2TaskView V = new GUI2TaskView();
+        V.setController(C);
+        C.setView(V);
+        this.setVisible(false);
+        V.GUIStart();
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        this.dispose();
+    }
 
     //
     
