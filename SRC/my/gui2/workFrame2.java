@@ -4,6 +4,8 @@
  */
 package my.gui2;
 
+import java.util.Vector;
+
 /**
  *
  * @author oscarramirez
@@ -132,6 +134,15 @@ public class workFrame2 extends javax.swing.JFrame {
                 new workFrame2().setVisible(true);
             }
         });
+    }
+
+    public Vector<String> getFields()
+    {
+        Vector<String> vec = new Vector<String>();
+        vec.add(projectText.getText());
+        vec.add(meetingText.getText());
+        vec.add(hoursWorkText.getText());
+        return vec;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
