@@ -6,7 +6,6 @@ package my.gui2;
 
 import java.util.Vector;
 
-package my.gui2;
 
 /**
  *

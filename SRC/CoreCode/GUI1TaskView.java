@@ -32,7 +32,7 @@ public class GUI1TaskView extends View {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new taskManager().setVisible(true);
+                new taskManager(C).setVisible(true);
             }
         });
 	}
