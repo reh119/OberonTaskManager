@@ -2,6 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+package my.gui2;
+
+import java.util.Vector;
 
 package my.gui2;
 
@@ -139,6 +142,15 @@ public class socialFrame2 extends javax.swing.JFrame {
                 new socialFrame2().setVisible(true);
             }
         });
+    }
+
+    public Vector<String> getFields()
+    {
+        Vector<String> vec = new Vector<String>();
+        vec.add(meetingText.getText());
+        vec.add(specialText.getText());
+        vec.add(attendingText.getText());
+        return vec;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -1,4 +1,8 @@
 package my.gui2;
+import CoreCode.TaskAttribute;
+import CoreCode.TaskType;
+import CoreCode.TaskController;
+
 import java.util.Vector;
 
 /*
@@ -17,8 +21,9 @@ public class user2 extends javax.swing.JFrame {
     /**
      * Creates new form user2
      */
-    public user2() {
+    public user2(TaskController C) {
         initComponents();
+        this.C = C;
     }
 
     /**
@@ -388,50 +393,64 @@ public class user2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-int check =0;
-String taskType = "";
+    int check =0;
+
+    int searchCheck = 1;
+    String taskType = "";
+    workFrame2 wf;
+    schoolFrame2 sf;
+    socialFrame2 scf;
+
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
-        
- 
+        Vector<String> dataValues = new Vector<String>();
+        if(workCheckbox.getModel().isSelected() && socialCheckbox.getModel().isSelected()
+                && schoolCheckbox.getModel().isSelected()) {
+            check = 0;
+        }
+        dataValues.add(titleText.getText());
+        dataValues.add(dateText.getText());
+        dataValues.add(priorityText.getText());
         if(check == 1){
-            
-          schoolFrame2 sf = new schoolFrame2();
-          sf.setVisible(true);
-          taskType = "School";
-            
+            dataValues.addAll(sf.getFields());
+            C.addTask(TaskType.SCHOOL, dataValues);
+            sf.dispose();
+        }else if(check == 2) {
+            dataValues.addAll(wf.getFields());
+            C.addTask(TaskType.WORK, dataValues);
+            wf.dispose();
+        } else if(check == 3){
+            dataValues.addAll(scf.getFields());
+            C.addTask(TaskType.SOCIAL, dataValues);
+            scf.dispose();
+        } else {
+            C.addTask(TaskType.BASIC, dataValues);
         }
-        
-        if(check == 2){
-            
-          workFrame2 wf = new workFrame2();
-          wf.setVisible(true);
-          taskType = "Work";
-            
-        }
-        
-        if(check == 3){
-            
-          socialFrame2 scf = new socialFrame2();
-          scf.setVisible(true);
-          taskType = "Social";
-            
-        }
+
+
     }//GEN-LAST:event_addButtonActionPerformed
 
-    
+
     private void schoolCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_schoolCheckboxActionPerformed
         // TODO add your handling code here:
         workCheckbox.setSelected(false);
         socialCheckbox.setSelected(false);
+        sf = new schoolFrame2();
+        sf.setVisible(true);
+        sf.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        taskType = "School";
         check = 1;
-        
+
     }//GEN-LAST:event_schoolCheckboxActionPerformed
 
     private void workCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_workCheckboxActionPerformed
         // TODO add your handling code here:
         schoolCheckbox.setSelected(false);
         socialCheckbox.setSelected(false);
+        wf = new workFrame2();
+        wf.setVisible(true);
+        wf.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        taskType = "Work";
         check = 2;
     }//GEN-LAST:event_workCheckboxActionPerformed
 
@@ -451,47 +470,69 @@ String taskType = "";
         // TODO add your handling code here:
         schoolCheckbox.setSelected(false);
         workCheckbox.setSelected(false);
+        scf = new socialFrame2();
+        scf.setVisible(true);
+        scf.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        taskType = "Social";
         check = 3;
     }//GEN-LAST:event_socialCheckboxActionPerformed
 
     private void viewTaskButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewTaskButtonActionPerformed
         // TODO add your handling code here:
-        switch((String)taskTableView.getModel().getValueAt(taskTableView.getSelectedRow(), 1)){
-            
+        switch((String)taskTableView.getModel().getValueAt(taskTableView.getSelectedRow(), 2)){
+
             case "Basic":
-                basicTaskInfo bt = new basicTaskInfo();
+                basicTaskInfo bt = new basicTaskInfo(C, this);
+                bt.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 bt.setVisible(true);
                 break;
-                
-             case "School":
-                schoolTaskInfo st = new schoolTaskInfo();
+
+            case "School":
+                schoolTaskInfo st = new schoolTaskInfo(C, this);
+                st.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 st.setVisible(true);
                 break;
-                
-             case "Work":
-                workTaskInfo wt = new workTaskInfo();
+
+            case "Work":
+                workTaskInfo wt = new workTaskInfo(C, this);
+                wt.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 wt.setVisible(true);
                 break;
-                
-              case "Social":
-                socialTaskInfo sct = new socialTaskInfo();
+
+            case "Social":
+                socialTaskInfo sct = new socialTaskInfo(C, this);
+                sct.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 sct.setVisible(true);
                 break;
-                
-              default: break;
-         
-              }
-        
-        
-               
-        
-        
+
+            default:
+                break;
+
+        }
+
+
+
+
+
     }//GEN-LAST:event_viewTaskButtonActionPerformed
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         // TODO add your handling code here:
+        switch(searchCheck)
+        {
+            case 1:     C.findTasks(TaskAttribute.TITLE, searchText.getText());
+                break;
+            case 2:     C.findTasks(TaskAttribute.PRIORITY, searchText.getText());
+                break;
+            case 3:     C.findTasks(TaskAttribute.DATE, searchText.getText());
+                break;
+            case 4:     C.findTasks(TaskAttribute.TYPE, searchText.getText());
+                break;
+            default:
+                break;
+        }
+        updateTaskTable(C.getGroupTaskStrings());
 
-      
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void titleCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titleCheckBoxActionPerformed
@@ -499,7 +540,7 @@ String taskType = "";
         priorityCheckBox.setSelected(false);
         dateCheckBox.setSelected(false);
         typeCheckBox.setSelected(false);
-        check = 1;
+        searchCheck = 1;
     }//GEN-LAST:event_titleCheckBoxActionPerformed
 
     private void priorityCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_priorityCheckBoxActionPerformed
@@ -507,7 +548,7 @@ String taskType = "";
         titleCheckBox.setSelected(false);
         dateCheckBox.setSelected(false);
         typeCheckBox.setSelected(false);
-        check = 2;
+        searchCheck = 2;
     }//GEN-LAST:event_priorityCheckBoxActionPerformed
 
     private void dateCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateCheckBoxActionPerformed
@@ -515,7 +556,7 @@ String taskType = "";
         titleCheckBox.setSelected(false);
         priorityCheckBox.setSelected(false);
         typeCheckBox.setSelected(false);
-        check = 3;
+        searchCheck = 3;
     }//GEN-LAST:event_dateCheckBoxActionPerformed
 
     private void typeCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typeCheckBoxActionPerformed
@@ -523,23 +564,31 @@ String taskType = "";
         titleCheckBox.setSelected(false);
         priorityCheckBox.setSelected(false);
         dateCheckBox.setSelected(false);
-        check = 4;
+        searchCheck = 4;
     }//GEN-LAST:event_typeCheckBoxActionPerformed
 
     private void sortTitleButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortTitleButActionPerformed
         // TODO add your handling code here:
+        C.sortTasks(TaskAttribute.TITLE,false);
+        updateTaskTable(C.getGroupTaskStrings());
     }//GEN-LAST:event_sortTitleButActionPerformed
 
     private void sortTypeButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortTypeButActionPerformed
         // TODO add your handling code here:
+        C.sortTasks(TaskAttribute.TYPE,false);
+        updateTaskTable(C.getGroupTaskStrings());
     }//GEN-LAST:event_sortTypeButActionPerformed
 
     private void sortDateButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortDateButActionPerformed
         // TODO add your handling code here:
+        C.sortTasks(TaskAttribute.DATE,false);
+        updateTaskTable(C.getGroupTaskStrings());
     }//GEN-LAST:event_sortDateButActionPerformed
 
     private void sortPriorityButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortPriorityButActionPerformed
         // TODO add your handling code here:
+        C.sortTasks(TaskAttribute.PRIORITY,false);
+        updateTaskTable(C.getGroupTaskStrings());
     }//GEN-LAST:event_sortPriorityButActionPerformed
 
     private void switchGUIButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_switchGUIButActionPerformed
@@ -547,57 +596,28 @@ String taskType = "";
     }//GEN-LAST:event_switchGUIButActionPerformed
 
     private void updateTaskTable(Vector<Vector<String>> stringVec) {
-    	taskTableView.setModel(new javax.swing.table.DefaultTableModel(
+        taskTableView.setModel(new javax.swing.table.DefaultTableModel(
                 new Object [stringVec.size()][3],
                 new String [] {
-                     "Title", "Priority", "Type", "Date"
+                        "Title", "Priority", "Type", "Date"
                 }));
-    	for (int i = 0; i < stringVec.size(); i++)
-    	{
-    		taskTableView.getModel().setValueAt(stringVec.get(i).get(0), i, 0);
-    		taskTableView.getModel().setValueAt(stringVec.get(i).get(3), i, 1);
-    		taskTableView.getModel().setValueAt(stringVec.get(i).get(2), i, 2);
-    		taskTableView.getModel().setValueAt(stringVec.get(i).get(1), i, 3);
-    	}
-        
-       
-    }
-    
-    
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(user2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(user2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(user2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(user2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        for (int i = 0; i < stringVec.size(); i++)
+        {
+            taskTableView.getModel().setValueAt(stringVec.get(i).get(0), i, 0);
+            taskTableView.getModel().setValueAt(stringVec.get(i).get(3), i, 1);
+            taskTableView.getModel().setValueAt(stringVec.get(i).get(2), i, 2);
+            taskTableView.getModel().setValueAt(stringVec.get(i).get(1), i, 3);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new user2().setVisible(true);
-            }
-        });
+
     }
+
+    public int getSelectedTaskIndex()
+    {
+        return taskTableView.getSelectedRow();
+    }
+
+    TaskController C;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addButton;
