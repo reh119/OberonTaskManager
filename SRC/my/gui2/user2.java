@@ -567,6 +567,26 @@ public class user2 extends javax.swing.JFrame {
         searchCheck = 4;
     }//GEN-LAST:event_typeCheckBoxActionPerformed
 
+    private void sortTitleButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortTitleButActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sortTitleButActionPerformed
+
+    private void sortTypeButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortTypeButActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sortTypeButActionPerformed
+
+    private void sortDateButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortDateButActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sortDateButActionPerformed
+
+    private void sortPriorityButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortPriorityButActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sortPriorityButActionPerformed
+
+    private void switchGUIButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_switchGUIButActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_switchGUIButActionPerformed
+
     private void updateTaskTable(Vector<Vector<String>> stringVec) {
         taskTableView.setModel(new javax.swing.table.DefaultTableModel(
                 new Object [stringVec.size()][3],
