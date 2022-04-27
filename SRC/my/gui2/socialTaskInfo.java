@@ -15,13 +15,14 @@ public class socialTaskInfo extends javax.swing.JFrame {
     /**
      * Creates new form socialTaskInfo
      */
-    public socialTaskInfo(TaskController C) {
+    public socialTaskInfo(TaskController C, user2 U) {
         initComponents();
         this.C = C;
+        this.U = U;
     }
 
     TaskController C;
-
+    user2 U;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -241,6 +242,10 @@ public class socialTaskInfo extends javax.swing.JFrame {
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
         // TODO add your handling code here:
+        C.selectTask(U.getSelectedTaskIndex());
+        C.removeTask();
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        this.dispose();
     }//GEN-LAST:event_deleteButtonActionPerformed
 
     private void taskTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_taskTextActionPerformed

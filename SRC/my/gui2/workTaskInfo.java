@@ -15,12 +15,14 @@ public class workTaskInfo extends javax.swing.JFrame {
     /**
      * Creates new form taskInfo
      */
-    public workTaskInfo(TaskController C) {
+    public workTaskInfo(TaskController C, user2 U) {
         initComponents();
         this.C = C;
+        this.U = U;
     }
 
     TaskController C;
+    user2 U;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -315,6 +317,10 @@ public class workTaskInfo extends javax.swing.JFrame {
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
         // TODO add your handling code here:
+        C.selectTask(U.getSelectedTaskIndex());
+        C.removeTask();
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        this.dispose();
     }//GEN-LAST:event_deleteButtonActionPerformed
 
     private void titleTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titleTextActionPerformed

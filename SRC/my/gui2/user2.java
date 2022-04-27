@@ -482,25 +482,25 @@ public class user2 extends javax.swing.JFrame {
         switch((String)taskTableView.getModel().getValueAt(taskTableView.getSelectedRow(), 2)){
 
             case "Basic":
-                basicTaskInfo bt = new basicTaskInfo(C);
+                basicTaskInfo bt = new basicTaskInfo(C, this);
                 bt.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 bt.setVisible(true);
                 break;
 
             case "School":
-                schoolTaskInfo st = new schoolTaskInfo(C);
+                schoolTaskInfo st = new schoolTaskInfo(C, this);
                 st.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 st.setVisible(true);
                 break;
 
             case "Work":
-                workTaskInfo wt = new workTaskInfo(C);
+                workTaskInfo wt = new workTaskInfo(C, this);
                 wt.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 wt.setVisible(true);
                 break;
 
             case "Social":
-                socialTaskInfo sct = new socialTaskInfo(C);
+                socialTaskInfo sct = new socialTaskInfo(C, this);
                 sct.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 sct.setVisible(true);
                 break;
@@ -610,6 +610,11 @@ public class user2 extends javax.swing.JFrame {
         }
 
 
+    }
+
+    public int getSelectedTaskIndex()
+    {
+        return taskTableView.getSelectedRow();
     }
 
     TaskController C;
