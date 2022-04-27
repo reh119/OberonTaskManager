@@ -57,33 +57,53 @@ public class editWorkTaskFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(java.awt.Color.lightGray);
+
+        editWorkTasksLabel.setFont(new java.awt.Font("Papyrus", 1, 24)); // NOI18N
+        editWorkTasksLabel.setForeground(new java.awt.Color(150, 0, 51));
+        editWorkTasksLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         editWorkTasksLabel.setText("Edit Work Tasks");
 
+        workEditTitleLabel.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         workEditTitleLabel.setText("Title ");
 
-        workEditDateLabel.setText("Date/Due:");
+        workEditDateLabel.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
+        workEditDateLabel.setText("Date");
 
+        workEditPriorityLabel.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         workEditPriorityLabel.setText("Priority");
 
+        workEditProjNameLabel.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         workEditProjNameLabel.setText("Project Name");
 
+        workEditMeetWLabel.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         workEditMeetWLabel.setText("Meeting With");
 
+        jLabel7.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         jLabel7.setText("Hours Worked");
 
+        editworkTitleField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         editworkTitleField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editworkTitleFieldActionPerformed(evt);
             }
         });
 
+        editWorkDateField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         editWorkDateField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editWorkDateFieldActionPerformed(evt);
             }
         });
 
+        workEditProjNField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
+        workEditMeetWField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
+        workEditHoursLabel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
         updateWorkTaskB.setText("Update Task");
+        updateWorkTaskB.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         updateWorkTaskB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateWorkTaskBActionPerformed(evt);
@@ -91,6 +111,7 @@ public class editWorkTaskFrame extends javax.swing.JFrame {
         });
 
         editWorkPriority.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4" }));
+        editWorkPriority.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -118,9 +139,9 @@ public class editWorkTaskFrame extends javax.swing.JFrame {
                         .addGap(201, 201, 201)
                         .addComponent(updateWorkTaskB))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(126, 126, 126)
+                        .addGap(101, 101, 101)
                         .addComponent(editWorkTasksLabel)))
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,15 +181,11 @@ public class editWorkTaskFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 14, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();

@@ -57,28 +57,50 @@ public class editSocialTaskFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(java.awt.Color.lightGray);
+
+        editSocialTaskLabel.setFont(new java.awt.Font("Papyrus", 1, 24)); // NOI18N
+        editSocialTaskLabel.setForeground(new java.awt.Color(140, 0, 51));
         editSocialTaskLabel.setText("Edit Social tasks");
 
+        socialEditTitleLabel.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         socialEditTitleLabel.setText("Title");
 
+        socialEditDateLabel.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         socialEditDateLabel.setText("Date");
 
+        socialEditPriorityLabel.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         socialEditPriorityLabel.setText("Priority");
 
+        socialEditMeetLocLabel.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         socialEditMeetLocLabel.setText("Meeting Location");
 
+        socialEditOccasionLabel.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         socialEditOccasionLabel.setText("Occasion");
 
+        socialEditAttenHoursLabel.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         socialEditAttenHoursLabel.setText("Attending Hours");
 
         editSocialPriority.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4" }));
+        editSocialPriority.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         editSocialPriority.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editSocialPriorityActionPerformed(evt);
             }
         });
 
+        editSocialTitleField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
+        editSocialdateField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
+        editSocialLocField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
+        editOccasionField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
+        editAttendingHours.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
         updateWorkTaskB.setText("Update Task");
+        updateWorkTaskB.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         updateWorkTaskB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateWorkTaskBActionPerformed(evt);
@@ -96,7 +118,7 @@ public class editSocialTaskFrame extends javax.swing.JFrame {
                         .addComponent(editSocialTaskLabel))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(45, 45, 45)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(socialEditDateLabel)
                             .addComponent(socialEditTitleLabel)
                             .addComponent(socialEditPriorityLabel)
@@ -104,12 +126,12 @@ public class editSocialTaskFrame extends javax.swing.JFrame {
                             .addComponent(socialEditOccasionLabel)
                             .addComponent(socialEditAttenHoursLabel)
                             .addComponent(editSocialPriority, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(editSocialdateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(editSocialLocField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(editOccasionField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(editAttendingHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(editSocialTitleField, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(99, Short.MAX_VALUE))
+                            .addComponent(editSocialTitleField, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                            .addComponent(editSocialLocField)
+                            .addComponent(editOccasionField)
+                            .addComponent(editAttendingHours)
+                            .addComponent(editSocialdateField))))
+                .addContainerGap(105, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(updateWorkTaskB)
@@ -146,21 +168,18 @@ public class editSocialTaskFrame extends javax.swing.JFrame {
                 .addComponent(editAttendingHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(updateWorkTaskB)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );

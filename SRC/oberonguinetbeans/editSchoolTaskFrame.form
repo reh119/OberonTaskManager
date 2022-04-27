@@ -23,15 +23,16 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="updateSchoolTask" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+          </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                           <Component id="courseNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="SchoolHWLabel" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -39,20 +40,19 @@
                           <Component id="editSchoolPriority" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="schoolTaskLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="schoolPriorityLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="editSchoolHWField" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="editSchoolStudyHField" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="editSchoolCourseField" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                          <Component id="editSchoolDateField" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="editSchoolTitleField" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="editSchoolCourseField" alignment="0" pref="250" max="32767" attributes="0"/>
+                          <Component id="editSchoolTitleField" alignment="0" max="32767" attributes="0"/>
+                          <Component id="editSchoolDateField" alignment="0" max="32767" attributes="0"/>
+                          <Component id="editSchoolHWField" alignment="0" max="32767" attributes="0"/>
+                          <Component id="editSchoolStudyHField" alignment="0" max="32767" attributes="0"/>
                       </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="102" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="updateSchoolTask" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -87,7 +87,7 @@
               <Component id="editSchoolStudyHField" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="updateSchoolTask" min="-2" pref="23" max="-2" attributes="0"/>
-              <EmptySpace pref="28" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -95,31 +95,52 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Papyrus" size="24" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="0" red="96" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Edit School Task"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="schoolTaskLabel">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Hiragino Mincho ProN" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Title"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Hiragino Mincho ProN" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Date"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="courseNameLabel">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Hiragino Mincho ProN" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Course Name"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="SchoolHWLabel">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Hiragino Mincho ProN" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="HW Name"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="studyHoursLabel">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Hiragino Mincho ProN" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Study Hours"/>
       </Properties>
     </Component>
@@ -133,6 +154,11 @@
             <StringItem index="3" value="4"/>
           </StringArray>
         </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder bevelType="1"/>
+          </Border>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editSchoolPriorityActionPerformed"/>
@@ -143,15 +169,32 @@
     </Component>
     <Component class="javax.swing.JLabel" name="schoolPriorityLabel">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Hiragino Mincho ProN" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Priority"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="editSchoolTitleField">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder bevelType="1"/>
+          </Border>
+        </Property>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editSchoolTitleFieldActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="editSchoolDateField">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder bevelType="1"/>
+          </Border>
+        </Property>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editSchoolDateFieldActionPerformed"/>
       </Events>
@@ -168,6 +211,11 @@
     <Component class="javax.swing.JButton" name="updateSchoolTask">
       <Properties>
         <Property name="text" type="java.lang.String" value="Update Task"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateSchoolTaskActionPerformed"/>
