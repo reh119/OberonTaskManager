@@ -2,25 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package my.gui2;
-
-import CoreCode.TaskController;
-
+ package my.gui2;
 /**
  *
  * @author oscarramirez
  */
-public class basicTaskInfo extends javax.swing.JFrame {
+public class editBasicTask extends javax.swing.JFrame {
 
     /**
-     * Creates new form basicTaskInfo
+     * Creates new form editBasicTask
      */
-    public basicTaskInfo(TaskController C) {
+    public editBasicTask() {
         initComponents();
-        this.C = C;
     }
-
-    TaskController C;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -38,8 +32,7 @@ public class basicTaskInfo extends javax.swing.JFrame {
         titleText = new javax.swing.JTextField();
         dateText = new javax.swing.JTextField();
         priorityText = new javax.swing.JTextField();
-        editButton = new javax.swing.JButton();
-        deleteButton = new javax.swing.JButton();
+        addEditBut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,22 +45,30 @@ public class basicTaskInfo extends javax.swing.JFrame {
         jLabel3.setText("Priority:");
 
         titleText.setText("jTextField1");
-
-        dateText.setText("jTextField2");
-
-        priorityText.setText("jTextField3");
-
-        editButton.setText("Edit Task");
-        editButton.addActionListener(new java.awt.event.ActionListener() {
+        titleText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editButtonActionPerformed(evt);
+                titleTextActionPerformed(evt);
             }
         });
 
-        deleteButton.setText("Delete Task");
-        deleteButton.addActionListener(new java.awt.event.ActionListener() {
+        dateText.setText("jTextField2");
+        dateText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteButtonActionPerformed(evt);
+                dateTextActionPerformed(evt);
+            }
+        });
+
+        priorityText.setText("jTextField3");
+        priorityText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                priorityTextActionPerformed(evt);
+            }
+        });
+
+        addEditBut.setText("Add Edit");
+        addEditBut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addEditButActionPerformed(evt);
             }
         });
 
@@ -94,9 +95,7 @@ public class basicTaskInfo extends javax.swing.JFrame {
                         .addGap(74, 74, 74))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(editButton)
-                        .addGap(18, 18, 18)
-                        .addComponent(deleteButton)
+                        .addComponent(addEditBut)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -115,9 +114,7 @@ public class basicTaskInfo extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(priorityText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(editButton)
-                    .addComponent(deleteButton))
+                .addComponent(addEditBut)
                 .addContainerGap(39, Short.MAX_VALUE))
         );
 
@@ -145,26 +142,61 @@ public class basicTaskInfo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
+    private void addEditButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEditButActionPerformed
         // TODO add your handling code here:
-        
-        editBasicTask ebt = new editBasicTask();
-        ebt.setVisible(true);
-    }//GEN-LAST:event_editButtonActionPerformed
 
-    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
+    }//GEN-LAST:event_addEditButActionPerformed
+
+    private void titleTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titleTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_deleteButtonActionPerformed
+    }//GEN-LAST:event_titleTextActionPerformed
+
+    private void dateTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dateTextActionPerformed
+
+    private void priorityTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_priorityTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_priorityTextActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(editBasicTask.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(editBasicTask.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(editBasicTask.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(editBasicTask.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new editBasicTask().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addEditBut;
     private javax.swing.JTextField dateText;
-    private javax.swing.JButton deleteButton;
-    private javax.swing.JButton editButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

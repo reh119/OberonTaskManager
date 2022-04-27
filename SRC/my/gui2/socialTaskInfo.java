@@ -15,8 +15,7 @@ public class socialTaskInfo extends javax.swing.JFrame {
     /**
      * Creates new form socialTaskInfo
      */
-    public socialTaskInfo(TaskController C)
-    {
+    public socialTaskInfo(TaskController C) {
         initComponents();
         this.C = C;
     }
@@ -60,8 +59,18 @@ public class socialTaskInfo extends javax.swing.JFrame {
         jLabel3.setText("Priority:");
 
         taskText.setText("jTextField1");
+        taskText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                taskTextActionPerformed(evt);
+            }
+        });
 
         dateText.setText("jTextField2");
+        dateText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dateTextActionPerformed(evt);
+            }
+        });
 
         priorityText.setText("jTextField3");
         priorityText.addActionListener(new java.awt.event.ActionListener() {
@@ -77,10 +86,25 @@ public class socialTaskInfo extends javax.swing.JFrame {
         jLabel24.setText("Attending Hours:");
 
         meetingText.setText("jTextField7");
+        meetingText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                meetingTextActionPerformed(evt);
+            }
+        });
 
         locateText.setText("jTextField8");
+        locateText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                locateTextActionPerformed(evt);
+            }
+        });
 
         attendingText.setText("jTextField9");
+        attendingText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                attendingTextActionPerformed(evt);
+            }
+        });
 
         editButton.setText("Edit Task");
         editButton.addActionListener(new java.awt.event.ActionListener() {
@@ -90,6 +114,11 @@ public class socialTaskInfo extends javax.swing.JFrame {
         });
 
         deleteButton.setText("Delete Task");
+        deleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -210,10 +239,33 @@ public class socialTaskInfo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_priorityTextActionPerformed
 
+    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deleteButtonActionPerformed
+
+    private void taskTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_taskTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_taskTextActionPerformed
+
+    private void dateTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dateTextActionPerformed
+
+    private void meetingTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_meetingTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_meetingTextActionPerformed
+
+    private void locateTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locateTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_locateTextActionPerformed
+
+    private void attendingTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_attendingTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_attendingTextActionPerformed
+
     /**
      * @param args the command line arguments
      */
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField attendingText;

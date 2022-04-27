@@ -43,33 +43,44 @@ public class editSchoolTaskFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Papyrus", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(150, 0, 51));
         jLabel1.setText("Edit School Task");
 
+        schoolTaskLabel.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         schoolTaskLabel.setText("Title");
 
+        jLabel3.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         jLabel3.setText("Date");
 
+        courseNameLabel.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         courseNameLabel.setText("Course Name");
 
+        SchoolHWLabel.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         SchoolHWLabel.setText("HW Name");
 
+        studyHoursLabel.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         studyHoursLabel.setText("Study Hours");
 
         editSchoolPriority.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4" }));
+        editSchoolPriority.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         editSchoolPriority.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editSchoolPriorityActionPerformed(evt);
             }
         });
 
+        schoolPriorityLabel.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 14)); // NOI18N
         schoolPriorityLabel.setText("Priority");
 
+        editSchoolTitleField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         editSchoolTitleField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editSchoolTitleFieldActionPerformed(evt);
             }
         });
 
+        editSchoolDateField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         editSchoolDateField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editSchoolDateFieldActionPerformed(evt);
@@ -83,6 +94,7 @@ public class editSchoolTaskFrame extends javax.swing.JFrame {
         });
 
         updateSchoolTask.setText("Update Task");
+        updateSchoolTask.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         updateSchoolTask.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateSchoolTaskActionPerformed(evt);
@@ -93,14 +105,15 @@ public class editSchoolTaskFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(updateSchoolTask)
+                .addGap(92, 92, 92))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(143, 143, 143)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(48, 48, 48)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel3)
                             .addComponent(courseNameLabel)
                             .addComponent(SchoolHWLabel)
@@ -108,16 +121,15 @@ public class editSchoolTaskFrame extends javax.swing.JFrame {
                             .addComponent(editSchoolPriority, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(schoolTaskLabel)
                             .addComponent(schoolPriorityLabel)
-                            .addComponent(editSchoolHWField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(editSchoolStudyHField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(editSchoolCourseField, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(editSchoolDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(editSchoolTitleField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(editSchoolCourseField, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                            .addComponent(editSchoolTitleField)
+                            .addComponent(editSchoolDateField)
+                            .addComponent(editSchoolHWField)
+                            .addComponent(editSchoolStudyHField)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(104, 104, 104)
+                        .addComponent(jLabel1)))
                 .addContainerGap(102, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(updateSchoolTask)
-                .addGap(92, 92, 92))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,7 +162,7 @@ public class editSchoolTaskFrame extends javax.swing.JFrame {
                 .addComponent(editSchoolStudyHField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(updateSchoolTask, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();

@@ -127,11 +127,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="jTextField1"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="taskTextActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="dateText">
           <Properties>
             <Property name="text" type="java.lang.String" value="jTextField2"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dateTextActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="priorityText">
           <Properties>
@@ -216,16 +222,25 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="jTextField7"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="meetingTextActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="locateText">
               <Properties>
                 <Property name="text" type="java.lang.String" value="jTextField8"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="locateTextActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="attendingText">
               <Properties>
                 <Property name="text" type="java.lang.String" value="jTextField9"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="attendingTextActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="editButton">
               <Properties>
@@ -239,6 +254,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Delete Task"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteButtonActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

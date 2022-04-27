@@ -15,12 +15,10 @@ public class schoolTaskInfo extends javax.swing.JFrame {
     /**
      * Creates new form schoolTaskInfo
      */
-    public schoolTaskInfo(TaskController C)
-    {
+    public schoolTaskInfo(TaskController C) {
         initComponents();
-        this.C = C;
+        this.C =C;
     }
-
     TaskController C;
 
     /**
@@ -60,10 +58,25 @@ public class schoolTaskInfo extends javax.swing.JFrame {
         jLabel3.setText("Priority:");
 
         titleText.setText("jTextField1");
+        titleText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                titleTextActionPerformed(evt);
+            }
+        });
 
         dateText.setText("jTextField2");
+        dateText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dateTextActionPerformed(evt);
+            }
+        });
 
         priorityText.setText("jTextField3");
+        priorityText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                priorityTextActionPerformed(evt);
+            }
+        });
 
         jLabel22.setText("Course Name:");
 
@@ -72,10 +85,25 @@ public class schoolTaskInfo extends javax.swing.JFrame {
         jLabel24.setText("Study Name:");
 
         courseText.setText("jTextField7");
+        courseText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                courseTextActionPerformed(evt);
+            }
+        });
 
         homeworkText.setText("jTextField8");
+        homeworkText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeworkTextActionPerformed(evt);
+            }
+        });
 
         studyText.setText("jTextField9");
+        studyText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                studyTextActionPerformed(evt);
+            }
+        });
 
         editButton.setText("Edit Task");
         editButton.addActionListener(new java.awt.event.ActionListener() {
@@ -85,6 +113,11 @@ public class schoolTaskInfo extends javax.swing.JFrame {
         });
 
         deleteButton.setText("Delete Task");
+        deleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -205,9 +238,38 @@ public class schoolTaskInfo extends javax.swing.JFrame {
         
     }//GEN-LAST:event_editButtonjButton1ActionPerformed
 
+    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deleteButtonActionPerformed
+
+    private void titleTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titleTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_titleTextActionPerformed
+
+    private void dateTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dateTextActionPerformed
+
+    private void priorityTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_priorityTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_priorityTextActionPerformed
+
+    private void courseTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_courseTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_courseTextActionPerformed
+
+    private void homeworkTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeworkTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_homeworkTextActionPerformed
+
+    private void studyTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studyTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_studyTextActionPerformed
+
     /**
      * @param args the command line arguments
      */
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField courseText;

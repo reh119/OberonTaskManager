@@ -1,6 +1,10 @@
 package my.gui2;
+import CoreCode.TaskAttribute;
+import CoreCode.TaskType;
+import CoreCode.TaskController;
+
 import java.util.Vector;
-import CoreCode.*;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -17,8 +21,7 @@ public class user2 extends javax.swing.JFrame {
     /**
      * Creates new form user2
      */
-    public user2(TaskController C)
-    {
+    public user2(TaskController C) {
         initComponents();
         this.C = C;
     }
@@ -51,7 +54,7 @@ public class user2 extends javax.swing.JFrame {
         taskTableView = new javax.swing.JTable();
         viewTaskButton = new javax.swing.JButton();
         sortTitleBut = new javax.swing.JButton();
-        switchBut = new javax.swing.JButton();
+        switchGUIBut = new javax.swing.JButton();
         sortTypeBut = new javax.swing.JButton();
         sortDateBut = new javax.swing.JButton();
         sortPriorityBut = new javax.swing.JButton();
@@ -212,14 +215,39 @@ public class user2 extends javax.swing.JFrame {
         });
 
         sortTitleBut.setText("Sort By Title");
+        sortTitleBut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sortTitleButActionPerformed(evt);
+            }
+        });
 
-        switchBut.setText("Switch GUI");
+        switchGUIBut.setText("Switch GUI");
+        switchGUIBut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                switchGUIButActionPerformed(evt);
+            }
+        });
 
         sortTypeBut.setText("Sort By Type");
+        sortTypeBut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sortTypeButActionPerformed(evt);
+            }
+        });
 
         sortDateBut.setText("Sort By Date");
+        sortDateBut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sortDateButActionPerformed(evt);
+            }
+        });
 
         sortPriorityBut.setText("Sort By Priority");
+        sortPriorityBut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sortPriorityButActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -235,7 +263,7 @@ public class user2 extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(sortPriorityBut)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(switchBut, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(switchGUIBut, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(viewTaskButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -260,7 +288,7 @@ public class user2 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(sortPriorityBut)
-                    .addComponent(switchBut, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(switchGUIBut, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -365,13 +393,13 @@ public class user2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-int check =0;
+    int check =0;
 
     int searchCheck = 1;
-String taskType = "";
-workFrame2 wf;
-schoolFrame2 sf;
-socialFrame2 scf;
+    String taskType = "";
+    workFrame2 wf;
+    schoolFrame2 sf;
+    socialFrame2 scf;
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
@@ -402,7 +430,7 @@ socialFrame2 scf;
 
     }//GEN-LAST:event_addButtonActionPerformed
 
-    
+
     private void schoolCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_schoolCheckboxActionPerformed
         // TODO add your handling code here:
         workCheckbox.setSelected(false);
@@ -412,7 +440,7 @@ socialFrame2 scf;
         sf.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         taskType = "School";
         check = 1;
-        
+
     }//GEN-LAST:event_schoolCheckboxActionPerformed
 
     private void workCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_workCheckboxActionPerformed
@@ -452,40 +480,40 @@ socialFrame2 scf;
     private void viewTaskButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewTaskButtonActionPerformed
         // TODO add your handling code here:
         switch((String)taskTableView.getModel().getValueAt(taskTableView.getSelectedRow(), 2)){
-            
+
             case "Basic":
-                basicTaskInfo bt = new basicTaskInfo();
+                basicTaskInfo bt = new basicTaskInfo(C);
                 bt.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 bt.setVisible(true);
                 break;
-                
-             case "School":
+
+            case "School":
                 schoolTaskInfo st = new schoolTaskInfo(C);
                 st.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 st.setVisible(true);
                 break;
-                
-             case "Work":
+
+            case "Work":
                 workTaskInfo wt = new workTaskInfo(C);
                 wt.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 wt.setVisible(true);
                 break;
-                
-              case "Social":
+
+            case "Social":
                 socialTaskInfo sct = new socialTaskInfo(C);
                 sct.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 sct.setVisible(true);
                 break;
-                
-              default:
-                  break;
-         
-              }
-        
-        
-               
-        
-        
+
+            default:
+                break;
+
+        }
+
+
+
+
+
     }//GEN-LAST:event_viewTaskButtonActionPerformed
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
@@ -504,7 +532,7 @@ socialFrame2 scf;
                 break;
         }
         updateTaskTable(C.getGroupTaskStrings());
-      
+
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void titleCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titleCheckBoxActionPerformed
@@ -539,27 +567,42 @@ socialFrame2 scf;
         searchCheck = 4;
     }//GEN-LAST:event_typeCheckBoxActionPerformed
 
+    private void sortTitleButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortTitleButActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sortTitleButActionPerformed
+
+    private void sortTypeButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortTypeButActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sortTypeButActionPerformed
+
+    private void sortDateButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortDateButActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sortDateButActionPerformed
+
+    private void sortPriorityButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortPriorityButActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sortPriorityButActionPerformed
+
+    private void switchGUIButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_switchGUIButActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_switchGUIButActionPerformed
+
     private void updateTaskTable(Vector<Vector<String>> stringVec) {
-    	taskTableView.setModel(new javax.swing.table.DefaultTableModel(
+        taskTableView.setModel(new javax.swing.table.DefaultTableModel(
                 new Object [stringVec.size()][3],
                 new String [] {
-                     "Title", "Priority", "Type", "Date"
+                        "Title", "Priority", "Type", "Date"
                 }));
-    	for (int i = 0; i < stringVec.size(); i++)
-    	{
-    		taskTableView.getModel().setValueAt(stringVec.get(i).get(0), i, 0);
-    		taskTableView.getModel().setValueAt(stringVec.get(i).get(3), i, 1);
-    		taskTableView.getModel().setValueAt(stringVec.get(i).get(2), i, 2);
-    		taskTableView.getModel().setValueAt(stringVec.get(i).get(1), i, 3);
-    	}
-        
-       
+        for (int i = 0; i < stringVec.size(); i++)
+        {
+            taskTableView.getModel().setValueAt(stringVec.get(i).get(0), i, 0);
+            taskTableView.getModel().setValueAt(stringVec.get(i).get(3), i, 1);
+            taskTableView.getModel().setValueAt(stringVec.get(i).get(2), i, 2);
+            taskTableView.getModel().setValueAt(stringVec.get(i).get(1), i, 3);
+        }
+
+
     }
-    
-    
-    /**
-     * @param args the command line arguments
-     */
 
     TaskController C;
 
@@ -587,7 +630,7 @@ socialFrame2 scf;
     private javax.swing.JButton sortPriorityBut;
     private javax.swing.JButton sortTitleBut;
     private javax.swing.JButton sortTypeBut;
-    private javax.swing.JButton switchBut;
+    private javax.swing.JButton switchGUIBut;
     private javax.swing.JTable taskTableView;
     private javax.swing.JCheckBox titleCheckBox;
     private javax.swing.JTextField titleText;

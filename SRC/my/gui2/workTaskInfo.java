@@ -15,8 +15,7 @@ public class workTaskInfo extends javax.swing.JFrame {
     /**
      * Creates new form taskInfo
      */
-    public workTaskInfo(TaskController C)
-    {
+    public workTaskInfo(TaskController C) {
         initComponents();
         this.C = C;
     }
@@ -316,7 +315,6 @@ public class workTaskInfo extends javax.swing.JFrame {
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
         // TODO add your handling code here:
-        C.removeTask();
     }//GEN-LAST:event_deleteButtonActionPerformed
 
     private void titleTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titleTextActionPerformed

@@ -243,7 +243,7 @@
                               <Group type="102" attributes="0">
                                   <Component id="sortPriorityBut" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="switchBut" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="switchGUIBut" min="-2" pref="110" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="viewTaskButton" min="-2" max="-2" attributes="0"/>
@@ -276,7 +276,7 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="sortPriorityBut" min="-2" max="-2" attributes="0"/>
-                      <Component id="switchBut" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="switchGUIBut" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -347,26 +347,41 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Sort By Title"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sortTitleButActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="switchBut">
+        <Component class="javax.swing.JButton" name="switchGUIBut">
           <Properties>
             <Property name="text" type="java.lang.String" value="Switch GUI"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="switchGUIButActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="sortTypeBut">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sort By Type"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sortTypeButActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="sortDateBut">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sort By Date"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sortDateButActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="sortPriorityBut">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sort By Priority"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sortPriorityButActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

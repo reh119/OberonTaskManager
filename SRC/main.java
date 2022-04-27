@@ -6,7 +6,7 @@ import CoreCode.*;
 
 public class main {
     public static void main(String[] args) {
-    	
+    	// initializing
          TaskModel modelM = new TaskModel();
          TaskController C = new TaskController();
          modelM.setController(C);
