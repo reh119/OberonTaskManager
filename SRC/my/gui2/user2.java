@@ -1,4 +1,5 @@
 package my.gui2;
+import CoreCode.GUI1TaskView;
 import CoreCode.TaskAttribute;
 import CoreCode.TaskType;
 import CoreCode.TaskController;
@@ -594,6 +595,14 @@ public class user2 extends javax.swing.JFrame {
 
     private void switchGUIButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_switchGUIButActionPerformed
         // TODO add your handling code here:
+        C.resetTasks();
+        GUI1TaskView V = new GUI1TaskView();
+        V.setController(C);
+        C.setView(V);
+        this.setVisible(false);
+        V.GUIStart();
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        this.dispose();
     }//GEN-LAST:event_switchGUIButActionPerformed
 
     private void updateTaskTable(Vector<Vector<String>> stringVec) {
