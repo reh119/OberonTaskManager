@@ -4,6 +4,11 @@
  */
 package oberonguinetbeans;
 
+import CoreCode.TaskController;
+import CoreCode.TaskType;
+
+import java.util.Vector;
+
 /**
  *
  * @author rafaelhernandez
@@ -13,8 +18,13 @@ public class editBasicTaskFrame extends javax.swing.JFrame {
     /**
      * Creates new form basicTaskFrame
      */
-    public editBasicTaskFrame() {
+    public editBasicTaskFrame(Vector<String> dataFields, TaskController C)
+    {
         initComponents();
+        editBasicTitleField.setText(dataFields.get(0));
+        editBasicDateField.setText(dataFields.get(1));
+        editBasicTaskPriority.setSelectedIndex(Integer.parseInt(dataFields.get(3))-1);
+        this.C = C;
     }
 
     /**
@@ -139,45 +149,20 @@ public class editBasicTaskFrame extends javax.swing.JFrame {
 
     private void updateBasicTaskBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBasicTaskBActionPerformed
         // TODO add your handling code here:
-        // When update is pressed on edit basic  task frame, task should be updated, and the edit basic task window should close without ending the program. 
-        // recommended to use xxxxx.setDefaultCloseOperation(DISPOSE_ON_CLOSE); command on update button. or something else similar. .
+        Vector<String> dataFields = new Vector<String>();
+        dataFields.add(editBasicTitleField.getText());
+        dataFields.add(editBasicDateField.getText());
+        dataFields.add(String.valueOf((editBasicTaskPriority.getSelectedIndex()+1)));
+        C.editTask(TaskType.BASIC, dataFields);
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        this.dispose();
     }//GEN-LAST:event_updateBasicTaskBActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(editBasicTaskFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(editBasicTaskFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(editBasicTaskFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(editBasicTaskFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new editBasicTaskFrame().setVisible(true);
-            }
-        });
-    }
+    TaskController C;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel dateLabel;

@@ -21,6 +21,7 @@ public class basicTaskInfo extends javax.swing.JFrame {
         initComponents();
         this.C = C;
         this.U = U;
+        this.C.selectTask(this.U.getSelectedTaskIndex());
         Vector<String> dataFields = new Vector<String>();
         dataFields = C.getCurrentTaskStrings();
         titleText.setText(dataFields.get(0));
@@ -160,13 +161,12 @@ public class basicTaskInfo extends javax.swing.JFrame {
     private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
         // TODO add your handling code here:
         
-        editBasicTask ebt = new editBasicTask();
+        editBasicTask ebt = new editBasicTask(C);
         ebt.setVisible(true);
     }//GEN-LAST:event_editButtonActionPerformed
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
         // TODO add your handling code here:
-        C.selectTask(U.getSelectedTaskIndex());
         C.removeTask();
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.dispose();

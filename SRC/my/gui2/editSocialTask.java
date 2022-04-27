@@ -4,6 +4,11 @@
  */
 package my.gui2;
 
+import CoreCode.TaskController;
+import CoreCode.TaskType;
+
+import java.util.Vector;
+
 /**
  *
  * @author oscarramirez
@@ -13,9 +18,21 @@ public class editSocialTask extends javax.swing.JFrame {
     /**
      * Creates new form editSocialTask
      */
-    public editSocialTask() {
+    public editSocialTask(TaskController C) {
         initComponents();
+        this.C = C;
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        Vector<String> dataFields = new Vector<String>();
+        dataFields = C.getCurrentTaskStrings();
+        titleText.setText(dataFields.get(0));
+        dateText.setText(dataFields.get(1));
+        priorityText.setText(dataFields.get(3));
+        meetingText.setText(dataFields.get(4));
+        locateText.setText(dataFields.get(5));
+        attendingText.setText(dataFields.get(6));
     }
+
+    TaskController C;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -183,42 +200,20 @@ public class editSocialTask extends javax.swing.JFrame {
 
     private void addEditButjButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEditButjButton1ActionPerformed
         // TODO add your handling code here:
+        Vector<String> dataFields = new Vector<String>();
+        dataFields.add(titleText.getText());
+        dataFields.add(dateText.getText());
+        dataFields.add(priorityText.getText());
+        dataFields.add(meetingText.getText());
+        dataFields.add(locateText.getText());
+        dataFields.add(attendingText.getText());
+        C.editTask(TaskType.SOCIAL, dataFields);
+        this.dispose();
     }//GEN-LAST:event_addEditButjButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(editSocialTask.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(editSocialTask.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(editSocialTask.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(editSocialTask.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new editSocialTask().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addEditBut;

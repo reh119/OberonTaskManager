@@ -4,6 +4,11 @@
  */
 package oberonguinetbeans;
 
+import CoreCode.TaskController;
+import CoreCode.TaskType;
+
+import java.util.Vector;
+
 /**
  *
  * @author rafaelhernandez
@@ -13,8 +18,16 @@ public class editSocialTaskFrame extends javax.swing.JFrame {
     /**
      * Creates new form editSocialTaskFrame
      */
-    public editSocialTaskFrame() {
+    public editSocialTaskFrame(Vector<String> dataFields, TaskController C)
+    {
         initComponents();
+        editSocialTitleField.setText(dataFields.get(0));
+        editSocialdateField.setText(dataFields.get(1));
+        editSocialPriority.setSelectedIndex(Integer.parseInt(dataFields.get(3))-1);
+        editSocialLocField.setText(dataFields.get(4));
+        editOccasionField.setText(dataFields.get(5));
+        editAttendingHours.setText(dataFields.get(6));
+        this.C = C;
     }
 
     /**
@@ -181,45 +194,22 @@ public class editSocialTaskFrame extends javax.swing.JFrame {
 
     private void updateWorkTaskBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateWorkTaskBActionPerformed
         // TODO add your handling code here:
-        // / When update is pressed on edit social task frame, task should be updated, and the edit social task window should close without ending the program. 
-        // recommended to use xxxxx.setDefaultCloseOperation(DISPOSE_ON_CLOSE); command on update button. or something similar
-        
+        Vector<String> dataFields = new Vector<String>();
+        dataFields.add(editSocialTitleField.getText());
+        dataFields.add(editSocialdateField.getText());
+        dataFields.add(String.valueOf((editSocialPriority.getSelectedIndex()+1)));
+        dataFields.add(editOccasionField.getText());
+        dataFields.add(editSocialLocField.getText());
+        dataFields.add(editAttendingHours.getText());
+        C.editTask(TaskType.SOCIAL, dataFields);
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        this.dispose();
     }//GEN-LAST:event_updateWorkTaskBActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(editSocialTaskFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(editSocialTaskFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(editSocialTaskFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(editSocialTaskFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new editSocialTaskFrame().setVisible(true);
-            }
-        });
-    }
+    TaskController C;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField editAttendingHours;

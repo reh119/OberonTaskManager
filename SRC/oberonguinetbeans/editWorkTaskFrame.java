@@ -4,6 +4,11 @@
  */
 package oberonguinetbeans;
 
+import CoreCode.TaskController;
+import CoreCode.TaskType;
+
+import java.util.Vector;
+
 /**
  *
  * @author rafaelhernandez
@@ -13,8 +18,16 @@ public class editWorkTaskFrame extends javax.swing.JFrame {
     /**
      * Creates new form editWorkTask
      */
-    public editWorkTaskFrame() {
+    public editWorkTaskFrame(Vector<String> dataFields, TaskController C)
+    {
         initComponents();
+        editworkTitleField.setText(dataFields.get(0));
+        editWorkDateField.setText(dataFields.get(1));
+        editWorkPriority.setSelectedIndex(Integer.parseInt(dataFields.get(3))-1);
+        workEditProjNField.setText(dataFields.get(4));
+        workEditMeetWField.setText(dataFields.get(5));
+        workEditHoursLabel.setText(dataFields.get(6));
+        this.C = C;
     }
 
     /**
@@ -190,6 +203,16 @@ public class editWorkTaskFrame extends javax.swing.JFrame {
 
     private void updateWorkTaskBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateWorkTaskBActionPerformed
         // TODO add your handling code here:
+        Vector<String> dataFields = new Vector<String>();
+        dataFields.add(editworkTitleField.getText());
+        dataFields.add(editWorkDateField.getText());
+        dataFields.add(String.valueOf(editWorkPriority.getSelectedIndex()+1));
+        dataFields.add(workEditProjNField.getText());
+        dataFields.add(workEditMeetWField.getText());
+        dataFields.add(workEditHoursLabel.getText());
+        C.editTask(TaskType.WORK, dataFields);
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        this.dispose();
         // When update is pressed on edit work task frame, task should be updated, and the edit work task window should close without ending the program. 
         // recommended to use xxxxx.setDefaultCloseOperation(DISPOSE_ON_CLOSE); command on update button. or something similar
         
@@ -198,38 +221,9 @@ public class editWorkTaskFrame extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(editWorkTaskFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(editWorkTaskFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(editWorkTaskFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(editWorkTaskFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new editWorkTaskFrame().setVisible(true);
-            }
-        });
-    }
+
+    TaskController C;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField editWorkDateField;
