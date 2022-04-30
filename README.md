@@ -572,7 +572,8 @@ https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/master/SRC/GUI2.
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/322b13d0f16f21fd8404dd88cdb91e8e5b3f1661
 
 
-
+## 3rd Sprint Contributions
+***Justin Jimenez:***
 
 
 
