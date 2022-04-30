@@ -575,6 +575,52 @@ https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/commits/322b13d0f16f
 ## 3rd Sprint Contributions
 ***Justin Jimenez:***
 
+Task: Create J-Unit testing for the sort task
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2?assignee=61ef4266c3cb7c007215c870&selectedIssue=OTM-91
+
+Justin added two J-Unit tests for sort task to test for the title and priority.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/branch/OTM-91-create-j-unit-testing-for-sort-task
+
+
+Task: Sort tasks in descending order
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2?assignee=61ef4266c3cb7c007215c870&selectedIssue=OTM-92
+
+Justin edited the Sort Task class to use an additional boolean parameter for ascending and descending sort order.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/branch/feature/OTM-92-sort-tasks-in-descending-order
+
+
+Task: Edit selected task
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2?assignee=61ef4266c3cb7c007215c870&selectedIssue=OTM-88
+
+Justin created a method within TaskController to edit a selested task.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/branch/feature/OTM-88-edit-selected-task
+
+
+Task: Implement a search based on date range
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2?assignee=61ef4266c3cb7c007215c870&selectedIssue=OTM-96
+
+Justin refactored the search based on date code to include a feature of searching by a date range.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/branch/feature/OTM-96-search-date-range
+
+
+Task: Sort tasks by task type
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2?assignee=61ef4266c3cb7c007215c870&selectedIssue=OTM-104
+
+Justin added an additional statement in the Sort method to sort based on task type.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/branch/feature/OTM-104-sort-by-task-type
+
+
+Task: Refactor Search and Sort Task
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2?assignee=61ef4266c3cb7c007215c870&selectedIssue=OTM-103
+
+Justin refactored the search and sort methods to each have their own classes.
+
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/branch/OTM-103-refactor-the-search-and-sort
 
 
 ## Screenshots
