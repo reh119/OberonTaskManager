@@ -652,6 +652,62 @@ Added JUNIT tests for the TaskController and model's objects, managed to get it 
 Bitbucket Branch - https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/2b9db0e060e387216fb19b4209db36c2af38c9c0/?at=feature%2FOTM-117-add-junittests-for-the-taskcontr
 
 
+
+***Rafael Hernandez***
+Jira Task 93:Create sort by Descending option on task view 
+
+Rafael created a descend toggle on the gui, giving the user an option to be able to sort in descendning order
+
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2?assignee=61eb34957ae0dc006acc285b&selectedIssue=OTM-93
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/branch/feature/OTM-93-create-sort-by-descending-option-reh119
+
+Jira Task 85: Refine GUI, add color, and other customizations to GUI
+
+Rafael refactored the previous gui from sprint to. and added things that were missing, as well as removing things that werent needed like mains.
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2?assignee=61eb34957ae0dc006acc285b&selectedIssue=OTM-85
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/branch/feature/OTM-85-refine-gui-add-color-and-other-cu
+
+
+Jira Task 89:Edit button so the user can edit previously added tasks
+
+Rafael Created a edit button so that users could change tasks that they had already added. Created a popup
+window on the gui giving the user ability to do this. 
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2?assignee=61eb34957ae0dc006acc285b&selectedIssue=OTM-89
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/branch/feature/OTM-89-edit-button-so-the-user-can-edit-tasks
+
+
+Jira Task 99:Refactor gui to be more organized, remove main
+Made many changes here such as adding missing fields to the sort task, making frames not local, gui displaying taks dynamically
+and labeling variables correclty
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2?assignee=61eb34957ae0dc006acc285b&selectedIssue=OTM-99
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/branch/feature/OTM-99-refactor-gui-to-be-more-organized
+
+
+
+Jira Task 100: Create view task button so that user can view tasks and their fields
+Rafael created an edit task button where users could view tasks they have previously added. These fields are uneditable and are only used to 
+view tasks. 
+
+
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2?assignee=61eb34957ae0dc006acc285b&selectedIssue=OTM-100
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/branch/feature/OTM-100-create-view-task-button-so-that-
+
+Jira Task 82:Remove the TaskID field from the display, and all associated TaskID uses in the GUI.
+Rafael removed the taskId field as it wasnt needed for the user(the user didnt need to see it.) 
+
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2?assignee=61eb34957ae0dc006acc285b&selectedIssue=OTM-82
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/branch/feature/OTM-82-remove-the-taskid-field-from-the-
+
+
+
+Jira Task 112: Change GUI Button
+Rafael created a change gui button where the user could click, and changed the gui if they wished to. 
+
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2?assignee=61eb34957ae0dc006acc285b&selectedIssue=OTM-110
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/branch/feature/OTM-110-change-gui-button
+
+
+
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
@@ -730,6 +786,9 @@ Overall I will be adding missing elemts from our demo to the backend as we see f
 ***Grant Smith***
 For sprint 4 I would start by implementing the input validation, and ensuring it works correctly, then add an aditional quality to the search function allowing for
 partial searches such as finding bob2 by searching bob.
+
+***Rafael Hernandez***
+For sprint 4, I would like to ensure that everything is 100% working. I would have also wanted to test the gui and make sure we spot any bugs that could be found or that break the program. 
 
 ## Acknowledgements
 Give credit here.
