@@ -706,6 +706,19 @@ Rafael created a change gui button where the user could click, and changed the g
 https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2?assignee=61eb34957ae0dc006acc285b&selectedIssue=OTM-110
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/branch/feature/OTM-110-change-gui-button
 
+***Jacob Jordan***
+Jacob added an ExceptionParser calss with methods to catch with and deal with exceptions regarding user inputs
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2?assignee=61eba30c84311c006952f9e2&selectedIssue=OTM-94
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/OTM-94-Input-vlidation-searched-range/
+
+Jacob added an InputValidate calss with methods to deal with a greater range of potential incorrect inputs from the user
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2?assignee=61eba30c84311c006952f9e2&selectedIssue=OTM-98
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/OTM-98-add-functionality-task-name-search/
+
+Jacob added popups, bug chasing and the final features of the input validate class.  Tested the InputValidate class.
+https://cs3398s22oberon.atlassian.net/jira/software/projects/OTM/boards/2?assignee=61eba30c84311c006952f9e2&selectedIssue=OTM-97
+https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/InputValidationFinshingTouch/SRC/CoreCode/
+
 
 
 ## Screenshots
@@ -789,6 +802,9 @@ partial searches such as finding bob2 by searching bob.
 
 ***Rafael Hernandez***
 For sprint 4, I would like to ensure that everything is 100% working. I would have also wanted to test the gui and make sure we spot any bugs that could be found or that break the program. 
+
+***Jacob Jordan***
+For sprint 4, I would add a backlof of finished tasks and add more input validation.  I would also add additional functionalities to the search function by allowing to search for terms by sub strings.
 
 ## Acknowledgements
 Give credit here.
