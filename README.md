@@ -622,6 +622,35 @@ Justin refactored the search and sort methods to each have their own classes.
 
 https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/branch/OTM-103-refactor-the-search-and-sort
 
+***Grant Smith***
+
+NOTE: All Tasks were finished late besides JUNIT tests due to an impassable block caused by another groupmember
+
+Jira Task 112 Hook up GUI1 and GUI2 to backend - https://cs3398s22oberon.atlassian.net/browse/OTM-112?atlOrigin=eyJpIjoiOGViMDVhOTA2MjVkNDlmNTlhYWRlNGUwNmQzMjEwMDciLCJwIjoiaiJ9
+Hooked up GUI1 and GUI2 to the backend as in sprint 2, but without breaking the GUI code in the progress
+Bitbucket Branch - https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/f5bd4dff3991efd36786e1cacbd110914b96df4d/?at=feature%2FOTM-112-hook-up-both-gui1-and-2s-buttons
+
+Jira Task 113 Add functionality to editTask button in the GUI - https://cs3398s22oberon.atlassian.net/browse/OTM-113?atlOrigin=eyJpIjoiOTFmMjE4NmI1YmM2NDYyOGIxNTIyODgxYjcyYTUxNjciLCJwIjoiaiJ9
+Added the functionality to EditTask for both GUI1 and GUI2 and conencted it to the backend Via TaskController
+BitBucket Branch - https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/a43a88ceef46b440afe78904169a75e00384def0/?at=feature%2FOTM-113-add-functionality-to-the-edittas
+
+Jira Task 114 Add functionality to the ViewTask button - https://cs3398s22oberon.atlassian.net/browse/OTM-114?atlOrigin=eyJpIjoiYTc4NjIyYzUzNzRjNDZlNmIyYmMyZDFlMWU5YjE4M2QiLCJwIjoiaiJ9
+Added functionality to the ViewTask button, has minimal need for the backend but was used
+Bitbucket Branch - https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/e5acdad21663ac18d6ca7c5b22b654045e6e3a56/?at=feature%2FOTM-114-add-functionality-to-the-viewtas
+
+Jira Task 115 Add functionality to the SwitchGUI button - https://cs3398s22oberon.atlassian.net/browse/OTM-115?atlOrigin=eyJpIjoiN2JlMGY5NGE1NTQzNDRiOWJjOTkyZDhjN2Q4OTVlMTEiLCJwIjoiaiJ9
+Added functionality to both GUIs switchGUI button via the backend, turned out to be realtively simple
+Bitbucket Branch - https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/bcf0b22687f81ae3e088497792a2fcaa811f15a8/?at=feature%2FOTM-115-add-functionality-to-the-changeg
+
+Jira Task 116 Add functionality to have a search range via the GUI - https://cs3398s22oberon.atlassian.net/browse/OTM-116?atlOrigin=eyJpIjoiMjE4MTNiMWNiN2UwNGY1ZGFlOGI5NTBiMmFiYTc5NGUiLCJwIjoiaiJ9
+NOTE: THIS TASK WAS OBSOLETED BY ANOTHER GROUP MEMBERS WORK
+I did not need to add this due to other group members work accidentally resolving this, with that said I made up for this with extra time in other tasks
+Bitbucket Branch - https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/da5172005cae2c2cb710802a7eb460bb6ed6896f/?at=feature%2FOTM-116-add-additional-functionality-for
+
+Jira Task 117 Add JUnitTests for the TaskController and the model's objects. - https://cs3398s22oberon.atlassian.net/browse/OTM-117?atlOrigin=eyJpIjoiNDAwYjAyNDViZTY5NGE3ZGI0NTgzZTQ4MWQ2ZGU1ZjIiLCJwIjoiaiJ9
+Added JUNIT tests for the TaskController and model's objects, managed to get it working with the help of Dr. Lehr, but it broke on the demoBranch for unknown reasons relating to a commit by a group member.
+Bitbucket Branch - https://bitbucket.org/cs3398-s22-oberon/oberon-task-manager/src/2b9db0e060e387216fb19b4209db36c2af38c9c0/?at=feature%2FOTM-117-add-junittests-for-the-taskcontr
+
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
@@ -695,6 +724,12 @@ extra windows, etc.). I also want to customize the design to make it more visual
 ***Jacob Jordan***
 For Sprint 3, I will be working on the back end, implementing imput validation and JUnit tests for various classes.  I will also communicate with my teammates to create more tasks that overall allow the GUI to function as neededed.
 Overall I will be adding missing elemts from our demo to the backend as we see fit.
+
+***Sprint 4 TODO***
+
+***Grant Smith***
+For sprint 4 I would start by implementing the input validation, and ensuring it works correctly, then add an aditional quality to the search function allowing for
+partial searches such as finding bob2 by searching bob.
 
 ## Acknowledgements
 Give credit here.
